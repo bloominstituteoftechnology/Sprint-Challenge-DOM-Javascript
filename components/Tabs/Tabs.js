@@ -1,9 +1,7 @@
 
 class TabItem {
-  constructor(element, parent) {
+  constructor(element) {
     this.element = element;
-    this.link = parent;
-    this.tabs = parent.tabs;
   }
 
   select() {
@@ -40,6 +38,7 @@ class TabLink {
 
 class Tabs {
   constructor(element) {
+    console.log(element)
     this.element = element;
     this.links = element.querySelectorAll(".Tabs__link");
     this.links = Array.from(this.links).map((link) => {
@@ -65,4 +64,4 @@ class Tabs {
 }
 
 let tabs = document.querySelectorAll(".Tabs");
-tabs = Array.from(allTabs).map(tabs => new Tabs(tabs));
+tabs = Array.from(tabs).map(tabs => new Tabs(tabs));

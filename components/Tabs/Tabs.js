@@ -14,51 +14,63 @@ class TabItem {
 }
 
 class TabLink {
-  constructor(element, parent) {
+  constructor(element) {
     this.element = element;
-    this.tabs = parent;
-    this.tabItem = this.tabs.getTab(this.element.dataset.tab);
-    this.tabItem = new TabItem(this.tabItem, this);
-    this.element.addEventListener('click', () => {
-      this.tabs.updateActive(this);
-      this.select();
+    this.element.addEventListener('click', (event) => {
+      event.tabData = this.element.dataset.tab;
     });
   };
 
   select() {
     this.element.classList.add("Tabs__link-selected");
-    this.tabItem.select();
   }
 
   deselect() {
     this.element.classList.remove("Tabs__link-selected");
-    this.tabItem.deselect();
   }
 }
 
 class Tabs {
   constructor(element) {
-    console.log(element)
     this.element = element;
+
+    // Attaches links with data-tab value as property
     this.links = element.querySelectorAll(".Tabs__link");
-    this.links = Array.from(this.links).map((link) => {
-      return new TabLink(link, this);
-    });
-    this.activeLink = this.links[0];
-    this.init();
+    this.links = Array.from(this.links).reduce((obj, link) => {
+      obj[link.dataset.tab] = new TabLink(link);
+      return obj;
+    }, {});
+
+    // Attaches items with data-tab value as property
+    this.items = element.querySelectorAll(".Tabs__item");
+    this.items = Array.from(this.items).reduce((obj, item) => {
+      obj[item.dataset.tab] = new TabItem(item);
+      return obj;
+    }, {});
+
+    // Listens for a click event in its children or self
+    this.element.addEventListener('click', (event) => {
+      if (event.tabData) {
+       this.updateActive(event.tabData);
+       event.stopPropagation(); 
+      }
+    })
+
+    this.activeData = element.querySelector(".Tabs__default");
+    this.activeData = this.activeData ? this.activeData.dataset.tab : null;
+    this.updateActive(this.activeData);
   }
 
-  init() {
-    this.activeLink.select();
-  }
+  updateActive(data) {
+    if (data === null) return;
+    if (this.activeData) {
+      this.links[this.activeData].deselect();
+      this.items[this.activeData].deselect();
+    }
 
-  updateActive(newActive) {
-    this.activeLink.deselect();
-    this.activeLink = newActive;
-  }
-
-  getTab(data) {
-    return this.element.querySelector(`.Tabs__item[data-tab="${data}"]`);
+    this.links[data].select();
+    this.items[data].select();
+    this.activeData = data;
   }
 
 }

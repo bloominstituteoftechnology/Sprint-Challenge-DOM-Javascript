@@ -1,7 +1,7 @@
 class Carousel {
     constructor(element) {
         this.element = element;
-        // Extract Arrows from Carousel
+        // Extract Arrows from Carousel and Set Events on them!
         this.leftArrow = element.querySelector('.Carousel__arrow-left');
         this.leftArrow.addEventListener('click', () => {
             this.updateActive('left');
@@ -17,33 +17,29 @@ class Carousel {
         this.activeIndex = 0;
     }
     updateActive(direction) {
-        // console.log(direction, ' was clicked');
         if (this.activeIndex === 0 && direction === 'left') {
-            // console.log('do not scroll anymore in that direction')
+            return;
         } else if (direction === 'left') {
             this.activeIndex--;
-            this.activeItem.classList.remove('Carousel__item-focused'); // Hide Current
+            this.hide();
             this.activeItem = this.element.querySelectorAll('.Carousel__item')[this.activeIndex]; // Update Current
-            this.activeItem.classList.add('Carousel__item-focused'); // Show New Current
-            // console.log(this.activeItem);
-            this.refresh();
-        }
-        
+            this.show();
+        }        
         if (this.activeIndex === this.carouselItems.length-1 && direction === 'right') {
-            // console.log('do not scroll anymore in that direction')
+            return;
         } else if (direction === 'right') {
             this.activeIndex++;
-            this.activeItem.classList.remove('Carousel__item-focused'); // Hide Current
+            this.hide();
             this.activeItem = this.element.querySelectorAll('.Carousel__item')[this.activeIndex]; // Update Current
-            this.activeItem.classList.add('Carousel__item-focused'); // Show New Current
-            // console.log(this.activeItem);
-            this.refresh();
+            this.show();
         }
-        // console.log(this.activeIndex);
     }
 
-    refresh() {
-
+    hide() {
+        this.activeItem.classList.remove('Carousel__item-focused');
+    }
+    show() {
+        this.activeItem.classList.add('Carousel__item-focused')
     }
 }
 

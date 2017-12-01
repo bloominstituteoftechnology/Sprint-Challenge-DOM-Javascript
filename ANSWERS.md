@@ -4,6 +4,13 @@ treats each document like a tree, with each node representing a part of that tre
 
 #What is an event?
 An event is just a signal that something has happened. Every node within the DOM is capable of generating event
-signals. A few good examples of events are `click`, `mouseover`, and `keydown`. Developers take advantage of 
-events by using event listeners which execute specific code should such an event happen.
+signals. A few good examples of events are `click`, `mouseover`, and `keydown`. 
+
+#What is an event listener?
+Developers can take advantage of event signals by adding event listeners to their programs. A specific piece of
+code can be executed when an event happens. This allows developers to design websites capable of making 
+intelligent decisions.
+
+
+
 

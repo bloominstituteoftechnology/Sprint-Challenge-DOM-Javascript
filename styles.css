@@ -11,3 +11,343 @@ body {
 	min-width: 300px;
 	margin: 0;
 }
+Your challenge is to write the functionality of a *Carousel* component. You have the HTML and CSS already in place. This is an advanced challenge, so you are not expected to be able to complete it. What we're looking for is your ability to begin writing this functionality, 
+and use your newly learned patterns to set up your component.
+
+html {
+    background-color: #f8f8f8;
+}
+body {
+}
+
+footer {
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgba(255,255,255,.5);
+    background-color: #1b1c1d;
+}
+
+footer h4 {
+    color: #fff;
+}
+footer ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+footer a {
+    color: rgba(255,255,255,.5);
+}
+
+footer a:hover, footer a:focus {
+    color: #fff;
+}
+
+footer .sponsorMessage {
+    color: rgba(255,255,255,.5);
+    margin-bottom: 10px;
+}
+
+.forkMeOnGithub {
+    position: absolute;
+    right: 0;
+    border: 0;
+    max-width: 20%;
+}
+
+/* Workaround Twitter button vertical misalignment */
+.twitter-follow-button {
+    vertical-align: middle;
+}
+
+.versionedButton > img {
+    vertical-align: top;
+}
+
+.versionedButton > div {
+    text-align: left;
+    display: inline-block;
+    white-space: normal;
+}
+
+/* Twitter bootstrap's navbar-fixed-top's hides content head */
+@media (max-width: 380px) {
+    .navbar-brand img {
+        max-width: 150px;
+    }
+}
+@media (max-width: 767px) {
+    .body-without-header-footer {
+        padding-top: 40px;
+    }
+}
+@media (min-width: 768px) {
+    .body-without-header-footer {
+        padding-top: 90px;
+    }
+}
+@media (min-width: 992px) {
+    .body-without-header-footer {
+        padding-top: 40px;
+    }
+}
+
+/* Menu look, especially needed on small media */
+li.navbar-form {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.summaryParagraph {
+    font-size: larger;
+}
+
+.positive {
+    color: #4E9A06;
+}
+
+.negative {
+    color: #A40000;
+}
+
+/******************************************************************************
+* Upgrade recipe
+******************************************************************************/
+
+.line-through {
+    text-decoration: line-through;
+}
+
+ul.upgrade-recipe-label-list {
+    padding-left: 10px;
+}
+
+.upgrade-recipe-label-list > li {
+    list-style: none;
+}
+
+.upgrade-recipe-note {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    padding: 0 10px 0 10px;
+    margin-bottom: 10px;
+}
+
+a.upgrade-recipe-note-header {
+    text-decoration: none;
+    color: #333;
+}
+
+.upgrade-recipe-note-header > h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.upgrade-recipe-note-header > h3 > span:first-child {
+    margin-right: 5px;
+}
+
+.upgrade-recipe-note-header > h3 > span:last-child {
+    margin-left: 5px;
+}
+
+.upgrade-recipe-reverted h3 {
+    text-decoration: line-through;
+}
+
+/******************************************************************************
+* Blog content
+******************************************************************************/
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 5px;
+}
+
+td > p:last-child {
+    margin-bottom: 0;
+}
+
+.content img {
+    margin-bottom: 10px;
+}
+
+/******************************************************************************
+* Components
+******************************************************************************/
+
+/* Reduce space taken by alerts */
+.alert {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.alert-dismissable .close {
+    top: 0;
+    right: 0;
+}
+
+.label-public-api {
+    background-color: #6f5499;
+}
+
+/* Carousel: center images, remove gradient, tabs instead of indicators */
+.frontPageCarousel .item > img {
+    margin: 0 auto;
+    display: block;
+}
+.frontPageCarousel .carousel-control.left, .carousel-control.right {
+    background-image: none;
+    color: inherit;
+}
+.frontPageCarouselButtons > li {
+    vertical-align: bottom;
+}
+.frontPageCarouselButtons > li.active a {
+    background-color: white;
+    color: inherit;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.horizontal-center {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/******************************************************************************
+* Tabs left, right and below (not supported in Twitter Bootstrap 3.1)
+******************************************************************************/
+
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+    border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+    display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+    display: block;
+}
+
+.tabs-below > .nav-tabs {
+    border-top: 1px solid #ddd;
+}
+
+.tabs-below > .nav-tabs > li {
+    margin-top: -1px;
+    margin-bottom: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+    border-top-color: #ddd;
+    border-bottom-color: transparent;
+}
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+    border-color: transparent #ddd #ddd #ddd;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+    float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+    min-width: 74px;
+    margin-right: 0;
+    margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+    float: left;
+    margin-right: 19px;
+    border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+    margin-right: -1px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+    border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+    border-color: #ddd transparent #ddd #ddd;
+    *border-right-color: #ffffff;
+}
+
+.tabs-right > .nav-tabs {
+    float: right;
+    margin-left: 19px;
+    border-left: 1px solid #ddd;
+}
+
+.tabs-right > .nav-tabs > li > a {
+    margin-left: -1px;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+    border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+    border-color: #ddd #ddd #ddd transparent;
+    *border-left-color: #ffffff;
+}
+
+.download-nav-tabs {
+    margin-bottom: 0px;
+}
+
+.download-tab-content {
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: #ddd;
+    border-radius: 0px 0px 4px 4px;
+    padding: 10px 10px 0px 10px;
+}

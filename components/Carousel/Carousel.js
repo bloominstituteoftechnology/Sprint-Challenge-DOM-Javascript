@@ -1,15 +1,19 @@
 class Carousel {
   constructor(element) {
-    console.log(element);
+    // console.log(element);
     this.element = element;
+    this.itemList = Array.from(this.element.querySelectorAll(".Carousel__item"));
+    // console.log(this.itemList);
+    this.active = this.itemList.shift();
+    // console.log(this.active);
   }
 
-  select() {
-    this.element.classList.add("Carousel");
+  moveLeft() {
+    this.active.remove('.Carousel__item-focused');
   }
 
-  deselect() {
-    this.element.classList.remove("Carousel");
+  moveRight() {
+
   }
 
 }

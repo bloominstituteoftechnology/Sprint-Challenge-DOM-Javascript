@@ -3,4 +3,7 @@ The DOM stands for document object model and is a language-independent applicati
 treats each document like a tree, with each node representing a part of that tree.
 
 #What is an event?
-An event is just a signal that something has happened.
+An event is just a signal that something has happened. Every node within the DOM is capable of generating event
+signals. A few good examples of events are `click`, `mouseover`, and `keydown`. Developers take advantage of 
+events by using event listeners which execute specific code should such an event happen.
+

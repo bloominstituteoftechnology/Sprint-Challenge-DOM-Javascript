@@ -1,11 +1,11 @@
-.Carousel__arrow-left {
+.Carousel__arrow--left {
   font-size: 42px;
   position: absolute;
   left: 20px;
   top: 50px;
 }
 
-.Carousel__arrow-right {
+.Carousel__arrow--right {
   font-size: 42px;
   position: absolute;
   right: 20px;
@@ -21,6 +21,6 @@
   display: none;
 }
 
-.Carousel__item-focused {
+.Carousel__item--focused {
   display: inline-block;
 }

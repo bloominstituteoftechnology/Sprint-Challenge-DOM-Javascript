@@ -18,6 +18,11 @@ class Carousel {
     }
     updateActive(direction) {
         if (this.activeIndex === 0 && direction === 'left') {
+            // Implement Looping Here
+            this.activeIndex = this.carouselItems.length-1;
+            this.hide();
+            this.activeItem = this.element.querySelectorAll('.Carousel__item')[this.activeIndex];
+            this.show();
             return;
         } else if (direction === 'left') {
             this.activeIndex--;
@@ -26,6 +31,11 @@ class Carousel {
             this.show();
         }        
         if (this.activeIndex === this.carouselItems.length-1 && direction === 'right') {
+            // Implement Looping Here
+            this.activeIndex = 0;
+            this.hide();
+            this.activeItem = this.element.querySelectorAll('.Carousel__item')[this.activeIndex];
+            this.show();
             return;
         } else if (direction === 'right') {
             this.activeIndex++;

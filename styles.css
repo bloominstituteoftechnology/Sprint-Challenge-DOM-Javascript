@@ -4,6 +4,7 @@
 @import './components/Box/Box.css';
 @import './components/Tabs/Tabs.css';
 @import './components/List/List.css';
+@import './components/Carousel/Carousel.css';
 
 body {
 	box-sizing: border-box;

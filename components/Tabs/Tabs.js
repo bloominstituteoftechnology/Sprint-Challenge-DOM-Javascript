@@ -5,11 +5,11 @@ class TabItem {
   }
 
   select() {
-    this.element.classList.add("Tabs__item-selected");
+    this.element.classList.add("Tabs__item--selected");
   }
 
   deselect() {
-    this.element.classList.remove("Tabs__item-selected");
+    this.element.classList.remove("Tabs__item--selected");
   }
 }
 
@@ -19,14 +19,14 @@ class TabLink {
     this.element.addEventListener('click', (event) => {
       event.tabData = this.element.dataset.tab;
     });
-  };
+  }
 
   select() {
-    this.element.classList.add("Tabs__link-selected");
+    this.element.classList.add("Tabs__link--selected");
   }
 
   deselect() {
-    this.element.classList.remove("Tabs__link-selected");
+    this.element.classList.remove("Tabs__link--selected");
   }
 }
 
@@ -63,10 +63,8 @@ class Tabs {
 
   updateActive(data) {
     if (data === null) return;
-    if (this.activeData) {
-      this.links[this.activeData].deselect();
-      this.items[this.activeData].deselect();
-    }
+    this.links[this.activeData].deselect();
+    this.items[this.activeData].deselect();
 
     this.links[data].select();
     this.items[data].select();

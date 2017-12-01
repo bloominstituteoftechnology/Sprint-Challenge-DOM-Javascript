@@ -1,0 +1,26 @@
+.Carousel__arrow-left {
+  font-size: 42px;
+  position: absolute;
+  left: 20px;
+  top: 50px;
+}
+
+.Carousel__arrow-right {
+  font-size: 42px;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+}
+
+.Carousel__items {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.Carousel__item {
+  display: none;
+}
+
+.Carousel__item-focused {
+  display: inline-block;
+}

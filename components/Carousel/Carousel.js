@@ -1,5 +1,7 @@
 class Carousel {
-
+    this.element = element;
+    this.boxes = boxes;
+    this.element.addEventListener("click", this.moveRight);
 }
 
 let carousels = document.querySelectorAll(".Carousel");

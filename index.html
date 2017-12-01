@@ -93,3 +93,36 @@
 
 	</body>
 </html>
+
+Your challenge is to write the functionality of a *Carousel* component. 
+You have the HTML and CSS already in place. This is an advanced challenge,
+so you are not expected to be able to complete it. What we're looking for 
+is your ability to begin writing this functionality, and use your newly
+learned patterns to set up your component.
+
+<div class="carousel slide" data-ride="carousel" id="whatIsCarousel">
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="slide0.png">
+        </div>
+        <div class="item">
+            <img src="slide1.png">
+        </div>
+        ...
+    </div>
+    <a class="left carousel-control" data-slide="prev" href="#whatIsCarousel">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" data-slide="next" href="#whatIsCarousel">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+<ul class="nav nav-justified" id="whatIsCarouselButtons">
+    <li class="active" data-target="#whatIsCarousel" data-slide-to="0">
+        <a data-toggle="tab" href="#">Slide 0</a>
+    </li>
+    <li data-target="#whatIsCarousel" data-slide-to="1">
+        <a data-toggle="tab" href="#">Slide 1</a>
+    </li>
+    ...
+</ul>

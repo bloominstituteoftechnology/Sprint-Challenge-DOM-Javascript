@@ -1,42 +1,37 @@
 class Carousel {
-  constructor(elment) {
+  constructor(element) {
+    console.log(element);
     this.element = element;
-    this.carouselItems = element.querySelectorAll('.Carousel__items');
-    this.carouselItems = Array.from(this.carouselItems).map((item) => {
-      return new CarouselItem(item, this);
+    this.carouselItems = this.element.querySelectorAll('.Carousel__item');
+    this.carouselItems = Array.from(this.carouselItems).map(item => {
+      return item;
     });
+    this.next = this.element.querySelector('.Carousel__arrow-right');
+    this.previous = this.element.querySelector('.Carousel__arror-left');
+    this.counter = 0;
+    this.amount = this.carouselItems.length;
     this.current = this.carouselItems[0];
-    
-    let count = 0;
-    const amount = this.carouselItems.length;
-  }
+    this.next.addEventListener('click', () => {
+      this.navigate(1);
+    });
 
+    this.previous.addEventListener('click', () => {
+      this.navigate(-1);
+    });
+  }
   navigate(direction) {
     this.current.classList.remove('Carousel__item-focused');
     this.counter += direction;
-    if (direction === -1 && counter < 0) {
-      counter = amount - 1;
+    if (direction === -1 && this.counter < 0) {
+      this.counter = this.amount - 1;
     }
-    if (direction === 1 && counter > amount) {
-      counter = 0;
+    if (direction === 1 && this.counter > this.amount) {
+      this.counter = 1;
     }
-    this.current = items[current];
-    current.classList.add('Carousel__item-focused');
+    this.current = this.carouselItems[counter];
+    this.current.classList.add('Carousel__item-focused');
   }
-  
 }
 
-class CarouselItem {
-  constructor(element, parent) {
-    this.element = element;
-    this.carousel = parent;
-
-    this.element.addEventListener('click')
-  }
-
-  
-}
-
-let carousels = document.querySelectorAll('.Carousel');
-console.log(carousels);
+carousels = document.querySelectorAll('.Carousel');
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));

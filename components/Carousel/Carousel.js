@@ -1,4 +1,16 @@
 class Carousel {
+  constructor(element) {
+    console.log(element);
+    this.element = element;
+  }
+
+  select() {
+    this.element.classList.add("Carousel");
+  }
+
+  deselect() {
+    this.element.classList.remove("Carousel");
+  }
 
 }
 

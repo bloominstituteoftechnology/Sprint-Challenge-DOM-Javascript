@@ -1,5 +1,8 @@
 class Carousel {
-
+  constructor(element) {
+    this.element = element;
+    
+  }
 }
 
 let carousels = document.querySelectorAll(".Carousel");

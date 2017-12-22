@@ -51,8 +51,8 @@ class Tabs {
     // Listens for a click event in its children or self
     this.element.addEventListener('click', (event) => {
       if (event.tabData) {
-       this.updateActive(event.tabData);
-       event.stopPropagation(); 
+        this.updateActive(event.tabData);
+        event.stopPropagation();
       }
     })
 

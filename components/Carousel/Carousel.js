@@ -19,7 +19,6 @@ class CarouselItem {
 class CarouselArrow {
 	constructor(element) {
 		this.element = element;
-		// console.log(this.element.dataset.arrow);
 		this.element.addEventListener('click', (event) => {
 			event.direction = this.element.dataset.arrow
 		});
@@ -38,12 +37,10 @@ class Carousel {
 		this.items = Array.from(this.items).map((item) => {
 			return new CarouselItem(item);
 		});
-		console.log(this.items);
 
 		this.element.addEventListener('click', (event) => {
-			// console.log(event.direction);
 			this.updateCarousel(event.direction);
-			// event.stopPropogation();
+			event.stopPropagation();
 		});
 
 		this.init();

@@ -24,3 +24,5 @@
 .Carousel__item-focused {
   display: inline-block;
 }
+
+/* I plan to append the vanilla-js-carousel.css file into this one to get it all to work together */

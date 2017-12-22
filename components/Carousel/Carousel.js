@@ -3,10 +3,6 @@ class CarouselItem {
 		this.element = element;
 	}
 
-	identity() {
-		return this.element
-	}
-
 	select() {
 		this.element.classList.add("Carousel__item-focused");
 	}
@@ -49,7 +45,7 @@ class Carousel {
 	init() {
 		this.activeItem = document.querySelector(".Carousel__item-focused");
 		this.items.forEach((item) => {
-			if (item.identity() === this.activeItem) {
+			if (item.element === this.activeItem) {
 				item.select();
 				this.activeItem = item;
 			}

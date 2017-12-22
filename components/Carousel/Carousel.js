@@ -10,6 +10,11 @@ class Carousel {
             this.updateActive('right');
         });
     }
+    updateActive(direction) {
+        if (this.activeIndex === 0 && direction === 'left') {
+            this.activeIndex = this.carouselItems.length - 1;
+        }
+    }
 
 }
 

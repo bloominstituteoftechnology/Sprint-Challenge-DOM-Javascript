@@ -13,7 +13,7 @@ let rightArrow = document.querySelector('.Carousel__arrow-right');
 
 leftArrow.addEventListener('click', () => {
   activeItem.classList.remove('Carousel__item-focused');
-  if (carouselItems.indexOf(activeItem) === 0){
+  if (carouselItems.indexOf(activeItem) === 0) {
     activeItem = carouselItems[carouselItems.length - 1];
   } else {
     activeItem = carouselItems[carouselItems.indexOf(activeItem) - 1];
@@ -22,7 +22,7 @@ leftArrow.addEventListener('click', () => {
 })
 rightArrow.addEventListener('click', () => {
   activeItem.classList.remove('Carousel__item-focused');
-  if (carouselItems.indexOf(activeItem) === carouselItems.length - 1){
+  if (carouselItems.indexOf(activeItem) === carouselItems.length - 1) {
     activeItem = carouselItems[0];
   } else {
     activeItem = carouselItems[carouselItems.indexOf(activeItem) + 1];

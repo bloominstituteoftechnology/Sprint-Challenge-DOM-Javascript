@@ -62,7 +62,7 @@ class Carousel {
             this.indexPosition -= 1;
             this.updateActive();
             console.log("left arrow has been clicked!")
-            event.stopPropagation();
+            // event.stopPropagation();
         });
 
         this.rightArrow.addEventListener('click', (event) => {
@@ -91,7 +91,7 @@ class Carousel {
             this.select();
             console.log(this.indexPosition);
         }
-        if (this.indexPosition > 0 && this.indexPosition < 2) {
+        else {
             this.deselect();
             this.select();
             console.log(this.indexPosition);

@@ -30,7 +30,7 @@ class Carousel {
 		this.activeItem;
 
 		this.element.addEventListener('click', (event) => {
-			this.updateCarousel(event.direction);
+			if (event.direction) this.updateCarousel(event.direction);
 			event.stopPropagation();
 		});
 

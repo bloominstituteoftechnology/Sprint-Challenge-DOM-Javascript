@@ -1,42 +1,72 @@
 class Carousel {
   constructor(element){
-    this.element = element;  // attaches the carousel node to this.element
-
-    this.items = this.element.querySelectorAll(".Carousel__items"); // creates an array of nodes which are items in the carousel from the dom
-    this.items =  Array.from(this.items).reduce((obj, item) => {  // reformats the nodes/items into workable elements in an array
-      obj[item.dataset.cItem] = new Items(item);
-      return obj;
-    }, {});
-    console.log(this.items);
-
-    this.activeItem = this.items[0];
-    this.arrow = this.element.querySelectorAll(".Carousel__arrow"); // gathers our arrows
-    this.arrow = Array.from(this.arrow).reduce((obj, arrow) => { // makes arrows DOM node array into workable JS element array
-      obj[arrow.dataset.arrow] = new Arrow(arrow);
-      return obj;
-    }, {});
+    this.element = element;  
+    this.items = this.element.querySelectorAll(".Carousel__item");
+    // console.log(this.items);
+    this.items = Array.from(this.items).map(item => {
+      return new Items(item);
+    });
+    // console.log(this.items);
+    this.current = this.items[0]; // remembers current
+    this.init();
+    this.addListener();
   }
-  activateItem(item){
-    this.activeItem.classList.remove("Carousel__item-focused")
-    item.classList.add("Carousel__item-focused");
-    return;
+
+  init(){
+    return this.items[0].classList.add("Carousel__item-focused"); // sets Box 1 visible on initilization
   }
-  spinLeft(event){
-    
+  addListener(){
+    document.addEventListener("click", (event) => {
+      if (event.target.classList.contains("Carousel__arrow-right") || event.target.classList.contains("Carousel__arrow-left")) return this.shift(this.items, event, this.current);
+    });
+  }
+
+  shift(items, event, currentItem){
+    if (currentItem === items[0]) { // Shift from Box 1
+      if (event.target.classList.contains("Carousel__arrow-right")) {
+        items[0].classList.remove("Carousel__item-focused");
+        items[1].classList.add("Carousel__item-focused");
+        return updateCurrent(items[1]);
+      }
+      if (event.target.classList.contains("Carousel__arrow-left")) {
+        items[0].classList.remove("Carousel__item-focused");
+        items[2].classList.add("Carousel__item-focused");
+        return updateCurrent(items[2]);
+      }
+    }
+    if (currentItem === items[1]) { // Shift from Box 2
+      if (event.target.classList.contains("Carousel__arrow-right")) {
+        items[1].classList.remove("Carousel__item-focused");
+        items[2].classList.add("Carousel__item-focused");
+        return updateCurrent(items[2]);
+      }
+      if (event.target.classList.contains("Carousel__arrow-left")) {
+        items[1].classList.remove("Carousel__item-focused");
+        items[0].classList.add("Carousel__item-focused");
+        return updateCurrent(items[0]);
+      }
+    }
+    if (currentItem === items[2]) { // Shift from Box 3
+      if (event.target.classList.contains("Carousel__arrow-right")) {
+        items[2].classList.remove("Carousel__item-focused");
+        items[0].classList.add("Carousel__item-focused");
+        return updateCurrent(items[0]);
+      }
+      if (event.target.classList.contains("Carousel__arrow-left")) {
+        items[2].classList.remove("Carousel__item-focused");
+        items[1].classList.add("Carousel__item-focused");
+        return updateCurrent(items[1]);
+      }
+    }
+  }
+  updateCurrent(current){
+    this.current = current;
   }
 }
 
 class Items {
-  constructor(element) {
-    this.element = element;
-
-    this
-  }
-}
-
-class Arrow {
-  constructor(element) {
-
+  constructor(item) {
+    this.item = item;
   }
 }
 

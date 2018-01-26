@@ -25,7 +25,7 @@ class Carousel {
     this.arrowLeft.addEventListener('click', () => { // When this works, it will only work for an array of 3 items (I want to adjust this later, once I can get it to work)
       let activeItem = this.currentItem;
       let index = this.items.findIndex((item) => {
-        item === activeItem;
+        return item === activeItem;
       });
       if (activeItem === this.items[0]) {
         activeItem = this.items[this.items.length-1];
@@ -39,7 +39,7 @@ class Carousel {
     this.arrowRight.addEventListener('click', () => { // needs to check the place of activeItem inside the this.items array
       let activeItem = this.currentItem;
       let index = this.items.findIndex((item) => {
-        item === activeItem;
+        return item === activeItem;
       });
       if (activeItem === this.items[this.items.length - 1]) {
         activeItem = this.items[0];

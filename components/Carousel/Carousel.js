@@ -1,4 +1,9 @@
 class Carousel {
+  constructor(element) {
+    this.element = element;
+
+    this.items = element.querySelectorAll('Carousel__item');
+  }
 
 }
 

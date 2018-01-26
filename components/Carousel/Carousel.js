@@ -1,38 +1,70 @@
 
-class CarouselNav {
+class Slide {
   constructor(element) {
     this.element = element;
-    this.element.addEventListener('click', (event) => {
-      //
-    });
   }
 
   select() {
-    this.element.classList.add("Tabs__link--selected");
+    this.element.classList.add("Carousel__item-focused");
   }
 
   deselect() {
-    this.element.classList.remove("Tabs__link--selected");
+    this.element.classList.remove("Carousel__item-focused");
   }
 }
+
+// class CarouselNav {
+//   constructor(element) {
+//     this.element = element;
+//   }
+
+//   select() {
+//   //  this.element.classList.add("Tabs__link--selected");
+//   }
+
+//   deselect() {
+//   //  this.element.classList.remove("Tabs__link--selected");
+//   }
+// }
+
 class Carousel {
   constructor(element) {
     this.element = element;
+    // Gets the let and Right arrows
     this.arrowLeft = element.querySelector(".Carousel__arrow-left");
     this.arrowRight = element.querySelector(".Carousel__arrow-right");
-    console.log(this.arrowLeft, this.rrowRight);
+
     this.slides = element.querySelectorAll(".Carousel__item");
     this.slides = Array.from(this.slides).map((slide) => {
-      return new Slide(link, this);
+      return new Slide(slide, this);
     });
+
     this.element.addEventListener('click', (event) => {
-      if (event.tabData) {
-       this.updateActive(event.tabData);
-       event.stopPropagation(); 
-      }
+      let current = this.getCurrentSlideIndex();
+      if (event.target === this.arrowLeft) {
+          if(current === -1) return;
+          else if (current === 0){
+            this.slides[current].deselect()
+            this.slides[this.slides.length-1].select();
+            // return this.slides[length-1].select();
+          }
+          else {
+            this.slides[current].deselect();
+            this.slides[current-1].select();
+          }
+        }
     })
-  } 
+  }
+  init() {
+  }
+
+  getCurrentSlideIndex() {
+    const currentSlide = this.element.querySelector(".Carousel__item-focused").dataset.slide;
+    const currentSlideIndex = this.slides.findIndex(slide => slide.element.dataset.slide === currentSlide);
+    return currentSlideIndex;
+  }
 }
 
 let carousels = document.querySelectorAll(".Carousel");
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));
+

@@ -10,11 +10,11 @@ class Carousel {
     this.right = element.querySelectorAll(".Carousel__arrow-right");
 
     this.left.addEvent('click', (event) => {
-      this.updateActive('left')
+      this.
 
   })
     this.right.addEvent('click', (event) => {
-      this.updateActive('right')
+      this.
 })
 
   }

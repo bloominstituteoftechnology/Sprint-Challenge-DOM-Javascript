@@ -23,19 +23,22 @@ class Carousel {
     this.numItems = this.items.length;
     this.count = 1;
     this.carItems = this.items.map(val => new CarouselItem(val));
-
     document.querySelector('.Carousel__arrow-right').addEventListener('click', () => {
-      console.log('clicked right');
-      this.count += 1;
-      console.log(this.count);
+      if (this.count === this.items.length) {
+        this.count = 1;
+      } else {
+        this.count += 1;
+      }
       this.updateActive(this.count);
     });
     document.querySelector('.Carousel__arrow-left').addEventListener('click', () => {
-      console.log('clicked left');
-      this.count -= 1;
+      if (this.count === 1) {
+        this.count = this.items.length;
+      } else {
+        this.count -= 1;
+      }
       this.updateActive(this.count);
     });
-
     this.activeItem = this.items[0];
     this.init();
  }

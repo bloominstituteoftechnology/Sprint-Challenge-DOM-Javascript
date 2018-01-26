@@ -75,6 +75,7 @@ class Carousel {
         this.slide = 1;
 
         this.arrows = element.querySelectorAll('.Carousel__link');
+        console.log(this.arrows);
         this.arrows = Array.from(this.arrows).reduce((obj, arrow) => {
             obj[arrow.dataset.dir] = new CarouselLink(arrow);
             return obj;

@@ -12,6 +12,10 @@
   top: 50px;
 }
 
+.Carousel__arrow-right:hover, .Carousel__arrow-left:hover {
+  cursor: pointer;
+}
+
 .Carousel__items {
   margin-left: 70px;
   margin-right: 70px;

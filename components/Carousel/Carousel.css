@@ -1,8 +1,13 @@
+.Carousel {
+  border: green 1px solid;
+}
+
 .Carousel__arrow-left {
   font-size: 42px;
   position: absolute;
   left: 20px;
   top: 50px;
+  border: purple 1px solid;
 }
 
 .Carousel__arrow-right {
@@ -10,11 +15,13 @@
   position: absolute;
   right: 20px;
   top: 50px;
+  border: purple 1px solid;
 }
 
 .Carousel__items {
   margin-left: 70px;
   margin-right: 70px;
+  border: red 1px dotted;
 }
 
 .Carousel__item {
@@ -23,4 +30,5 @@
 
 .Carousel__item-focused {
   display: inline-block;
+  border: yellow dotted 1px;
 }

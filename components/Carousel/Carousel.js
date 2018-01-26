@@ -17,11 +17,10 @@ class Carousel {
     this.element = element;
 
     this.items = document.querySelectorAll('.Carousel__item');
-    console.log('here are items:', this.items);
     this.items = Array.from(this.items).map(item => new CarouselItem(item));
+    console.log('here are items:', this.items);
     
     this.arrowLeft = this.element.querySelector('.Carousel__arrow-left');
-    console.log('this is arrow left', this.arrowLeft);
     this.arrowRight = this.element.querySelector('.Carousel__arrow-right');
 
     this.currentItem = this.items[0];
@@ -32,7 +31,7 @@ class Carousel {
       else if (activeItem = this.items[1]) {activeItem = this.items[0]}
       else if (activeItem = this.items[2]) {activeItem = this.items[1]};
       this.updateActiveItem(activeItem);
-      activeItem.UpNext();
+      activeItem.upNext();
     });
 
     this.arrowRight.addEventListener('click', () => {
@@ -41,7 +40,7 @@ class Carousel {
       else if (activeItem = this.items[1]) {activeItem = this.items[2]}
       else if (activeItem = this.items[2]) {activeItem = this.items[0]};
       this.updateActiveItem(activeItem);
-      activeItem.UpNext();
+      activeItem.upNext();
     });
 
     this.initialize();

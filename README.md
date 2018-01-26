@@ -4,9 +4,9 @@
 * **Just a friendly Reminder** Don't fret or get anxious about this, this is a no-pressure assessment that is only going to help guide you here in the near future. This is NOT a pass/fail situation. 
 
 ## Questions
-1. What is the DOM?
-2. What is an event?
-2. What is an event listener?
+1. What is the DOM? - Complete
+2. What is an event? - Complete
+2. What is an event listener? - Complete
 
 ## Challenge
-Your challenge is to write the functionality of a *Caoursel* component. You have the HTML and CSS already in place. This is an advanced challenge, so you are not expected to be able to complete it. What we're looking for is your ability to begin writing this functionality, and use your newly learned patterns to set up your component.
+Your challenge is to write the functionality of a *Carousel* component. You have the HTML and CSS already in place. This is an advanced challenge, so you are not expected to be able to complete it. What we're looking for is your ability to begin writing this functionality, and use your newly learned patterns to set up your component.

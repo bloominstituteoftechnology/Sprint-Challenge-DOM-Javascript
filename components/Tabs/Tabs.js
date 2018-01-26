@@ -52,7 +52,7 @@ class Tabs {
     this.element.addEventListener('click', (event) => {
       if (event.tabData) {
        this.updateActive(event.tabData);
-       event.stopPropagation(); 
+       event.stopPropagation();
       }
     })
 

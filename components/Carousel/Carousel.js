@@ -23,33 +23,31 @@ class Carousel {
     this.arrowLeft = this.element.querySelector('.Carousel__arrow-left');
     this.arrowRight = this.element.querySelector('.Carousel__arrow-right');
 
-    this.arrowLeft.addEventListener('click', (event) => { // When this works, it will only work for an array of 3 items (I want to adjust this later, once I can get it to work)
+    this.arrowLeft.addEventListener('click', () => { // When this works, it will only work for an array of 3 items (I want to adjust this later, once I can get it to work)
       let activeItem = this.currentItem;
-      if (activeItem = this.items[0]) {
+      if (activeItem === this.items[0]) {
         activeItem = this.items[2];
-      } else if (activeItem = this.items[1]) {
+      } else if (activeItem === this.items[1]) {
         activeItem = this.items[0];
-      } else if (activeItem = this.items[2]) {
+      } else if (activeItem === this.items[2]) {
         activeItem = this.items[1];
       }
       this.updateActiveItem(activeItem);
       activeItem.upNext();
-      event.stopPropagation();
     });
 
-    this.arrowRight.addEventListener('click', (event) => {
+    this.arrowRight.addEventListener('click', () => {
       let activeItem = this.currentItem;
-      if (activeItem = this.items[0]) {
+      if (activeItem === this.items[0]) {
         activeItem = this.items[1];
-      } else if (activeItem = this.items[1]) {
+      } else if (activeItem === this.items[1]) {
         activeItem = this.items[2];
-      } else if (activeItem = this.items[2]) {
+      } else if (activeItem === this.items[2]) {
         activeItem = this.items[0];
       }
 
       this.updateActiveItem(activeItem);
       activeItem.upNext();
-      event.stopPropagation();
     });
     this.currentItem = this.items[0];
     this.initialize();

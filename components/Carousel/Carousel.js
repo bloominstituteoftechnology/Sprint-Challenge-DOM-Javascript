@@ -5,11 +5,13 @@ class Carousel {
     // Puts Carousel Items into an array
     this.items = element.querySelectorAll(".Carousel__item");
     this.items = Array.from(this.items);
+    console.log(this.items);
     this.index = 0;
 
     // Adds arrow elements into an array
-    this.arrows = element.querySelectorAll(".arrow");
+    this.arrows = element.querySelectorAll(".Arrow");
     this.arrows = Array.from(this.arrows);
+    console.log(this.arrows);
     // Adds event listeners that return false/true for left/right
     this.arrows[0].addEventListener('click', () => {
       this.updateActive(false);
@@ -19,7 +21,7 @@ class Carousel {
       this.updateActive(true);
 
     });
-    this.activeData = index;
+    this.activeData = this.index;
   }
 
   updateActive(data) {

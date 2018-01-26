@@ -5,23 +5,30 @@ class Carousel {
     this.items = Array.from(this.carItems).map((item) => {
       return new CarItem(item);
     });
-    // console.log(this.element);
-    // console.log(this.carItems);
+    this.activeItemIndex = 0;
     this.activeItem = this.carItems[0];
     this.element.addEventListener('click', (event) => {
-      // let carArrowLeft = this.element.querySelector(".Carousel__arrow-left");
-      // let carArrowRight = this.element.querySelector(".Carousel__arrow-right");
       let carArrowLeftClicked = event.target.classList[0] === 'Carousel__arrow-left'; 
       let carArrowRightClicked = event.target.classList[0] === 'Carousel__arrow-right';
-      if (carArrowLeftClicked) console.log('Clicked left arrow');
-      if (carArrowRightClicked) console.log('Clicked right arrow');
+      if (carArrowLeftClicked) {
+        console.log('Clicked left arrow');
+        if (this.activeItemIndex === 0) this.activeItemIndex = this.carItems.length - 1;
+        else { this.activeItemIndex--; }
+        console.log(this.activeItemIndex);
+      }
+      if (carArrowRightClicked) {
+        console.log('Clicked right arrow');
+        if (this.activeItemIndex === this.carItems.length - 1) this.activeItemIndex = 0;
+        else { this.activeItemIndex++; }
+        console.log(this.activeItemIndex);
+      }
     })
   }
 }
 
 class CarItem {
   constructor(element) {
-
+    this.element = element;
   }
 }
 

@@ -15,7 +15,7 @@ class CarouselItem {
 class Carousel {
   constructor(element) {
     this.element = element;
-    this.items = element.querySelectorAll(".Carousel__items");
+    this.items = element.querySelectorAll(".Carousel__item");
     this.items = Array.from(this.items).map(item => {
       return new CarouselItem(item);
 		});
@@ -24,21 +24,17 @@ class Carousel {
 		let i = 0;
     document.addEventListener("click", () => {
       if (event.target.dataset.arrow) {
+				console.log('test');
 				const data = event.target.dataset.arrow;
 				console.log(data);
 				if (data === 'R') {
-					if (i < length) i++;
-					else {
-						i = 0;
-					}
+					if (i < length - 1) i++;
+					else i = 0;
 					this.updateActive(this.items[i]);
 				}
-				if (data === 'L' && i > length) {
-					if (i > length) i--;
-					else {
-						i = length;
-						i--;
-					}
+				if (data === 'L') {
+					if (i > 0) i--;
+					else i = length - 1;
 					this.updateActive(this.items[i]);
 				}
     	}

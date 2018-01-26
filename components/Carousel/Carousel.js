@@ -22,16 +22,12 @@ class Carousel {
     this.arrowLeft = this.element.querySelector('.Carousel__arrow-left');
     this.arrowRight = this.element.querySelector('.Carousel__arrow-right');
 
-    this.arrowLeft.addEventListener('click', () => { // When this works, it will only work for an array of 3 items (I want to adjust this later, once I can get it to work)
+    this.arrowLeft.addEventListener('click', () => { // When this works, it will only work for an array of 3 items (I adjusted this, so it should work for any number other than 0)
       let activeItem = this.currentItem;
       let index = this.items.findIndex((item) => {
         return item === activeItem;
       });
-      if (activeItem === this.items[0]) {
-        activeItem = this.items[this.items.length-1];
-      } else {
-        activeItem = this.items[index - 1]
-      }
+      activeItem === this.items[0] ? activeItem = this.items[this.items.length-1] : activeItem = this.items[index - 1];
       this.updateActiveItem(activeItem);
       activeItem.upNext();
     });
@@ -41,12 +37,7 @@ class Carousel {
       let index = this.items.findIndex((item) => {
         return item === activeItem;
       });
-      if (activeItem === this.items[this.items.length - 1]) {
-        activeItem = this.items[0];
-      } else {
-        activeItem = this.items[index + 1];
-      }
-
+      activeItem === this.items[this.items.length - 1] ? activeItem = this.items[0] : activeItem = this.items[index + 1];
       this.updateActiveItem(activeItem);
       activeItem.upNext();
     });

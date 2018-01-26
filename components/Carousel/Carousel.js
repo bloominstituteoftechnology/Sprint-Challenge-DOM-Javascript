@@ -13,20 +13,6 @@ class Slide {
   }
 }
 
-// class CarouselNav {
-//   constructor(element) {
-//     this.element = element;
-//   }
-
-//   select() {
-//   //  this.element.classList.add("Tabs__link--selected");
-//   }
-
-//   deselect() {
-//   //  this.element.classList.remove("Tabs__link--selected");
-//   }
-// }
-
 class Carousel {
   constructor(element) {
     this.element = element;
@@ -54,17 +40,18 @@ class Carousel {
           }
         }
     })
+    this.init();
   }
   init() {
+    this.slides[0].select();
   }
 
   getCurrentSlideIndex() {
-    const currentSlide = this.element.querySelector(".Carousel__item-focused").dataset.slide;
-    const currentSlideIndex = this.slides.findIndex(slide => slide.element.dataset.slide === currentSlide);
+    const currentSlideData = this.element.querySelector(".Carousel__item-focused").dataset.slide;
+    const currentSlideIndex = this.slides.findIndex(slide => slide.element.dataset.slide === currentSlideData);
     return currentSlideIndex;
   }
 }
 
 let carousels = document.querySelectorAll(".Carousel");
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));
-

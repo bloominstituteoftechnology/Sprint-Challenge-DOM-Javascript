@@ -16,17 +16,17 @@ class Carousel {
   constructor(element) {
     this.element = element;
 
-    this.items = document.querySelectorAll('Carousel__item');
+    this.items = document.querySelectorAll('.Carousel__item');
     console.log('here are items:', this.items);
     this.items = Array.from(this.items).map(item => new CarouselItem(item));
     
-    this.arrowLeft = this.element.querySelector('Carousel__arrow-left');
+    this.arrowLeft = this.element.querySelector('.Carousel__arrow-left');
     console.log('this is arrow left', this.arrowLeft);
-    this.arrowRight = this.element.querySelector('Carousel__arrow-right');
+    this.arrowRight = this.element.querySelector('.Carousel__arrow-right');
 
     this.currentItem = this.items[0];
 
-    this.arrowLeft.addEventListener('click', () => {
+    this.arrowLeft.addEventListener('click', () => { // When this works, it will only work for an array of 3 items (I want to adjust this later, once I can get it to work)
       let activeItem = this.currentItem;
       if (activeItem = this.items[0]) {activeItem = this.items[2]}
       else if (activeItem = this.items[1]) {activeItem = this.items[0]}

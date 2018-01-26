@@ -23,4 +23,5 @@
 
 .Carousel__item-focused {
   display: inline-block;
+  background-color: green;
 }

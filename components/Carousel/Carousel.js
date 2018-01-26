@@ -18,7 +18,6 @@ class Carousel {
 
     this.items = document.querySelectorAll('.Carousel__item');
     this.items = Array.from(this.items).map(item => new CarouselItem(item));
-    console.log('here are items:', this.items);
     
     this.arrowLeft = this.element.querySelector('.Carousel__arrow-left');
     this.arrowRight = this.element.querySelector('.Carousel__arrow-right');
@@ -36,7 +35,7 @@ class Carousel {
       activeItem.upNext();
     });
 
-    this.arrowRight.addEventListener('click', () => {
+    this.arrowRight.addEventListener('click', () => { // needs to check the place of activeItem inside the this.items array
       let activeItem = this.currentItem;
       if (activeItem === this.items[0]) {
         activeItem = this.items[1];
@@ -58,7 +57,6 @@ class Carousel {
   }
 
   updateActiveItem(Item) {
-    console.log('This this the item that should go away', this.currentItem);
     this.currentItem.goAway();
     this.currentItem = Item;
   }

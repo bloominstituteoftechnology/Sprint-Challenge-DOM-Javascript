@@ -24,3 +24,8 @@
 .Carousel__item-focused {
   display: inline-block;
 }
+
+.clicked-on {
+  color: red;
+  border-style: solid;
+}

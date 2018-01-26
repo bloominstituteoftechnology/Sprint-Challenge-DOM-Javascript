@@ -7,12 +7,12 @@ class Carousel {
 		// assign left arrow node to click event
 		this.leftArrow = this.mainElement.querySelector('.Carousel__arrow-left').addEventListener('click', (event) => {
 			this.updateCarousel(event);
-      event.stopPropagation();
+      	event.stopPropagation();
    	});
 		// assign right arrow node to click event
 		this.rightArrow = this.mainElement.querySelector('.Carousel__arrow-right').addEventListener('click', (event) => {
 			this.updateCarousel(event);
-      event.stopPropagation();
+      	event.stopPropagation();
    	});
    	// assign current focused item to 0 for tracking
    	this.currentFocused = 0;

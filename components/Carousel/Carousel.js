@@ -86,7 +86,9 @@ class Carousel {
         }, {});
 
         this.element.addEventListener('click', (event) => {
+            console.log('what');
             if (event.carouselData) {
+                console.log('why isnt this calling');
                 this.updateActive(event.carouselData);
                 event.stopPropagation();
             }
@@ -97,21 +99,22 @@ class Carousel {
         this.defaultActive(this.activeData);
     }
 
-    updateActive(data) {  // the ugliest and most naive function imaginable  DOESNT EVEN WORK
-
+    updateActive(data) {  // the ugliest and most naive function imaginable
+        console.log('its getting to update');
         if (this.slide === 1) {
-            if (data === 1) {
+            if (data === '1') {
                 this.slide = 3;
-                this.slide[1].deselect();
-                this.slide[2].deselect();
+                console.log(this.slide);
+                this.items[1].deselect();
+                this.items[2].deselect();
                 this.items[this.slide].select()
 
                 return;
 
-            } else if (data === 2) {  // literally the hackiest solution possible, i just want it working   DOESNT EVEN WORK
-                slide = 2;
-                this.slide[1].deselect();
-                this.slide[3].deselect();
+            } else if (data === '2') {  // literally the hackiest solution possible, i just want it working (only the left does for some reason)
+                this.slide = 2;
+                this.items[1].deselect();
+                this.items[3].deselect();
                 this.items[this.slide].select()
 
                 return;
@@ -119,18 +122,18 @@ class Carousel {
             }
         }
         if (this.slide === 2) {
-            if (data === 1) {
-                slide = 1;
-                this.slide[2].deselect();
-                this.slide[3].deselect();
+            if (data === '1') {
+                this.slide = 1;
+                this.items[2].deselect();
+                this.items[3].deselect();
                 this.items[this.slide].select()
 
                 return;
 
-            } else if (data === 2) { // this also doesnt scale by number of items, whatever
-                slide = 3;
-                this.slide[1].deselect();
-                this.slide[2].deselect();
+            } else if (data === '2') { // this also doesnt scale by number of items, whatever
+                this.slide = 3;
+                this.items[1].deselect();
+                this.items[2].deselect();
                 this.items[this.slide].select()
 
                 return;
@@ -138,18 +141,18 @@ class Carousel {
             }
         }
         if (this.slide === 3) {
-            if (data === 1) {
-                slide = 2;
-                this.slide[3].deselect();
-                this.slide[1].deselect();
+            if (data === '1') {
+                this.slide = 2;
+                this.items[3].deselect();
+                this.items[1].deselect();
                 this.items[this.slide].select()
 
                 return;
 
-            } else if (data === 2) {
-                slide = 1;
-                this.slide[2].deselect();
-                this.slide[3].deselect();
+            } else if (data === '2') {
+                this.slide = 1;
+                this.items[2].deselect();
+                this.items[3].deselect();
                 this.items[this.slide].select()
                 return;
 
@@ -183,6 +186,7 @@ class CarouselItem {
     }
 
     select() {
+        console.log('its getting here');
         this.element.classList.add('Carousel__item--focused');
     }
     deselect() {

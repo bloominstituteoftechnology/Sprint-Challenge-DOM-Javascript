@@ -3,6 +3,11 @@
   position: absolute;
   left: 20px;
   top: 50px;
+  display: block;
+}
+
+.Carousel__arrow-left--hidden {
+  display: none;
 }
 
 .Carousel__arrow-right {
@@ -10,6 +15,11 @@
   position: absolute;
   right: 20px;
   top: 50px;
+  display: block;
+}
+
+.Carousel__arrow-right--hidden {
+  display: none;
 }
 
 .Carousel__items {
@@ -23,4 +33,9 @@
 
 .Carousel__item-focused {
   display: inline-block;
+}
+
+div[class|='Carousel__arrow'] {
+  cursor: pointer;
+  user-select: none;
 }

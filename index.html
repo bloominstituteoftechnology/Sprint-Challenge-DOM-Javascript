@@ -6,7 +6,8 @@
 	</head>
 	<body>
 		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
-		
+		<script defer="defer" src="./components/Carousel/Carousel.js"></script>
+
 		<div class="Section Section--bordered">
 			<div class="Section__full">
 				<div class="Header">Header</div>
@@ -60,33 +61,32 @@
 			</div>
 		</div>
 
+
 		<div class="Section Section--bordered">
 			<div class="Section__full">
 				<div class="Carousel">
-					<div class="Carousel__arrow-left"> < </div>
-					<div class="Carousel__items">
-						<div class="Carousel__item Carousel__item-focused">
-							<div class="Box Box--placeholder Box--grey">
+					<div class="Carousel__arrow-left Carousel__link" data-dir="1"> &lsaquo; </div>
+					<div class="Carousel__track">
+						<div class="Carousel__item Carousel__default" data-slide="1">
+							<div class="Box Box--placeholder Box--grey" >
 								<div class="Box__title">Box # 1</div>
 								<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
 							</div>
 						</div>
-					</div>
-					<div class="Carousel__item">
-							<div class="Box Box--placeholder Box--blue">
-								<div class="Box__title">Box # 1</div>
+						<div class="Carousel__item" data-slide="2">
+							<div class="Box Box--placeholder Box--blue" >
+								<div class="Box__title">Box # 2</div>
+								<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
+							</div>
+						</div>
+						<div class="Carousel__item" data-slide="3">
+							<div class="Box Box--placeholder Box--green" >
+								<div class="Box__title">Box # 3</div>
 								<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
 							</div>
 						</div>
 					</div>
-					<div class="Carousel__item">
-							<div class="Box Box--placeholder Box--green">
-								<div class="Box__title">Box # 1</div>
-								<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-							</div>
-						</div>
-					</div>
-					<div class="Carousel__arrow-right"> > </div>
+					<div class="Carousel__arrow-right Carousel__link" data-dir="2"> &rsaquo; </div>
 				</div>
 			</div>
 		</div>

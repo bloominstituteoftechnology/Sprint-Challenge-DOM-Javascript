@@ -16,9 +16,44 @@ class Carousel {
   constructor(element) {
     this.element = element;
 
-    this.items = element.querySelectorAll('Carousel__item');
+    this.items = document.querySelectorAll('Carousel__item');
+    console.log('here are items:', this.items);
     this.items = Array.from(this.items).map(item => new CarouselItem(item));
-    console.log(this.items);
+    
+    this.arrowLeft = this.element.querySelector('Carousel__arrow-left');
+    console.log('this is arrow left', this.arrowLeft);
+    this.arrowRight = this.element.querySelector('Carousel__arrow-right');
+
+    this.currentItem = this.items[0];
+
+    this.arrowLeft.addEventListener('click', () => {
+      let activeItem = this.currentItem;
+      if (activeItem = this.items[0]) {activeItem = this.items[2]}
+      else if (activeItem = this.items[1]) {activeItem = this.items[0]}
+      else if (activeItem = this.items[2]) {activeItem = this.items[1]};
+      this.updateActiveItem(activeItem);
+      activeItem.UpNext();
+    });
+
+    this.arrowRight.addEventListener('click', () => {
+      let activeItem = this.currentItem;
+      if (activeItem = this.items[0]) {activeItem = this.items[1]}
+      else if (activeItem = this.items[1]) {activeItem = this.items[2]}
+      else if (activeItem = this.items[2]) {activeItem = this.items[0]};
+      this.updateActiveItem(activeItem);
+      activeItem.UpNext();
+    });
+
+    initialize();
+  }
+
+  initialize() {
+    this.currentItem.upNext();
+  }
+
+  updateActiveItem(Item) {
+    this.currentItem.goAway();
+    this.currentItem = Item;
   }
 
 }

@@ -44,7 +44,7 @@ class Carousel {
       activeItem.UpNext();
     });
 
-    initialize();
+    this.initialize();
   }
 
   initialize() {

@@ -6,7 +6,8 @@ class Carousel {
 
         this.arrows = element.querySelectorAll(`.Carousel__Arrow-${direction}`);  // ?
         this.arrows = Array.from(this.arrows);
-    // i'm lost
+
+
 
 }
 

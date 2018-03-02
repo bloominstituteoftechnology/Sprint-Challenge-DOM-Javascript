@@ -4,7 +4,6 @@ class Button {
       this.btns = parent;
      
       this.element.addEventListener('click', () => {
-        // this.btns.hide(this);
         this.hidden();
       });
     };
@@ -25,6 +24,5 @@ class Button {
     }
   }
   
-  let btns = document.querySelectorAll(".Buttons");
-  btns = Array.from(btns).map(btns => new Buttons(btns));
-  console.log(btns);
+  let btnsClass = document.querySelectorAll(".Buttons");
+  btnsClass = Array.from(btnsClass).map(btnsClass => new Buttons(btnsClass));

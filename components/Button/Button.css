@@ -1,3 +1,10 @@
 .Button {
   display: inline-block;
+  padding: 15px;
+  background-color: tomato;
+  border: 2.5px dotted aqua;
+}
+
+.Button__magic {
+    display: none;
 }

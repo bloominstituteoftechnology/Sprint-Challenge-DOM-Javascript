@@ -13,4 +13,7 @@ button = Array.from(button).map(button => {
     return new Buttons(button)
 }); // implicit return
 
+// let button = document.querySelectorAll(".Button");
+// button = Array.from(button).map(button => new Buttons(button)}); // smaller implicit return
+
 console.log(button); // tracks button in the console

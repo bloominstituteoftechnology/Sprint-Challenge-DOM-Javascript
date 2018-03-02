@@ -12,3 +12,7 @@
 .Button:hover {
   background: aquamarine;
 }
+
+.Button--hidden {
+  display: none;
+}

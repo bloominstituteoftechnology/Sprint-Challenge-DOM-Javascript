@@ -20,24 +20,22 @@ class Carousel {
   
   
   next() {
-    if (counter >= 0 && counter < 3){
+    if (counter >= 0 && counter < 2){
       counter++;
-      this.element.querySelector(`#\\3${counter}`).classList.add("Carousel__item-focused");
-      this.element.querySelector(`#\\3${counter-1}`).classList.remove("Carousel__item-focused");
-      console.log(counter);
     }
-    
+    this.element.querySelector(`#\\3${counter}`).classList.add("Carousel__item-focused");
+    this.element.querySelector(`#\\3${counter-1}`).classList.remove("Carousel__item-focused");
+    console.log(counter);
     
   }
   
   previous() {
-    if (counter >= 0 && counter < 3){
+    if (counter >= 1 && counter < 3){
       counter--;
-      this.element.querySelector(`#\\3${counter}`).classList.add("Carousel__item-focused");
-      this.element.querySelector(`#\\3${counter+1}`).classList.remove("Carousel__item-focused");
     }
-
-    
+    this.element.querySelector(`#\\3${counter}`).classList.add("Carousel__item-focused");
+    this.element.querySelector(`#\\3${counter+1}`).classList.remove("Carousel__item-focused");
+    console.log(counter);
   }
 }
 

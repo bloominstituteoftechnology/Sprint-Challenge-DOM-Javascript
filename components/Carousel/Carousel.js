@@ -3,11 +3,8 @@ class CarouselItem {
     this.element = element;
   }
 
-  select() {
-    this.element.classList.add('Carousel__item-focused')
-  }
-  deselect() {
-    this.element.classList.remove('Carousel__item-focused');
+  toggleFocus() {
+    this.element.classList.toggle('Carousel__item-focused')
   }
 }
 
@@ -15,22 +12,33 @@ class Carousel {
   constructor(element) {
     this.element = element;
     this.arrowLeft = this.element.querySelector('.Carousel__arrow-left');
-    this.arrowLeft.addEventListener('click', () => { this.carousel.updateActive(this) });
+    this.arrowLeft.addEventListener('click', () => { this.switchLeft() });
     this.arrowRight = this.element.querySelector('.Carousel__arrow-right'); 
-    this.arrowRight.addEventListener('click', () => {this.carousel.updateActive(this) });
+    console.log(this.arrowRight);
+    this.arrowRight.addEventListener('click', () => { this.switchRight() });
     this.items = element.getElementsByClassName('Carousel__item');
+    
+
     console.log('this.items');
     console.log(this.items);
     
     this.items = Array.from(this.items).map(item => new CarouselItem(item));
     console.log(this.items);
-    this.activeItem = this.items[0];
+    this.items.unshift(this.items.pop());
+    this.focusIndex = Math.ceil((this.items.length / 2) - 1);
+    console.log(`index ${this.focusIndex} ${this.items.length}`);
   }
 
-  updateActive(newActive) {
-    this.activeItem.deselect();
-    this.activeItem = newActive;
-    this.activeItem.select();
+  switchRight() {
+    this.items[this.focusIndex].toggleFocus();
+    this.items.push(this.items.shift());
+    this.items[this.focusIndex].toggleFocus();
+  }
+
+  switchLeft() {
+    this.items[this.focusIndex].toggleFocus();
+    this.items.unshift(this.items.pop());
+    this.items[this.focusIndex].toggleFocus();
   }
 
 }

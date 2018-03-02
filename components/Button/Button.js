@@ -2,8 +2,8 @@ class Button {
   constructor(element) {
     this.element = element;
 
-    element.parentElement.addEventListener('click', () => {
-      event.target.classList.add('Button--gone');
+    element.addEventListener('click', () => {
+      element.classList.add('Button--gone');
     });
   }
 }

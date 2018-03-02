@@ -6,9 +6,9 @@
 
 .Dropdown__button {
   padding: 15px;
-  background-color: white;
-  border: 2.5px solid black;
-
+  background-color: pink;
+  border: 2.5px solid darkslategray;
+  opacity: 0.6;
 }
 
 .Dropdown__content {

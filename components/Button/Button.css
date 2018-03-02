@@ -10,3 +10,7 @@
   justify-content: space-around;
 }
 
+.Button__hide {
+  display: none;
+}
+

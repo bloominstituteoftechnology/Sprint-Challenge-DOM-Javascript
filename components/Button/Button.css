@@ -8,3 +8,7 @@
   padding: 15px;
   margin-right: 10px;
 }
+
+.Button__hide {
+  display: none;
+}

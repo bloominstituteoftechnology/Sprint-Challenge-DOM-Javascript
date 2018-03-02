@@ -6,14 +6,13 @@ class Carousel {
             this.toLeft();
         });
         this.rightArrow = document.getElementsByClassName("Carousel__arrow-right")[0];
-        this.rightArrow.addEventListener('click', event => this.toRight());
+        this.rightArrow.addEventListener('click', event => this.toRight(event.target));
         this.items = element.getElementsByClassName("Carousel__item");
         this.items = Array.from(this.items).map(item => new CarouselItem(item));
         this.focusIndex = 0;
         this.activeItem = this.items[this.focusIndex];
     }
     toRight() {
-        element.style.background = "yellow";
         this.activeItem.deselect();
         if (this.focusIndex < this.items.length-1) {
             this.focusIndex++;

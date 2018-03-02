@@ -6,4 +6,5 @@ disButton.forEach( (item) => {
         item.classList.toggle("Button--clicked");
         console.log("test");
     });
-})
+});
+

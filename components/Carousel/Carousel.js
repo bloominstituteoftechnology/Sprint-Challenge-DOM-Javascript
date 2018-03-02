@@ -27,13 +27,13 @@ class Carousel {
     updateContent(arrowDirection) {
         //Setup loop to iterate over each carousel item, track which item focus is on, remove and add focus accordingly based on which arrow direction argument is passed
         for (let i = 0; i <= this.carouselItems.length; i++) {
-            if (this.carouselItems[i].classList.contains('Carousel__item-focused') && arrow === 'rightArrow') {
+            if (this.carouselItems[i].classList.contains('Carousel__item-focused') && arrowDirection === 'rightArrow') {
                 if (i + 1 > this.carouselItems.length - 1) {return;}
                 this.carouselItems[i + 1].classList.add('Carousel__item-focused');
                 this.carouselItems[i].classList.remove('Carousel__item-focused');
                 return;
 
-            } else if (this.carouselItems[i].classList.contains('Carousel__item-focused') && arrow === 'leftArrow') {
+            } else if (this.carouselItems[i].classList.contains('Carousel__item-focused') && arrowDirection === 'leftArrow') {
                 if (i - 1 < 0) {return;}
                 this.carouselItems[i - 1].classList.add('Carousel__item-focused');
                 this.carouselItems[i].classList.remove('Carousel__item-focused');

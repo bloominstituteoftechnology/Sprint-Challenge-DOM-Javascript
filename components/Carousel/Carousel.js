@@ -3,19 +3,19 @@ class Carousel {
         this.element = element;
         this.leftArrow = document.getElementsByClassName("Carousel__arrow-left")[0];
         this.leftArrow.addEventListener('click', (event) => {
-            this.toLeft(event.target);
+            this.toLeft();
         });
         this.rightArrow = document.getElementsByClassName("Carousel__arrow-right")[0];
-        this.rightArrow.addEventListener('click', event => this.toRight(event.target));
+        this.rightArrow.addEventListener('click', event => this.toRight());
         this.items = element.getElementsByClassName("Carousel__item");
         this.items = Array.from(this.items).map(item => new CarouselItem(item));
         this.focusIndex = 0;
         this.activeItem = this.items[this.focusIndex];
     }
-    toRight(element) {
+    toRight() {
         element.style.background = "yellow";
         this.activeItem.deselect();
-        if (this.focusIndex++ < this.items.length) {
+        if (this.focusIndex < this.items.length-1) {
             this.focusIndex++;
         }
         else {
@@ -24,7 +24,7 @@ class Carousel {
         this.activeItem = this.items[this.focusIndex];
         this.items[this.focusIndex].select();
     }
-    toLeft(element) {
+    toLeft() {
         this.activeItem.deselect();
         if(this.focusIndex > 0){
         this.focusIndex--;

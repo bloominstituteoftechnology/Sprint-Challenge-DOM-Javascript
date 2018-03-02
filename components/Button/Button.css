@@ -1,3 +1,7 @@
-.Button {
+.button {
   display: inline-block;
+  margin: 2px;
+  border:solid rgb(0, 0, 0) 2px;
+  background-color: azure;
+
 }

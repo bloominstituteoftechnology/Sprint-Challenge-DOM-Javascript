@@ -1,3 +1,18 @@
+
+.Button--holder {
+  display: flex;
+}
+
 .Button {
-  display: inline-block;
+  color: black;
+  font-size: 16px;
+  border: 3px solid black;
+  text-align:center;
+  width:100px;
+  line-height:2;
+  margin-top: 10px;
+}
+
+.Button--hide {
+  opacity:0;
 }

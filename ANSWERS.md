@@ -1,0 +1,4 @@
+1.  DOM stands for Document Object Model,  and this allows Javascript  and other programs to be able to access the document, update the styles and structors of it as well.
+2. An Event is something that can be put into the HTML or JavaScript and either the browser itself will produce something or the user on the page can interact with the page. 
+3. An EventListener is a method in JavaScript that is used to add those ways people can interact with the page and to make things more responsive, as an example if someone clicks on a tab and it opens a dropdown.
+4. A crustoctor is also a method used in Javascripts class syntax, this is for creating and calling or initializing an object inside a certain class.

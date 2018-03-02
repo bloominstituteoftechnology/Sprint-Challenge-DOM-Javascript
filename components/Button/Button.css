@@ -1,3 +1,32 @@
 .Button {
   display: inline-block;
+  background-color: plum;
+  width: 50px;
+  margin: 50px;
+  padding: 20px;
+}
+
+.Button__header {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.Button__description {
+  color: blueviolet;
+}
+
+.Button--hidden {
+  display: none;
+}
+
+.Button--one {
+  background-color: palevioletred;
+}
+
+.Button--two {
+  background-color: palegoldenrod;
+}
+
+.Button--three {
+  background-color: palegreen;
 }

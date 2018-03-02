@@ -1,14 +1,18 @@
 class Button {
-    costructor(element) {
+    constructor(element) {
         this.element = element;
-        this.button = this.element.querySelectorAll(".Buttons__box");
 
-        this.button.addEventListener("click", () => {
-            this.goAway();
+        this.element.addEventListener("click", () => {
+            this.element.classList.add('.Button--disappear');
         });
     }
-
-    goAway() {
-        this.element.visibility = "hidden";
-    }
+    // goAway() {
+    //     // let element = this.element;
+    //     this.element.classList.add('.Button--disappear');
+    // }
 }
+let button = document.getElementsByClassName(".Button__box");
+
+button = Array.from(button).map(button => {
+     new Button(button)
+});

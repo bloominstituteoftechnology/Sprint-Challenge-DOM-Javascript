@@ -13,3 +13,19 @@ body {
 	min-width: 300px;
 	margin: 0;
 }
+
+.button--green {
+	border: 2px solid green;
+}
+
+.button--blue {
+	border: 2px solid blue;
+}
+
+.button--red {
+	border: 2px solid red;
+}
+
+.button--hide-button {
+	display: none;
+}

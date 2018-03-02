@@ -22,6 +22,11 @@
 	font-size: 2.5em;
 	font-weight: bold;
 }
+.Section__buttons {
+	display: flex;
+	flex-flow: column;
+	width: 8%;
+}
 
 @media (min-width: 600px) {
 	.Section--half {

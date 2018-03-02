@@ -1,3 +1,9 @@
-.Button {
+.Buttons__box {
   display: inline-block;
+  border: 2.5px solid black;
+  background-color: teal;
+  color: white;
+  width: 100px;
+  height: 50px;
+  text-align: center;  
 }

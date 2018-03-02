@@ -1,6 +1,20 @@
+
+class Buttons {
+    constructor(element) {
+        this.element = element;
+        this.element.addEventListener("click", () => {
+           this.hide();
+        });
+    }
+
+    hide() {
+        let element = this.element;
+        element.style.display = 'none';
+    }
+}
+
 let buttons = document.getElementsByClassName("Button");
+
 buttons = Array.from(buttons).map(button => {
-    button.addEventListener("click", () => {
-        button.classList.add("Button-hidden");
-    })
+    return new Buttons(button);
 })

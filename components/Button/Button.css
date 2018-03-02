@@ -1,7 +1,17 @@
-.Button {
-  display: inline-block;
+
+.Button:hover {
+  background-color: beige;
 }
 
-.Button-hidden {
-  display: none;
+.Buttons {
+  display: flex;
+	flex-flow: column;
+	width: 8%;
 }
+
+.Button {
+  padding: 7px;
+  border: 3px solid black;
+  margin: 8px 0;
+}
+

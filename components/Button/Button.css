@@ -1,3 +1,14 @@
 .Button {
   display: inline-block;
+  border: 1px solid black;
+  background: lightblue;
+  border-radius: 5px;
+  width: 160px;
+  height: 40px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Button:hover {
+  background: aquamarine;
 }

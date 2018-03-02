@@ -1,20 +1,23 @@
 .Button {
   display: inline-block;
-  background-color: red;
-}
-
-.Button__item-clicked {
-  display: none;
-}
-
-.Buttons__links {
-  margin: 0;
-}
-
-.Buttons__link {
-  padding: 10px 15px;
 }
 
 .Button--border {
-  border: 1px solid black;
+  border: 2px solid blue;
+}
+
+.Button--color {
+  background: black;
+}
+
+.Button--dimensions {
+  height: 30px;
+  width: 90px;
+  margin-left: 20px;
+}
+
+.Button--text {
+  color: white;
+  text-align: center;
+  padding: 7px 5px 0 5px;
 }

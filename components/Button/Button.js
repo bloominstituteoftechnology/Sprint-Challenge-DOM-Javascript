@@ -6,7 +6,7 @@ for (let i = 0; i < buttons.length; i++) {
             if (buttons[i].style.display === "") {
                 buttons[i].style.display = "none";
         } else {
-            alert("No")
+            alert("Something Went Horribly Wrong")
         }
         } disappear();
     });

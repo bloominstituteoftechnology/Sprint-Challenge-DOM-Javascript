@@ -1,8 +1,12 @@
 .Button {
   display: inline-block;
-  height: 40px;
+  height: 18px;
   width: 100px;
   border: 2px solid black;
   text-align: center;
   
+}
+
+.Button--gone {
+  display: none;
 }

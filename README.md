@@ -23,7 +23,7 @@ An event is when a specific action is performed/condition is met inside of an el
 An event listener is a native function that essentially loops over continuously looking for a specific event. Once that event is detected it will execute the callback function fed to the event listener.
 
 
-### 4. What is a Constructor
+### 4. What is a Constructor?
 
 
 A constructor is a method of a class function that essentially creates or initializes an object of the type specificed. 

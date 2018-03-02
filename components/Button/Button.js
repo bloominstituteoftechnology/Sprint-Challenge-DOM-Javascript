@@ -9,6 +9,6 @@ class Button {
 }
 
 let buttons = document.getElementsByClassName('Button');
-console.log(buttons);
+// console.log(buttons);
 buttons = Array.from(buttons).map(item => new Button(item));
-console.log(buttons);
+// console.log(buttons);

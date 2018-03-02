@@ -2,12 +2,11 @@
 class Button {
     constructor(element) {
         this.element = element;
-        this.clicked = 0;
         this.element.addEventListener("click", () => {
             this.disappear();
         })
     }
-//function determines whether clicked and appears/disappears box
+//function disappears box
     disappear() {
         this.element.classList.toggle("Button--invisible")
     }

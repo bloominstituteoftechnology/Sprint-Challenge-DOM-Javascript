@@ -1,3 +1,7 @@
 .Button {
-  display: inline-block;
+  border: 2px dashed crimson;
+  height: 40%;
+  width: 80px;
+  text-align: center;
 }
+

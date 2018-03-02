@@ -3,4 +3,21 @@
   background-color: pink;
   border: solid;
   border-color: darkslategray;
+  display: flex;
+  flex-direction: row;
 }
+
+#Button1 {
+  order: 1;
+}
+
+#Button2 {
+  order: 2;
+}
+
+#Button3 {
+  order: 3;
+}
+
+
+

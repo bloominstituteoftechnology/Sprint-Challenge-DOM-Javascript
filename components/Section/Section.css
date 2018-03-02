@@ -8,6 +8,10 @@
 	position: relative;
 }
 
+.Section--Carousel{
+	background:#777;
+}
+
 .Section--bordered {
 	border: 2.5px solid black;
 	border-top: none;

@@ -3,6 +3,9 @@
   position: absolute;
   left: 20px;
   top: 50px;
+  color:white;
+  margin-top:50px;
+  margin-left:10%;
 }
 
 .Carousel__arrow-right {
@@ -10,11 +13,17 @@
   position: absolute;
   right: 20px;
   top: 50px;
+  color:white;
+  margin-top:50px;
+  margin-right:10%;
+
 }
 
 .Carousel__items {
+  margin-top:20px;
   margin-left: 70px;
   margin-right: 70px;
+  text-align:center;
 }
 
 .Carousel__item {
@@ -24,3 +33,8 @@
 .Carousel__item-focused {
   display: inline-block;
 }
+
+.Carousel{
+}
+
+

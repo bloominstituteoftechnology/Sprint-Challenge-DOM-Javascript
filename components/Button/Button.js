@@ -1,7 +1,6 @@
 class Button {
     constructor(element) {
       this.element = element;
-    //   this.button = this.element.querySelector(".Dropdown__button");
   
       this.element.addEventListener("click", () => {
           this.hideContent();

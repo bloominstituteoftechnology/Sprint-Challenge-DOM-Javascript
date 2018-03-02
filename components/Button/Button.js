@@ -2,12 +2,9 @@ class Buttons {
     constructor(element) {
       this.element = element;
       this.element.addEventListener("click", (element) => {
-        this.makeMagic();
-      });
-}
-
-    makeMagic() {
         this.element.classList.add("Button__magic")
+      });
+    }
 }
 
 let buttons = document.getElementsByClassName("Button");

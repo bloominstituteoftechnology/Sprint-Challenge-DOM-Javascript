@@ -15,6 +15,7 @@ class Button {
 }
 
 let buttons = document.querySelectorAll(".Button");
-console.log(buttons);
+
 buttons = Array.from(buttons).map(button => new Button(button));
-console.log(buttons);
+
+

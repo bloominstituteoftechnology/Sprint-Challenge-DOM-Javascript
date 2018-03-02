@@ -1,3 +1,9 @@
 .Button {
   display: inline-block;
+  visibility: visible;
+}
+
+.Button--dissapear {
+  color: red;
+  visibility: hidden;
 }

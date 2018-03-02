@@ -1,3 +1,17 @@
 .Button {
   display: inline-block;
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: lightgrey;
+  color: black;
+}
+
+.Button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.disapear {
+  display: none;
 }

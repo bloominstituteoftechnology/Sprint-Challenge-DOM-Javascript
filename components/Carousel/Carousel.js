@@ -14,11 +14,11 @@ class CarouselItem {
 class Carousel {
   constructor(element) {
     this.element = element;
-    this.arrowLeft = this.element.querySelector('.Carousel__arrow-left')
+    this.arrowLeft = this.element.querySelector('.Carousel__arrow-left');
     this.arrowLeft.addEventListener('click', () => { this.carousel.updateActive(this) });
-    this.arrowRight = this.element.querySelector('.Carousel__arrow-right')    
-    this.arrowRight.addEventListener('click', () => { });
-    this.items = this.element.getElementsByClassName('.Carousel__item');
+    this.arrowRight = this.element.querySelector('.Carousel__arrow-right'); 
+    this.arrowRight.addEventListener('click', () => {this.carousel.updateActive(this) });
+    this.items = element.getElementsByClassName('Carousel__item');
     console.log('this.items');
     console.log(this.items);
     

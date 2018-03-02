@@ -1,3 +1,12 @@
 .Button {
   display: inline-block;
+  background-color: palevioletred;
+  border: solid 2px gray;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  margin: 5px 5px 5px 5px;
+}
+
+.Button--hidden {
+  display: none;
 }

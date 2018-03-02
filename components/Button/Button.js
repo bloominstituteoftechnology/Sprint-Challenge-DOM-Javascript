@@ -27,4 +27,4 @@ class Button {
 buttons = document.getElementsByClassName('Button');
 buttons = Array.from(buttons).map((item) => new Button(item));
 
-console.log('this is the first element', buttons[1]);
+//console.log('this is the first element', buttons[1]);

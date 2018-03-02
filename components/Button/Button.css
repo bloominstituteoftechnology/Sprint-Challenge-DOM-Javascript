@@ -1,3 +1,23 @@
 .Button {
   display: inline-block;
 }
+
+.Button--border {
+  border: 2px solid blue;
+}
+
+.Button--color {
+  background: black;
+}
+
+.Button--dimensions {
+  height: 30px;
+  width: 90px;
+  margin-left: 20px;
+}
+
+.Button--text {
+  color: white;
+  text-align: center;
+  padding: 7px 5px 0 5px;
+}

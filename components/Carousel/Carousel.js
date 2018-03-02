@@ -2,29 +2,37 @@ class Carousel {
     constructor(element) {
         this.element = element;
         this.leftArrow = document.getElementsByClassName("Carousel__arrow-left")[0];
-        this.leftArrow.addEventListener('click', (leftArrow) => leftArrow.parentElement.toLeft());
+        this.leftArrow.addEventListener('click', (event) => {
+            this.toLeft(event.target);
+        });
         this.rightArrow = document.getElementsByClassName("Carousel__arrow-right")[0];
-        this.rightArrow.addEventListener('click', element => toRight());
+        this.rightArrow.addEventListener('click', event => this.toRight(event.target));
         this.items = element.getElementsByClassName("Carousel__item");
         this.items = Array.from(this.items).map(item => new CarouselItem(item));
         this.focusIndex = 0;
         this.activeItem = this.items[this.focusIndex];
     }
-    toRight() {
+    toRight(element) {
+        element.style.background = "yellow";
         this.activeItem.deselect();
-        if(this.focusIndex++ < items.length){
-        this.focusIndex++;
+        if (this.focusIndex++ < this.items.length) {
+            this.focusIndex++;
         }
-        else{
+        else {
             this.focusIndex = 0;
         }
-        this.activeItem = items[this.focusIndex];
-        this.activeItem.select();
+        this.activeItem = this.items[this.focusIndex];
+        this.items[this.focusIndex].select();
     }
-    toLeft() {
+    toLeft(element) {
         this.activeItem.deselect();
+        if(this.focusIndex > 0){
         this.focusIndex--;
-        this.activeItem = items[this.focusIndex];
+        }
+        else {
+            this.focusIndex = this.items.length - 1;
+        }
+        this.activeItem = this.items[this.focusIndex];
         this.activeItem.select();
     }
 
@@ -33,7 +41,7 @@ class Carousel {
 class CarouselItems {
     constructor(element) {
         this.element = element;
-    }    
+    }
 }
 
 class CarouselItem {
@@ -49,4 +57,4 @@ class CarouselItem {
 }
 
 let carousels = document.querySelectorAll(".Carousel");
-carousels = Array.from(carousels).map(carousel => new Carousel(carousel));
+carousels = Array.from(carousels).map(carousels => new Carousel(carousels));

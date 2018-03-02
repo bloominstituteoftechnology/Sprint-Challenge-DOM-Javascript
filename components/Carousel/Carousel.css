@@ -5,6 +5,10 @@
   top: 50px;
 }
 
+.Carousel__arrow-left:hover, .Carousel__arrow-right:hover {
+  cursor: pointer;
+}
+
 .Carousel__arrow-right {
   font-size: 42px;
   position: absolute;

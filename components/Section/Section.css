@@ -17,6 +17,10 @@
 	border-top: 2.5px solid black;
 }
 
+.Section--full {
+	min-height: 145px;
+}
+
 .Section__header {
 	text-align: center;
 	font-size: 2.5em;

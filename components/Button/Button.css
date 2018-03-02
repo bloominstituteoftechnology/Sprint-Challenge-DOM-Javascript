@@ -1,3 +1,19 @@
 .Button {
   display: inline-block;
+  background: #34d9ad;
+  border-radius: 28px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+
+}
+
+.Button:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+
+.Button--hidden {
+  display: none;
 }

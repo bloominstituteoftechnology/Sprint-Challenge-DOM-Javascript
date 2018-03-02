@@ -1,3 +1,10 @@
 .Button {
   display: inline-block;
+  border: 3px black dotted;
+  background: lightgray;
+  padding: 5px;
+}
+
+.Button-Ghost{
+  display: none;
 }

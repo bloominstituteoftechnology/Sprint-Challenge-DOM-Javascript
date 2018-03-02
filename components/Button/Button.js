@@ -8,8 +8,6 @@ class Button {
   }
 }
 
-
-
 let button1 = document.getElementsByClassName('Button')[0];
 let button2 = document.getElementsByClassName('Button')[1];
 let button3 = document.getElementsByClassName('Button')[2];

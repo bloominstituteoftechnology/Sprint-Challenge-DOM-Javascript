@@ -1,3 +1,16 @@
 .Button {
   display: inline-block;
 }
+
+
+.Button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  margin: 10px 10px 10px 0;
+  background-color: mistyrose;
+}
+
+.Button--hidden {
+  display: none;
+}

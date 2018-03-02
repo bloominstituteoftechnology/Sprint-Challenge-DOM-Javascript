@@ -41,3 +41,9 @@
 		padding: 20px;
 	}
 }
+
+@media (max-width: 600px) {
+	.Section__row {
+		justify-content: space-between;
+	}
+}

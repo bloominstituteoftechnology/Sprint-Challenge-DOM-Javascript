@@ -5,13 +5,15 @@
   display: inline-block;
   color: white;
   background: black;
+  visibility: visible;
 }
 
 
 .Button1 {
-  color: white;
+  background: red;
 }
 
 .Button--hidden {
-  visibility: hidden;
+  /* visibility: hidden; */
+  background: green; 
 }

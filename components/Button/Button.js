@@ -14,5 +14,3 @@ class Dissapear {
 let buttons = document.getElementsByClassName("Button__son");
 // console.log(buttons);
 buttons = Array.from(buttons).map(button => new Dissapear(button));
-
-console.log(buttons);

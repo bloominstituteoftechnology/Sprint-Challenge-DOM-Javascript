@@ -1,17 +1,24 @@
 class Button {
-    constructor(element) {
+    constructor(element, parent) {
       this.element = element;
-      this.button = this.element.querySelector(".Button");
-  
-      this.button.addEventListener("click", () => {
+      this.button = parent;
+      this.element.addEventListener("click", () => {
         this.disappear();
       });
     }
-  
     disappear() {
-      this.element.classList.add(".Button--Disappear");
+      this.element.classList.add("Button--Disappear");
     }
   }
-  
-   let buttons = document.querySelectorAll(".Buttons");
-   buttons = Array.from(buttons).map(buttons => new Button(buttons));
+
+class Buttons {
+    constructor(element) {
+        this.element = element;
+        this.button = element.querySelectorAll(".Button");
+        this.button = Array.from(this.button).map((buttons) => {
+          return new Button(buttons, this);
+        });
+      }
+}
+let buttons = document.querySelectorAll(".Buttons");
+buttons = Array.from(buttons).map(buttons => new Buttons(buttons));

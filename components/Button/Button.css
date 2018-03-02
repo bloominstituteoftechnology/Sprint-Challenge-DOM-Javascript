@@ -2,7 +2,6 @@
   display: inline-block;
   background-color: #666;
   padding: 20px;
-  transition: all 2s;
   color: white;
   text-transform: uppercase;
 }
@@ -11,4 +10,8 @@
   cursor: pointer;
   background-color: #eee;
   color: black;
+}
+
+.Button--hide{
+  display: none;
 }

@@ -1,6 +1,6 @@
 .Button {
   display: inline-block;
 }
-.Button-selected {
+.Button--selected {
   display: none;
 }

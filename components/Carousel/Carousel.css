@@ -1,3 +1,7 @@
+.Carousel {
+  height: 230px;
+}
+
 .Carousel__arrow-left {
   font-size: 42px;
   position: absolute;

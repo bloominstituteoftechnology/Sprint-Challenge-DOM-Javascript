@@ -15,12 +15,15 @@
 
 .Section--bordered:first-of-type {
 	border-top: 2.5px solid black;
+	background-color: lightslategray;
 }
 
 .Section__header {
 	text-align: center;
 	font-size: 2.5em;
 	font-weight: bold;
+	font-family: cursive;
+	font-style: italic;
 }
 
 @media (min-width: 600px) {
@@ -30,4 +33,12 @@
 		width: 50%;
 		padding: 20px;
 	}
+}
+
+.Section--bordered.Section--half {
+	background-color: pink;
+}
+
+.Section--bordered.Section--full {
+	background-color: lightslategray;
 }

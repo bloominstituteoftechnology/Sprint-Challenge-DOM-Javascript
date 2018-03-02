@@ -23,4 +23,16 @@
 
 .Carousel__item-focused {
   display: inline-block;
+  animation:fadeIn 1s;
+}
+
+@keyframes fadeIn
+{
+  0%   {opacity:0}
+  15% { opacity: 0.15}
+  33.333% { opacity: 0.33}
+  50% {opacity: 0.5}
+  66.666% { opacity: 0.66}
+  80% {opacity: 0.8}
+  100% { opacity: 1}
 }

@@ -3,6 +3,7 @@
 	<head>
 		<title>Introduction to the DOM</title>
 		<link rel="stylesheet" href="./styles.css">
+		<link href='https://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet'>
 	</head>
 	<body>
 		<script defer="defer" src="./components/Carousel/Carousel.js"></script>
@@ -12,8 +13,8 @@
 		
 		<div class="Section Section--bordered Section--full">
 			<div class="Dropdown">
-				<div class="Dropdown__button">Dropdown</div>
-				<div class="Dropdown__content">
+				<div class="Dropdown__button" style="font-family: Arizonia; font-size: 24px;">Dropdown</div>
+				<div class="Dropdown__content" style="font-family: Arizonia; font-size: 24px;">
 					<a class="Dropdown__link" href="https://lambdaschool.com/">Lambda</a>
 					<a class="Dropdown__link" href="https://www.google.com/">Google</a>
 					<a class="Dropdown__link" href="https://developer.mozilla.org/en-US/">MDN</a>
@@ -38,9 +39,9 @@
 		<div class="Section Section--bordered Section--full">
 			<div class="Section__header">Three Buttons</div>
 
-			<div class="Button">I Dissapear</div>
-			<div class="Button">I Dissapear</div>
-			<div class="Button">I Dissapear</div>
+			<button id="Button1" style="background-color: pink; border: solid; border-color: darkslategray; opacity: 0.6; font-family: Arizonia; font-size: 24px;" onmousedown="disappearOne()"; onmouseup="appearOne()";>I Disappear</button>
+			<button id="Button2" style="background-color: pink; border: solid; border-color: darkslategray; opacity: 0.6; font-family: Arizonia; font-size: 24px;" onmousedown="disappearTwo()"; onmouseup="appearTwo()";>I Disappear</button>
+			<button id="Button3" style="background-color: pink; border: solid; border-color: darkslategray; opacity: 0.6; font-family: Arizonia; font-size: 24px;" onmousedown="disappearThree()"; onmouseup="appearThree()";>I Disappear</button>
 
 		</div>
 

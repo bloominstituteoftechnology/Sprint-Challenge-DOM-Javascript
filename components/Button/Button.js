@@ -4,7 +4,6 @@ class Button {
 
         this.element.addEventListener('click', () => {
             this.disappear(); 
-
         });
     }
 

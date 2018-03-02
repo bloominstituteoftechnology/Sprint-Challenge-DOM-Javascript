@@ -1,11 +1,21 @@
 class Button {
     constructor(button) {
-        this.button = this.button;
+        this.button = button;
+
+        this.button.addEventListener('click', () => {
+            this.disapear();
+        });
     }
     
-    disapear(){
-        document.getElementsByClassName('Button')
-    }
-
-
+    disapear() {
+        this.button.classList.add('disapear');
+        }
 }
+
+let btns = document.getElementsByClassName('Button');
+Array.from(btns).forEach(btn => {
+    new Button(btn);
+});
+
+
+

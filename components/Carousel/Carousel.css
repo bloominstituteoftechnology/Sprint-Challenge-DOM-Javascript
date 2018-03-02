@@ -1,15 +1,10 @@
-.Carousel__arrow-left {
-  font-size: 42px;
-  position: absolute;
-  left: 20px;
-  top: 50px;
-}
 
-.Carousel__arrow-right {
-  font-size: 42px;
-  position: absolute;
-  right: 20px;
-  top: 50px;
+.Carousel__link {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  margin: 10px 10px 10px 0;
+  background-color: gray;
 }
 
 .Carousel__items {
@@ -21,6 +16,27 @@
   display: none;
 }
 
-.Carousel__item-focused {
+.Carousel__item--focused {
   display: inline-block;
+}
+
+.Carousel__link--focused {
+  background-color: white;
+  color: blue;
+  border: solid 1px gray;
+}
+
+.Carousel__arrow-left {
+  font-size: 42px;
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  z-index: inherit + 1;
+}
+
+.Carousel__arrow-right {
+  font-size: 42px;
+  position: absolute;
+  right: 20px;
+  top: 50px;
 }

@@ -5,11 +5,11 @@ class TabItem {
   }
 
   select() {
-    this.element.classList.add("Tabs__item--selected");
+    this.element.classList.add("Tabs__item-selected");
   }
 
   deselect() {
-    this.element.classList.remove("Tabs__item--selected");
+    this.element.classList.remove("Tabs__item-selected");
   }
 }
 
@@ -22,11 +22,11 @@ class TabLink {
   }
 
   select() {
-    this.element.classList.add("Tabs__link--selected");
+    this.element.classList.add("Tabs__link-selected");
   }
 
   deselect() {
-    this.element.classList.remove("Tabs__link--selected");
+    this.element.classList.remove("Tabs__link-selected");
   }
 }
 

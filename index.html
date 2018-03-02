@@ -1,99 +1,142 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Introduction to the DOM</title>
-		<link rel="stylesheet" href="./styles.css">
-	</head>
-	<body>
-		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
-		<script defer="defer" src="./components/Carousel/Carousel.js"></script>
-		
-		<div class="Section Section--bordered">
-			<div class="Section__full">
-				<div class="Header">Header</div>
+
+<head>
+	<title>Introduction to the DOM</title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+	<script defer="defer" src="./components/Tabs/Tabs.js"></script>
+	<script defer="defer" src="./components/Carousel/Carousel.js"></script>
+
+	<div class="Section Section--bordered">
+		<div class="Section__full">
+			<div class="Header">Header</div>
+		</div>
+	</div>
+
+	<div class="Section Section--bordered ">
+		<div class="Section__half-left">
+			<div class="Section__flag">New!</div>
+			<div class="Box">
+				<div class="Box__title">Placeholder</div>
+				<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis
+					lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis
+					libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue
+					feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac
+					habitasse platea dictumst.</div>
+			</div>
+		</div><div class="Section__half-right">
+			<div class="Box">
+				<div class="Box__title">Placeholder</div>
+				<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis
+					lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis
+					libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue
+					feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac
+					habitasse platea dictumst.</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="Section Section--bordered ">
-			<div class="Section__half-left">
-				<div class="Section__flag">New!</div>
-				<div class="Box">
-					<div class="Box__title">Placeholder</div>
-					<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
+	<div class="Section Section--bordered">
+		<div class="Section__full">
+			<div class="Section__title">Tab Menu</div>
+			<div class="Tabs">
+				<div class="List">
+					<div class="List__item Tabs__link Tabs__default" data-tab="1">Tab 1</div>
+					<div class="List__item Tabs__link" data-tab="2">Tab 2</div>
+					<div class="List__item Tabs__link" data-tab="3">Tab 3</div>
 				</div>
-			</div><div class="Section__half-right">
-				<div class="Box">
-					<div class="Box__title">Placeholder</div>
-					<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="Section Section--bordered">
-			<div class="Section__full">
-				<div class="Section__title">Tab Menu</div>
-				<div class="Tabs">
-					<div class="List">
-						<div class="List__item Tabs__link Tabs__default" data-tab="1">Tab 1</div>
-						<div class="List__item Tabs__link" data-tab="2">Tab 2</div>
-						<div class="List__item Tabs__link" data-tab="3">Tab 3</div>
+				<div class="Tabs__item" data-tab="1">
+					<div class="Box Box--placeholder Box--lightpink">
+						<div class="Box__title">Box # 1</div>
+						<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis
+							lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis
+							libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec
+							augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat.
+							In hac habitasse platea dictumst.</div>
 					</div>
+				</div>
+				<div class="Tabs__item" data-tab="2">
+					<div class="Box Box--placeholder Box--lightgreen">
+						<div class="Box__title">Box # 2</div>
+						<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis
+							lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis
+							libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec
+							augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat.
+							In hac habitasse platea dictumst.</div>
+					</div>
+				</div>
+				<div class="Tabs__item" data-tab="3">
+					<div class="Box Box--placeholder Box--lavender">
+						<div class="Box__title">Box # 3</div>
+						<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis
+							lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis
+							libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec
+							augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat.
+							In hac habitasse platea dictumst.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-					<div class="Tabs__item" data-tab="1">
-						<div class="Box Box--placeholder Box--grey">
+	<div class="Section Section--bordered">
+		<div class="Section__full">
+			<div class="Carousels">
+
+				<div class="Carousel_links">
+					<!-- <div class="Carousel__Link Carousel__arrow-left" data-slide="1 2 3"> Previous </div>
+					<div class="Carousel__Link Carousel__arrow-right" data-slide="1 2 3"> Next </div> -->
+					<div class="Carousel__link Carousel__default" data-slide="1"> Carousel 1 </div>
+					<div class="Carousel__link" data-slide="2"> Carousel 2 </div>
+					<div class="Carousel__link" data-slide="3"> Carousel 3 </div>
+
+				</div>
+
+				<div class="Carousel__items">
+
+					<div class="Carousel__item" data-slide="1">
+						<div class="Box Box--placeholder Box--lavender">
 							<div class="Box__title">Box # 1</div>
-							<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
+							<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis
+								lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis
+								libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec
+								augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat.
+								In hac habitasse platea dictumst.</div>
 						</div>
 					</div>
-					<div class="Tabs__item" data-tab="2">
-						<div class="Box Box--placeholder Box--blue">
-							<div class="Box__title">Box # 2</div>
-							<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-						</div>
-					</div>
-					<div class="Tabs__item" data-tab="3">
-						<div class="Box Box--placeholder Box--green">
-							<div class="Box__title">Box # 3</div>
-							<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<div class="Section Section--bordered">
-			<div class="Section__full">
-				<div class="Carousel">
-					
-					<div class="Carousel__Link Carousel__arrow-left"> < </div>
-					<div class="Carousel__items">
-
-						<div class="Carousel__item Carousel__item-focused" data-slide="1">
-							<div class="Box Box--placeholder Box--grey">
-								<div class="Box__title">Box # 1</div>
-								<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-							</div>
-						</div>
-					
 
 					<div class="Carousel__item" data-slide="2">
-							<div class="Box Box--placeholder Box--blue">
-								<div class="Box__title">Box # 1</div>
-								<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-							</div>
-						</div>
-					
-					<div class="Carousel__item" data-slide="3">
-							<div class="Box Box--placeholder Box--green">
-								<div class="Box__title">Box # 1</div>
-								<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
-							</div>
+						<div class="Box Box--placeholder Box--lightpink">
+							<div class="Box__title">Box # 1</div>
+							<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis
+								lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis
+								libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec
+								augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat.
+								In hac habitasse platea dictumst.</div>
 						</div>
 					</div>
-					<div class="Carousel__Link Carousel__arrow-right"> > </div>
+
+					<div class="Carousel__item" data-slide="3">
+						<div class="Box Box--placeholder Box--lightgreen">
+							<div class="Box__title">Box # 1</div>
+							<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis
+								lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis
+								libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec
+								augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat.
+								In hac habitasse platea dictumst.</div>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</div>
+	</div>
 
-	</body>
+</body>
+
 </html>

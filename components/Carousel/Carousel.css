@@ -26,11 +26,12 @@
   border: solid 1px gray;
 }
 
-/* .Carousel__arrow-left {
+.Carousel__arrow-left {
   font-size: 42px;
   position: absolute;
   left: 20px;
   top: 50px;
+  z-index: inherit + 1;
 }
 
 .Carousel__arrow-right {
@@ -38,4 +39,4 @@
   position: absolute;
   right: 20px;
   top: 50px;
-} */
+}

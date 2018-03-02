@@ -1,3 +1,27 @@
 .Button {
-  display: inline-block;
+   display: inline-block;
+}
+
+.Button__box {
+  padding: 15px;
+  border: 2.5px solid black;
+
+}
+
+.Button--hidden {
+  display: none;
+}
+
+.Button--syle-1{
+  background-color: blue;
+  color: white;
+}
+
+.Button--syle-2{
+  background-color: red;
+  color: white;
+}
+.Button--syle-3{
+  background-color: whitesmoke ;
+  color: black;
 }

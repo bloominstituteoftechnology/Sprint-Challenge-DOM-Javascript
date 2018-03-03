@@ -1,3 +1,19 @@
 .Button {
   display: inline-block;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.Button:hover {
+  background: aqua;  
+}
+
+.Buttons {
+  text-align: center;
+}
+
+.Disappear {
+  display: none;
 }

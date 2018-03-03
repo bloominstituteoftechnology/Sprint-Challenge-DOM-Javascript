@@ -21,6 +21,6 @@
   display: none;
 }
 
-.Carousel__item-focused {
+.Carousel__item--focused {
   display: inline-block;
 }

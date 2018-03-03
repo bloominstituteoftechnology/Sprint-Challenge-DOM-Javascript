@@ -1,4 +1,3 @@
-
 class TabItem {
   constructor(element) {
     this.element = element;

@@ -1,3 +1,13 @@
 .Button {
   display: inline-block;
+  height: 75px;
+  width: 200px;
+  border: 2px solid darkmagenta;
+  border-radius: 30%;
+  text-align: center;
+  padding: 45px 0 0 0;
+}
+
+.Button--gone {
+  display: none;
 }

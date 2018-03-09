@@ -1,0 +1,4 @@
+1. The DOM stands for Document Object Model. Its an object representation of HTML. When a browser receives a HTML doc it reads it breaks it down and creates a object model.
+2. An event is a command that tell the computer to do X when Y happens. 
+3. A Event Listener is basically the stand by to the actual event. Since our code isnt always running the listener is what is waiting to run the actual event prompted. Like the result of the "click" event isn't executed unless the event listener is told "click".
+4. A constructor is a function that creates and initializes an object created within a class. 

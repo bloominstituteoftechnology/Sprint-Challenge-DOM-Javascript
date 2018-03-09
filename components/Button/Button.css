@@ -1,3 +1,10 @@
 .Button {
   display: inline-block;
+  font-size: 12px;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+.Button_disappear {
+  display: none;
 }

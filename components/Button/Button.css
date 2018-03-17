@@ -4,6 +4,8 @@
   background: red;
   margin: 20px;
   padding: 10px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
 .Button--vanish {
@@ -16,4 +18,6 @@
   background: blueviolet;
   margin: 20px;
   padding: 10px;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
 }

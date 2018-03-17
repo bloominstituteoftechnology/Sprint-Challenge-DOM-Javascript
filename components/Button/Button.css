@@ -1,3 +1,19 @@
 .Button {
   display: inline-block;
+  border: 2px solid black;
+  background: red;
+  margin: 20px;
+  padding: 10px;
+}
+
+.Button--vanish {
+  display: none;
+}
+
+.Button--refresh{
+  display: inline-block;
+  border: 2px solid black;
+  background: blueviolet;
+  margin: 20px;
+  padding: 10px;
 }

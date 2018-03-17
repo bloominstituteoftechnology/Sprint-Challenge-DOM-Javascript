@@ -2,7 +2,6 @@ class Dropdown {
   constructor(element) {
     this.element = element;
     this.button = this.element.querySelector(".Dropdown__button");
-console.log(this.button)
     this.button.addEventListener("click", () => {
       this.toggleContent();
     });

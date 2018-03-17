@@ -23,6 +23,11 @@
 	font-weight: bold;
 }
 
+.Section__button {
+	display: flex;
+	justify-content: center;
+}
+
 @media (min-width: 600px) {
 	.Section--half {
 		box-sizing: border-box;

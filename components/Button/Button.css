@@ -1,9 +1,9 @@
 .Button {
   display: inline-block;
-  border: 2.5px solid #5514bd;
+  border: 2.5px solid green;
   padding: 1%;
 }
 
 .Button--hidden {
-  display: none;
+  visibility: hidden;
 }

@@ -4,11 +4,11 @@ class Button {
         this.button = this.element.querySelectorAll(".Button");
 
         this.element.addEventListener("click", () => {
-            this.toggleContent();
+            this.hideButton();
         });
     }
-    toggleContent() {
-        this.element.classList.toggle("Button--hidden");
+    hideButton() {
+        this.element.classList.add("Button--hidden");
     }
 }
 

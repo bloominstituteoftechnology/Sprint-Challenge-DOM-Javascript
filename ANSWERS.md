@@ -10,3 +10,5 @@ A few great examples are `click`, `mouseover`, and `keydown`.
 An event listener is just a piece of code that executes when some event signal happens. This allows developers
 to design websites that can make intelligent decisions. 
 
+#What is a constructor? 
+A constructor is a method that adds properties to the instance of the object being created.

@@ -1,9 +1,8 @@
-const button = document.getElementsByClassName(".Button");
+const button = document.getElementsByClassName('Button');
 
-const vanish = (element) => {
-  element.classList.toggle('vanish');
+
+class Button {
+  constructor(element) {
+    this.element = element;
+  } 
 }
-
-button.addEventListener('click', vanish)
-
-console.log(button);

@@ -10,16 +10,15 @@ class Carousel {
 
         this.controlRight = element.querySelector(".Carousel__arrow-right");
         this.controlRight.addEventListener("click", () => {
-            this.active.classList.remove(".Carousel__item-focused");
+            this.active.classList.remove("Carousel__item-focused");
             if (this.index < this.slides.length) {
                this.active = this.slides[this.index ++];
                 console.log(this.index);
                 console.log(this.active);
-                // this.active.classList.add(".Carousel__item-focused");
-                console.log("clickR"); 
+                this.active.classList.add("Carousel__item-focused");
             }
             else {
-                this.active = this.slides[0];
+                this.active = this.slides[this.index = 0];
             }
             
         });

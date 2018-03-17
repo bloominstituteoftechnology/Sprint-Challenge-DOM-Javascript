@@ -1,3 +1,7 @@
 .Button {
   display: inline-block;
 }
+
+.vanish {
+  display: none;
+}

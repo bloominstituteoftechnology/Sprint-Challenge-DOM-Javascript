@@ -12,4 +12,6 @@ An event listener is a piece of script that listens for something to occur and t
 
 What is a Constructor?
 
-A constructor is a function that holds a reusable script that can be used to make an object.  
+A constructor is a function that holds a reusable script that can be used to make an object of a particular type.  Each object of that type will share properties and methods.  
+
+You can also create similar objects by creating a class that extends on a constructor. 

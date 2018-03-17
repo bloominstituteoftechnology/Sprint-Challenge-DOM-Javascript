@@ -12,9 +12,8 @@ class CarouselItem {
       }
     }
 
-    
-    class Carousel {
-      constructor(element) {
+class Carousel {
+    constructor(element) {
         this.element = element;
         this.arrowL = element.querySelector('.Carousel__arrow-left');
         this.arrowR = element.querySelector('.Carousel__arrow-right');
@@ -46,8 +45,6 @@ class CarouselItem {
       updateActive(data) {
         this.carouselItems[data].select();
       }
-    
-
 }
 
 let carousels = document.querySelectorAll(".Carousel");

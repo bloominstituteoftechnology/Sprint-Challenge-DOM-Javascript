@@ -1,4 +1,4 @@
-const button = document.getElementsByClassName(".button");
+const button = document.getElementsByClassName(".Button");
 
 const vanish = (element) => {
   element.classList.toggle('vanish');

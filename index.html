@@ -3,6 +3,12 @@
 	<head>
 		<title>Introduction to the DOM</title>
 		<link rel="stylesheet" href="./styles.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<script defer="defer" src="./components/Carousel/Carousel.js"></script>
@@ -37,12 +43,21 @@
 
 		<div class="Section Section--bordered Section--full">
 			<div class="Section__header">Three Buttons</div>
-
-			<div class="Button">I Dissapear</div>
-			<div class="Button">I Dissapear</div>
-			<div class="Button">I Dissapear</div>
-
-		</div>
+			
+						<div class="Button">
+							<button id="button1" onClick="actionOne()" type="button" class="btn btn-danger btn-lg">I Disappear</button>
+						</div>
+					
+						<div class="Button">
+							<button id="button2" onClick="actionTwo()" type="button" class="btn btn-danger btn-lg">I Disappear</button>
+						</div>
+							
+						<div class="Button">
+							<button id="button3" onClick="actionThr()" type="button" class="btn btn-danger btn-lg">I Disappear</button>
+						</div>
+				
+			</div><!-- section header -->
+		</div><!-- section section -->
 
 		<!-- <div class="Section Section--bordered Section--full">
 			<div class="Section__header">Tab Menu</div>

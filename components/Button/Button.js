@@ -1,10 +1,10 @@
 const buttons = document.querySelectorAll('Button');
-console.log(buttons);
-const vanish = (element) => {
- element.classList.toggle('vanish');
+
+const vanish = (event) => {
+  event.target.classList.toggle('vanish');
 }
 
 buttons.forEach(function(button) {
-  button.addEventListener('click', vanish(button));
+  button.addEventListener('click', vanish);
 });
 

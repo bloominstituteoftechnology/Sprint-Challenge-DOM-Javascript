@@ -1,8 +1,7 @@
-const button = document.getElementsByClassName('Button');
+const buttons = document.querySelectorAll('Button');
 
 
-class Button {
-  constructor(element) {
-    this.element = element;
-  } 
-}
+
+buttons.forEach(function(button) {
+  button.addEventListener('click', vanish);
+});

@@ -1,7 +1,7 @@
 class Button {
     constructor(element) {
         this.element = element;
-        this.button = this.element.querySelector(".Button");
+
         this.button.addEventListener("click", () => {
             this.displayOff();
         });
@@ -9,7 +9,7 @@ class Button {
     }
 
     displayOff() {
-        this.element.classList.add("Button--display--off");
+        this.element.style.display = "none"
     }
 }
 

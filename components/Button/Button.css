@@ -5,3 +5,7 @@
   margin: 10px 5px 10px 5px;
   background-color: yellow;
 }
+
+.Button .Button--display--off {
+  display: none;
+}

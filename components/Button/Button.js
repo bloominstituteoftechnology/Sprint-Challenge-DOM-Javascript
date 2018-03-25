@@ -1,15 +1,19 @@
 class Button {
     constructor(element) {
         this.element = element;
-        this.button = this.element.querySelectorAll(".Button");
+        this.button = this.element.querySelector(".Button");
         this.button.addEventListener("click", () => {
-            this.button.style.display = "none";
-        })
+            this.displayOff();
+        });
 
+    }
+
+    displayOff() {
+        this.element.classList.add("Button--display--off");
     }
 }
 
-let allButtons = document.activeElement.querySelectorAll(".Button");
+let allButtons = document.querySelectorAll(".Button");
 allButtons = Array.from(allButton).map (button => {
     return new Button(button);
 })

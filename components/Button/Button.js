@@ -1,5 +1,10 @@
 class Button {
-    constructor() {
+    constructor(element) {
+        this.element = element;
+        this.button = this.element.querySelectorAll(".Button");
+        this.button.addEventListener("click", () => {
+            this.button.style.display = "none";
+        })
 
     }
 }

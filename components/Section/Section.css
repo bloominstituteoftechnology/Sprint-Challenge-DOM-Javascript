@@ -3,7 +3,7 @@
 	display: inline-block;
 	clear: both;
 	width: 100%;
-	margin: 0;
+	margin: -2px;
 	padding: 20px;
 	position: relative;
 }
@@ -15,6 +15,10 @@
 
 .Section--bordered:first-of-type {
 	border-top: 2.5px solid black;
+}
+
+Section Section--bordered Section--half {
+	display: flex;
 }
 
 .Section__header {

@@ -1,26 +1,30 @@
 .Button {
   display: inline-block;
+  cursor: pointer;
 }
 
 .Button__border {
   border: 2px solid black;
-  margin: auto;
+  margin: 15px;
   padding: 3px;
 }
 
 .Button[data-button='1'] {
   background-color: blueviolet;
   color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .Button[data-button='2'] {
   background-color: teal;
   color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .Button[data-button='3'] {
   background-color: darkslateblue;
   color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .Hide--button {

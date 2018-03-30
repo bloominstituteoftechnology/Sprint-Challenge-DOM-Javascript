@@ -1,8 +1,9 @@
 .Button {
   display: inline-block;
-  border: 1px solid red;
+  font-size: 20px;
+  padding: 10px;
 }
 
 .Button--hide {
-  display: none;
+  visibility: hidden;
 }

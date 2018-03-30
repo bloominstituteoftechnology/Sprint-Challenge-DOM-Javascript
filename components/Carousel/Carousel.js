@@ -9,8 +9,8 @@ class Carousel {
     this.focusClass = 'Carousel__item-focused'
 
     // WARNING THIS IS STATE
-    this.focus = this.items[0]
     this.index = 0
+    this.focus = this.items[this.index]
 
     // find a better way to do this
     // left and right buttons
@@ -42,6 +42,7 @@ class Carousel {
     this.setFocus(this.items[this.index++])
   }
 
+  // I have a bug in this code. pls help.
   previous() {
     // if this is first item in array
     if (!this.index) {

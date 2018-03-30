@@ -15,6 +15,10 @@
 	margin: 25px;
 }
 
-.Button__actual--hide {
-	display: none;
+.Button__actual--phantom {
+	color: white;
+	border: 1px solid;
+	padding: 13px;
+	margin: 25px;
+	box-shadow: 2px 3px 3px 3px #888888;
 }

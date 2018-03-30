@@ -17,7 +17,8 @@ class Handler {
 	}
 
 	hideButton() {
-		this.element.classList.toggle('Button__actual--hide');
+		// this.element.classList.toggle('Button__actual--hide');
+		this.element.classList.toggle('Button__actual--phantom');
 	}
 }
 

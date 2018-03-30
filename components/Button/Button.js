@@ -9,9 +9,9 @@ const hideButton = (event) => {
 
         this.DropdownButton.addEventListener('click', this.toggleMenu.bind(this));
     }
-}*/ // planned to implement a class if the simpler code had worked...
+}*/ // planned to implement a class if the simpler code had worked
 
-// buttons = Array.from(document.querySelectorAll(".Button")); //Propagates to upper divs for some reason...
+// buttons = Array.from(document.querySelectorAll(".Button")); //Propagates to upper divs for some reason
 // buttons.forEach(() => addEventListener('click', hideButton));
 
 button1 = document.querySelector(".Button1");

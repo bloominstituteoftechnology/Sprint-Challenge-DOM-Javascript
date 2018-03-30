@@ -44,17 +44,21 @@ class Carousel {
 	init() {
 		this.items[this.activeIndex].show();
 	}
-	// update the current active item via the activeIndex
-	updateActive() {
-
-	}
 	// hides the current slide and displays the previous slide
 	previousSlide() {
-		document.querySelector('.Carousel').style.backgroundColor = 'red';
+		// this.items[this.activeIndex].remove('Carousel__item-focused');
+		// decrement index to go to a previous slide
+		this.activeIndex--;
+		if (this.activeIndex < 0) {
+			this.activeIndex = this.items.length;
+		} else if (this.activeIndex > this.items.length) {
+			this.activeindex = this.items[0];
+		}
+		this.items[this.activeIndex].show('Carousel__item-focused');
 	}
 	// hides the current slide and displays the next slide
 	nextSlide() {
-		document.querySelector('.Carousel').style.backgroundColor = 'blue';
+		
 	}
 }
 

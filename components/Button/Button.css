@@ -1,3 +1,18 @@
 .Button {
   display: inline-block;
 }
+
+.Button--red{
+  border: 5px solid red;
+  width: 10%;
+}
+
+.Button--blue{
+  border: 5px solid blue;
+  width: 10%;
+}
+
+.Button--green{
+  border: 5px solid green;
+  width: 10%;
+}

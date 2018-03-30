@@ -1,3 +1,20 @@
 .Button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Button__list {
+	display: flex;
+	justify-content: center;
+}
+
+.Button__actual {
+	border: 2px solid black;
+	padding: 13px;
+	margin: 25px;
+}
+
+.Button__actual--hide {
+	display: none;
 }

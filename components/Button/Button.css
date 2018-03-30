@@ -33,3 +33,7 @@ body {
 	margin: 25px;
 	box-shadow: 2px 3px 3px 3px #888888;
 }
+
+.Button__actual--invert {
+	opactiy: 0.33;
+}

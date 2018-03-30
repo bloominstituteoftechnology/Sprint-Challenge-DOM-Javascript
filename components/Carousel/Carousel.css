@@ -25,6 +25,12 @@
 }
 
 .Carousel__item {
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+  
   display: none;
 }
 
@@ -46,12 +52,4 @@
 
 .Carousel-item-center {
   margin: 0;
-}
-
-.Carousel-item-moveLeft {
-  
-}
-
-.Carousel-item-moveRight {
-  
 }

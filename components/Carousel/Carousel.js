@@ -3,18 +3,25 @@ class Carousel {
     // Carousel and each carousel item in array format
     this.element = element;
     this.items = Array.from(items).map(item => new CarouselItem(item));
+    this.focusIndex = 0;
     // Arrow elements and listeners
-    this.leftArrow = element.children[0];
-    this.rightArrow = element.children[2];
-    this.leftArrow.addEventListener('click', this.clickLeft);
-    this.rightArrow.addEventListener('click', this.clickRight);
+    this.leftArrow = this.element.children[0];
+    this.rightArrow = this.element.children[2];
+    this.leftArrow.addEventListener('click', () => {
+      this.shiftLeft();
+    });
+    this.rightArrow.addEventListener('click', () => {
+      this.items[0].moveRightOut();
+      console.log(this.items[this.items.length - 1]);
+      this.items[this.items.length - 1].moveRightIn();
+    });
   }
 
-  clickLeft() { // Left arrow clicked
+  shiftLeft() { // Left arrow clicked
     console.log('left');
   }
 
-  clickRight() { // Right arrow clicked
+  shiftRight() { // Right arrow clicked
     console.log('right');
   }
 }
@@ -23,17 +30,12 @@ class CarouselItem {
   constructor(element) {
     this.element = element;
     this.parent = element.parentNode;
-
-    this.element.addEventListener('click', () => {
-      this.moveLeft();
-    });
   }
 
-  moveRight() { // Move out and to the right and fade
+  moveRightOut() { // Move out and to the right while fading out
     const ownWidth = this.getOwnWidth();
     const parentWidth = this.getParentWidth();
-    // Allow for 2 second transitions
-    this.element.classList.add('Carousel__item-transition');
+    // Modify margin based on parent width
     this.element.style.marginRight = `-${Number(parentWidth.slice(0, -2)) * 2}px`;
     this.fadeOut();
     // Wait until animation is done then remove from screen
@@ -43,11 +45,25 @@ class CarouselItem {
     }, 2000);
   }
 
-  moveLeft() { // Move out and to the left and fade
+  moveRightIn() { // Move in and to the right while fading in
     const ownWidth = this.getOwnWidth();
     const parentWidth = this.getParentWidth();
-    // Allow for 2 second transitions
-    this.element.classList.add('Carousel__item-transition');
+    // Move off screen to the left and set opacity to 0
+    this.element.style.marginLeft = `-${Number(parentWidth.slice(0, -2)) * 2}px`;
+    this.fadeOut();
+    // After other item has left screen
+    setTimeout(() => {
+      // Display element and transition to default position
+      this.element.style.margin = 'auto';
+      this.fadeIn();
+      this.element.classList.add('Carousel__item-focused');
+    }, 2000);
+  }
+
+  moveLeftOut() { // Move out and to the left while fading out
+    const ownWidth = this.getOwnWidth();
+    const parentWidth = this.getParentWidth();
+    // Modify margin based on parent width
     this.element.style.marginLeft = `-${Number(parentWidth.slice(0, -2)) * 2}px`;
     this.fadeOut();
     // Wait until animation is done then remove from screen
@@ -58,7 +74,7 @@ class CarouselItem {
   }
 
   fadeIn() { // Set opacity to 1
-    this.style.opacity = 1;
+    this.element.style.opacity = 1;
   }
 
   fadeOut() { // Set opacity of 0
@@ -69,6 +85,10 @@ class CarouselItem {
     this.element.style.margin = 'auto';
     this.element.style.opacity = 1;
     this.width = 'auto';
+  }
+
+  toggleTransition(option) {
+    // To be added
   }
 
   getOwnWidth() { // Detect own width to prevent resizing

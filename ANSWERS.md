@@ -1,0 +1,4 @@
+What is a DOM? A DOM, also known as a Document Object Model is a programming API for documents. It is used to connect Javascript with HTMl by accessing the document. It is a standard on how to get, change, add, or delete HTML elements.
+What is an event? An event is something that happens when something else occurs on an element on the page. For example, when a user mouses over or clicks on an element, a new page could pop up or words could show.
+What is an Event Listener? An Event listener is a method of adding those events to the the element. It "listens" for the click or mouse over then adds a handler to it.
+What is a Constructor? A constructor is used to create an object type and initializing in within a class.

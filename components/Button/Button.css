@@ -1,3 +1,11 @@
 .Button {
   display: inline-block;
+  border: 3px black solid;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.Button--hide {
+  border: 0px;
+  color: white;
 }

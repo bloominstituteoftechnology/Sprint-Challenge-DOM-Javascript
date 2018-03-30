@@ -1,7 +1,7 @@
 .Dropdown {
   z-index: 5;
   display: inline-block;
-  position: absolute;
+  position: relative;
 }
 
 .Dropdown__button {
@@ -26,5 +26,38 @@
 }
 
 .Dropdown--active .Dropdown__content {
+  display: block;
+}
+
+/* Button Styling */
+
+.Button {
+  z-index: 5;
+  display: inline-block;
+  position: absolute;
+}
+
+.Button__button {
+  padding: 15px;
+  background-color: white;
+  border: 2.5px solid black;
+
+}
+
+.Button__content {
+  position: absolute;
+  background-color: white;
+  display: none;
+  margin-top: 10px;
+  padding: 15px;
+  border: 2.5px solid black;
+}
+
+.Button__link {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.Button--active .Button__content {
   display: block;
 }

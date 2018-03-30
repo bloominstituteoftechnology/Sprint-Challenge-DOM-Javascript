@@ -44,7 +44,7 @@ class Carousel {
 
   previous() {
     // if this is first item in array
-    if (this.index <= 0) {
+    if (!this.index) {
       this.index = this.items.length - 1
     }
 

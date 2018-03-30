@@ -1,3 +1,10 @@
 .Button {
   display: inline-block;
+  border: 2px solid black;
+  padding: 5px;
+  cursor: crosshair
+}
+
+.Button--selected {
+  display: none;
 }

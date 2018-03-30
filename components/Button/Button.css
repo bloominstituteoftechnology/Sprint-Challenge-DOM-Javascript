@@ -4,6 +4,7 @@
   border: solid 2px;
   border-bottom-color: aqua;
   border-top-color: navy;
+  margin-right: 5px;
 }
 .Button--dissappear {
   display: none; 

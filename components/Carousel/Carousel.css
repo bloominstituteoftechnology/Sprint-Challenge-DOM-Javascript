@@ -1,26 +1,39 @@
+.Carousel { 
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
 .Carousel__arrow-left {
-  font-size: 42px;
-  position: absolute;
-  left: 20px;
-  top: 50px;
+  font-size: 5rem;
+  align-self: center;
+  margin-left: 2%;
 }
 
+/* .Carousel__arrow-left:hover {
+  cursor: pointer;
+} */
+
 .Carousel__arrow-right {
-  font-size: 42px;
-  position: absolute;
-  right: 20px;
-  top: 50px;
+  font-size: 5rem;
+  align-self: center;
+  margin-right: 2%;
+}
+
+.Carousel__arrow--hover {
+  color: green;
+  font-size: 10rem;
+  cursor: pointer;
 }
 
 .Carousel__items {
-  margin-left: 70px;
-  margin-right: 70px;
+  padding: 5%;
+  /* border: 1px solid #000; */
 }
 
 .Carousel__item {
   display: none;
 }
 
-.Carousel__item-focused {
+.Carousel__item--show {
   display: inline-block;
 }

@@ -1,5 +1,9 @@
 .Box__title {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 15px;
+}
+
+.Box__description{
+  font-size: 1rem;
 }

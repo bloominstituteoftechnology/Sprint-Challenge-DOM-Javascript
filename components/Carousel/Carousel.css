@@ -11,6 +11,7 @@
 .Carousel__arrow-left:hover {
   cursor: pointer;
   background-color: blue;
+  color: white;
 }
 
 .Carousel__arrow-right {
@@ -26,6 +27,7 @@
 .Carousel__arrow-right:hover {
   cursor: pointer;
   background-color: blue;
+  color: white;
 }
 
 .Carousel__items {

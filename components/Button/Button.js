@@ -10,7 +10,7 @@ class Button {
 	// callback for when a button's event listener is triggered
 	hide() {
 		this.element.classList.toggle('Button__hide');
-		// console.log(this.element.classList);
+		console.log(this.element.classList);
 	}
 }
 

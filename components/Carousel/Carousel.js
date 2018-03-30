@@ -1,4 +1,20 @@
+// describes each carousel item
+class CarouselItem {
+	constructor() {
+
+	}
+	// Prototype Methods
+
+}
+
+// describes carousel as a whole
+// contains information about each carousel item
+// controls the carousel right and left arrows 
 class Carousel {
+	constructor() {
+
+	}
+	// Prototype Methods
 
 }
 

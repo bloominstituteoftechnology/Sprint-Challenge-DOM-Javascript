@@ -14,8 +14,18 @@ there needs to be a set data that so we can use the counter with coercion to add
 
 
 class Carousel {
-
+    constructor(carousel) {
+        this.carousel = carousel;
+    
+       
+        this.arrows = carousel.querySelector('.Carousel__arrow');
+        console.log(this.arrow);
+        this.arrows = Array.from(this.arrows).reduce((obj, arrows) => {
+          //obj[arrow.dataset.tab] = new TabLink(arrow);
+          //return obj;
+        });
 }
-
+}
 let carousels = document.querySelectorAll(".Carousel");
+//console.log(document.querySelector(`.Carousel__arrow[data-arrow="1"`));
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));

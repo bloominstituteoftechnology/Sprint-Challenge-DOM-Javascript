@@ -1,3 +1,8 @@
 .Button {
   display: inline-block;
+  cursor: pointer;
+}
+
+.Button__button-off {
+  display: none;
 }

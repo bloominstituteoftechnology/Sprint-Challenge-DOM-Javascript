@@ -3,7 +3,10 @@
 	<head>
 		<title>Introduction to the DOM</title>
 		<link rel="stylesheet" href="./styles.css">
+		<script defer="defer" src="./components/Button/Button.js"></script> <!--Script Tag Added & updated to reflect Button.js-->
+		<script defer="defer" src="./components/Carousel/Carousel.js"></script> <!--Script Tag Added & updated to reflect Stretch Goal attempt-->
 	</head>
+
 	<body>
 		<script defer="defer" src="./components/Carousel/Carousel.js"></script>
 		<script defer="defer" src="./components/Tabs/Tabs.js"></script>
@@ -27,7 +30,8 @@
 					<div class="Box__title">Placeholder</div>
 					<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
 				</div>
-		</div><div class="Section Section--bordered Section--half"
+		</div>		
+		<div class="Section Section--bordered Section--half">
 				<div class="Box">
 					<div class="Box__title">Placeholder</div>
 					<div class="Box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce risus nibh, gravida nec felis quis, facilisis facilisis lectus. Nulla ac orci pretium, condimentum orci quis, accumsan nisi. Aliquam erat volutpat. Curabitur cursus mattis libero, at viverra risus hendrerit quis. Fusce imperdiet tristique tortor non tincidunt. Mauris accumsan urna nec augue feugiat porta. Proin vitae magna in ex malesuada laoreet eget a nulla. Aliquam tristique et elit at consequat. In hac habitasse platea dictumst.</div>
@@ -35,16 +39,18 @@
 			</div>
 		</div>
 
+		<!--Buttons-->
 		<div class="Section Section--bordered Section--full">
-			<div class="Section__header">Three Buttons</div>
+			<div class="Section__header2">Kaitlyn's Three AWESOME Buttons</div>
 
-			<div class="Button">I Dissapear</div>
-			<div class="Button">I Dissapear</div>
-			<div class="Button">I Dissapear</div>
+			<div class="Button Button__border" data-button="1">I Dissapear</div>
+			<div class="Button Button__border" data-button="2">I Dissapear</div>
+			<div class="Button Button__border" data-button="3">I Dissapear</div>
 
 		</div>
 
-		<!-- <div class="Section Section--bordered Section--full">
+		<!--STRETCH GOAL-->
+		<div class="Section Section--bordered Section--full">
 			<div class="Section__header">Tab Menu</div>
 			
 			<div class="Carousel">
@@ -116,7 +122,7 @@
         </div>
         <div class="Carousel__arrow-right"> > </div>
       </div>
-		</div> -->
+		</div>
 
 	</body>
 </html>

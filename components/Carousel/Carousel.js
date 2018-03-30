@@ -9,6 +9,7 @@ class Carousel {
         this.rightArrow.addEventListener('click', () => {this.rightMove()});
         this.items = Array.from(this.element.querySelectorAll('.Carousel__item'));
         this.selected = this.items[a];
+        this.autoCarousel();
     }
     leftMove(){
         this.selected.classList.remove('Carousel__item-focused');
@@ -30,8 +31,12 @@ class Carousel {
         }
         this.selected.classList.add('Carousel__item-focused');
     }
+    autoCarousel(){
+        setInterval(() => {
+            this.rightMove();
+        }, 1000);
+    }
 }
 
 let carousels = document.querySelectorAll(".Carousel");
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));
-console.log(carousels);

@@ -1,3 +1,20 @@
 .Button {
   display: inline-block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  margin: 10px 10px 10px 0;
+  color: white;
+  background-color: purple;
+  cursor: pointer;
+}
+
+.Button:hover {
+  color: purple;
+  background-color: white;
+  border: 1px solid purple;
+  font-weight: bold;
+}
+
+.Button--hidden {
+  display: none;
 }

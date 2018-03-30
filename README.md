@@ -14,4 +14,4 @@ Your Challenge is to make a simple `Button` component that hides when it's click
 ## Stretch Challenge
 Your stretch challenge is to write the functionality of a `Caoursel` component. You have the HTML and CSS already in place. This is an advanced challenge, so you are not expected to be able to complete it. If you begin and don't finish, you should still submit with what you have. You may reference the `Tabs` component for assistance.
 
-Example of a Carousel: https://v4-alpha.getbootstrap.com/components/carousel/#with-controls
+Example of a Carousel: https://v4-alpha.getbootstrap.com/components/carousel/#with-controls .

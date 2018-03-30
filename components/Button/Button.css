@@ -2,6 +2,6 @@
   display: inline-block;
 }
 
-.Button__disappear {
+.Button--disappear {
   display: none;
 }

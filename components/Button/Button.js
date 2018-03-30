@@ -1,12 +1,13 @@
 class Disappear {
-  constuctor (button) {
-    button.addEventListener('click', (event) =>{
-      console.log('hello I have been clicked');
-      // button.classList.toggle('.Button__disappear');
+  constructor(element) {
+    this.element = element;
+    this.dataButton = element.dataset.button; //probably not needed
+    this.element.addEventListener('click', (event) => {
+      this.element.classList.add('Button--disappear'); //upon being clicked, button disappears
     });
   }
 }
 
-const pressButton = document.querySelector('Button');
-
-const test = new Disappear (pressButton);
+Array.from(document.querySelectorAll('.Button')).map(button => {
+  new Disappear(button);
+});

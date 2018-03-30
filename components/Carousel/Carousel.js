@@ -1,73 +1,71 @@
-// class CarouselItem {
-//     constructor(element) {
-//         this.element = element;
-//     }
-// }
+class Carousel {
+    constructor(element) {
+        this.element = element;
+        this.slide = this.element.querySelectorAll('.Carousel__item');
+        this.left = this.element.querySelector('.Carousel__arrow-left');
+        this.left.addEventListener('click', () => { this.goLeft() });
+        this.right = this.element.querySelector('.Carousel__arrow-right');
+        this.right.addEventListener('click', () => { this.goRight() });
+        this.current = 0;
+        this.focus();
+    }
 
+    unfocus() {
+        clearInterval(this.interval);
+        this.slide[this.current].classList.remove('Carousel__item-focused')
+    }
 
-// class Carousel {
-//     constructor(element) {
-//         this.element = element;
-//         this.slide = document.querySelector('.Carousel__item');
-//         this.slide = Array.from(this.slide).map(slide => new CarouselItem(slide));
-//         this.current = 0;
-//         this.focus();
-//     }
+    focus() {
+        this.slide[this.current].classList.add('Carousel__item-focused')
+        this.interval = setInterval(this.goRight, 3000);
+    }
 
-//     unfocus() {
-//         this.element.children[current].classList.remove('Carousel__item-focused')
-//     }
+    goLeft() {
+        this.unfocus();
+        this.current = ((this.current + 2) % 3);
+        this.focus();
+    }
 
-//     focus() {
-//         this.element.children[current].classList.add('Carousel__item-focused')
-//     }
+    goRight() {
+        this.unfocus();
+        this.current = ((this.current + 1) % 3);
+        this.focus();
+    }
+}
 
-//     goLeft() {
-//         unfocus();
-//         current = ((current + 2) % 3);
-//         focus();
-//     }
+let carousels = document.querySelectorAll(".Carousel");
+carousels = Array.from(carousels).map(carousel => new Carousel(carousel));
 
-//     goRight() {
-//         unfocus();
-//         current = ((current + 1) % 3);
-//         focus();
-//     }
-// }
+// const cars = document.querySelectorAll(".Carousel__item");
+// const left = document.querySelector('.Carousel__arrow-left');
+// const right = document.querySelector('.Carousel__arrow-right');
 
-// let carousels = document.querySelectorAll(".Carousel__items");
-// carousels = new Carousel(carousels);
+// let current = 0;
+// let interval;
 
-const cars = document.querySelectorAll(".Carousel__item");
-const left = document.querySelector('.Carousel__arrow-left');
-const right = document.querySelector('.Carousel__arrow-right');
+// const unfocus = () => {
+//     clearInterval(interval);
+//     cars[current].classList.remove('Carousel__item-focused')
+// };
 
-let current = 0;
-let interval;
+// const focus = () => {
+//     cars[current].classList.add('Carousel__item-focused')
+//     interval = window.setInterval(goRight, 12000);
+// };
 
-const unfocus = () => {
-    clearInterval(interval);
-    cars[current].classList.remove('Carousel__item-focused')
-};
+// const goLeft = () => {
+//     unfocus();
+//     current = ((current + 2) % 3);
+//     focus();
+// };
 
-const focus = () => {
-    cars[current].classList.add('Carousel__item-focused')
-    interval = window.setInterval(goRight, 12000);
-};
+// const goRight = () => {
+//     unfocus();
+//     current = ((current + 1) % 3);
+//     focus();
+// };
 
-const goLeft = () => {
-    unfocus();
-    current = ((current + 2) % 3);
-    focus();
-};
-
-const goRight = () => {
-    unfocus();
-    current = ((current + 1) % 3);
-    focus();
-};
-
-left.addEventListener('click', goLeft);
-right.addEventListener('click', goRight);
-focus();
+// left.addEventListener('click', goLeft);
+// right.addEventListener('click', goRight);
+// focus();
 

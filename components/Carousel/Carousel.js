@@ -1,9 +1,18 @@
 // describes each carousel item
 class CarouselItem {
-	constructor() {
-
+	constructor(element) {
+		// store the carousel item
+		this.element = element;
 	}
 	// Prototype Methods
+	// when an arrow is clicked, hide current slide item
+	hide() {
+
+	}
+	// when an arrow is clicked, show the new slide
+	show() {
+
+	}
 
 }
 
@@ -15,7 +24,7 @@ class Carousel {
 		// store the carousel div
 		this.element = element;
 		// add an event listener to the right arrow
-		document.querySelector('.Carousel__arrow-left').addEventListener('click', () => nextSlide());
+		document.querySelector('.Carousel__arrow-left').addEventListener('click', () => previousSlide());
 		// add an event listener to the left arrow
 		document.querySelector('.Carousel__arrow-right').addEventListener('click', () => nextSlide());
 		// store reference to all carousel items
@@ -24,7 +33,14 @@ class Carousel {
 		this.items = Array.from(this.items).map((item) => new CarouselItem(item));
 	}
 	// Prototype Methods
+	// hides the current slide and displays the previous slide
+	previousSlide() {
 
+	}
+	// hides the current slide and displays the next slide
+	nextSlide() {
+
+	}
 }
 
 let carousels = document.querySelectorAll(".Carousel");

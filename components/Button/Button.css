@@ -1,5 +1,6 @@
 .Button {
   display: inline-block;
+  text-align: center;
 }
 
 .Button--red{
@@ -15,4 +16,8 @@
 .Button--green{
   border: 5px solid green;
   width: 10%;
+}
+
+.Button_Disappear {
+  display: none;
 }

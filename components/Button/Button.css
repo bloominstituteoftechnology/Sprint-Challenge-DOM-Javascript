@@ -5,5 +5,5 @@
 }
 
 .Button--none {
-  visibility: hidden;
+  opacity: 0;
 }

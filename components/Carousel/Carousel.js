@@ -34,7 +34,7 @@ class Carousel {
 
   next() {
     // if this is the last item in array
-    if (this.index === this.items.length) {
+    if (this.index >= this.items.length) {
       // set index to start
       this.index = 0
     }
@@ -44,7 +44,7 @@ class Carousel {
 
   previous() {
     // if this is first item in array
-    if (!this.index) {
+    if (this.index <= 0) {
       this.index = this.items.length - 1
     }
 

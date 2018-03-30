@@ -34,7 +34,7 @@ class Carousel {
     autoCarousel(){
         setInterval(() => {
             this.rightMove();
-        }, 1000);
+        }, 2000);
     }
 }
 

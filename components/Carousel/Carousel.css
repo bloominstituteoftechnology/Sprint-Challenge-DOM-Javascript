@@ -3,6 +3,7 @@
   position: absolute;
   left: 20px;
   top: 50px;
+  border: 1px solid red;
 }
 
 .Carousel__arrow-right {
@@ -17,10 +18,12 @@
   margin-right: 70px;
 }
 
+/* turn on and off switch */
 .Carousel__item {
   display: none;
 }
 
 .Carousel__item-focused {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }

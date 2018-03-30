@@ -7,4 +7,4 @@ const hidden = e => {
 
 for (let i = 0; i < target.length; i++) {
     target[i].addEventListener('click', hidden);
-}
+}  

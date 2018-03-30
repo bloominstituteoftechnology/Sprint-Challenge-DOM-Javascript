@@ -8,7 +8,7 @@ class Carousel {
     this.leftArrow = this.element.children[0];
     this.rightArrow = this.element.children[2];
     this.leftArrow.addEventListener('click', () => {
-      this.shiftLeft();
+      this.items[0].moveLeftOut();
     });
     this.rightArrow.addEventListener('click', () => {
       this.items[0].moveRightOut();

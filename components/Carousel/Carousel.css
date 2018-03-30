@@ -2,14 +2,32 @@
   font-size: 42px;
   position: absolute;
   left: 20px;
-  top: 50px;
+  top: 100px;
+  border: 2px solid black;
+  padding: .3% .2%;
+  transition: .5s;  
+}
+
+.Carousel__arrow-left:hover {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
 }
 
 .Carousel__arrow-right {
   font-size: 42px;
   position: absolute;
   right: 20px;
-  top: 50px;
+  top: 100px;
+  border: 2px solid black;
+  padding: .3% .2%;
+  transition: .5s;
+}
+
+.Carousel__arrow-right:hover {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
 }
 
 .Carousel__items {

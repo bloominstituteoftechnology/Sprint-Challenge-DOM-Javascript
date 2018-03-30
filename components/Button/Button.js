@@ -18,4 +18,5 @@ class HideButton{
 }
 let button = document.querySelectorAll(".Button");
 button = Array.from(button).map(button => new HideButton(button));
+
 //header = new HideButton(header);

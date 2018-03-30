@@ -27,5 +27,5 @@ class Carousel {
 }
 }
 let carousels = document.querySelectorAll(".Carousel");
-//console.log(document.querySelector(`.Carousel__arrow[data-arrow="1"`));
+console.log(document.querySelectorAll(".Carousel"));
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));

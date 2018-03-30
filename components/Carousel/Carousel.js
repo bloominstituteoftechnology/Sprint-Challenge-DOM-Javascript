@@ -5,6 +5,8 @@ class Carousel {
     this.items = items.map(item => new CarouselItem(item));
     let leftArrow = document.querySelector('.Carousel__arrow-left');
     leftArrow = new Arrow(leftArrow, this, -1);
+    let rightArrow = document.querySelector('.Carousel__arrow-right');
+    rightArrow = new Arrow(rightArrow, this, 1);
     this.selectedItem = 0;
   }
 
@@ -14,9 +16,10 @@ class Carousel {
         this.items[i].hide();
         this.selectedItem = (this.selectedItem + direction) % 3;
         if(this.selectedItem < 0) this.selectedItem = 2;
+        this.showNext();
+        return;
       }
     }
-    this.showNext();
   }
 
   showNext(){

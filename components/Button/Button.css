@@ -10,3 +10,13 @@
   border: 2px solid black
   
 }
+
+.Button--displayNone{
+  display:none;
+}
+.Button__1{
+  background: rgb(68, 163, 127);
+}
+.Button__3{
+  background: rgb(159, 123, 192);
+}

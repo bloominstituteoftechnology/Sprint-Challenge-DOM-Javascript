@@ -1,3 +1,5 @@
+let a = 0;
+
 class Carousel {
     constructor(element){
         this.element = element;
@@ -6,14 +8,19 @@ class Carousel {
         this.leftArrow.addEventListener('click', () => {this.leftMove()});
         this.rightArrow.addEventListener('click', () => {this.rightMove()});
         this.items = Array.from(this.element.querySelectorAll('.Carousel__item'));
+        this.selected = this.items[a];
     }
     leftMove(){
         console.log('left');
+        this.selected.classList.remove('Carousel__item-focused');
+        this.selected = this.items[--a];
+        this.selected.classList.add('Carousel__item-focused');
     }
     rightMove(){
         console.log('right');
-        this.items[0].classList.remove('Carousel__item-focused');
-        this.items[1].classList.add('Carousel__item-focused');
+        this.selected.classList.remove('Carousel__item-focused');
+        this.selected = this.items[++a];
+        this.selected.classList.add('Carousel__item-focused');
     }
 }
 

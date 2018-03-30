@@ -1,3 +1,17 @@
 .Button {
   display: inline-block;
+  border: 3px solid black;
+  width: 160px;
+  height: 35px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.Button--hidden {
+  display: none;
+}
+
+.Button__text {
+ text-align: center;
+ line-height: 4px;
 }

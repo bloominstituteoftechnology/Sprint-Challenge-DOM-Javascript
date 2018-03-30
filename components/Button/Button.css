@@ -1,3 +1,12 @@
+body {
+	background-color: #13A5FF;
+	color: white;
+}
+
+.Body--invert {
+	filter: invert(100%);
+}
+
 .Button {
   display: flex;
   justify-content: center;
@@ -11,6 +20,7 @@
 
 .Button__actual {
 	border: 2px solid black;
+	box-shadow: 1px 2px 2px 2px black;
 	padding: 13px;
 	margin: 25px;
 }

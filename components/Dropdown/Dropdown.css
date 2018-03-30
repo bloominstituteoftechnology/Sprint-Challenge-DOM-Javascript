@@ -6,23 +6,25 @@
 
 .Dropdown__button {
   padding: 15px;
-  background-color: white;
-  border: 2.5px solid black;
+  background-color: black;
+  border: 2.5px solid white;
 
 }
 
 .Dropdown__content {
   position: absolute;
-  background-color: white;
+  background-color: black;
   display: none;
   margin-top: 10px;
   padding: 15px;
-  border: 2.5px solid black;
+  border: 2.5px solid white;
 }
 
 .Dropdown__link {
   display: inline-block;
   margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
 }
 
 .Dropdown--active .Dropdown__content {

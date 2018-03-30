@@ -41,8 +41,6 @@ class Carousel {
       }
       return tallest;
     }, 0) + "px";
-
-    this.update();
   }
 
   scrollLeft() {

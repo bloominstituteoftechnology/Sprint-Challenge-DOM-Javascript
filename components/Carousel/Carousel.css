@@ -2,19 +2,39 @@
   font-size: 42px;
   position: absolute;
   left: 20px;
-  top: 50px;
+  top: 80px;
+  padding: 5px;
+  background-color: white;
+  border: 2.5px solid black;
+  font-weight: bold;
 }
 
 .Carousel__arrow-right {
   font-size: 42px;
   position: absolute;
   right: 20px;
-  top: 50px;
+  top: 80px;
+  padding: 5px;
+  background-color: white;
+  border: 2.5px solid black;
+  font-weight: bold;
 }
 
 .Carousel__items {
-  margin-left: 70px;
-  margin-right: 70px;
+  margin: 25px 70px 25px 70px;
+}
+
+.Box {
+  display: flex;
+  align-items: center;
+}
+
+.Box__title {
+  margin-right: 20px;
+}
+
+.Box__description {
+  margin-left: 20px;
 }
 
 .Carousel__item {
@@ -22,5 +42,6 @@
 }
 
 .Carousel__item-focused {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }

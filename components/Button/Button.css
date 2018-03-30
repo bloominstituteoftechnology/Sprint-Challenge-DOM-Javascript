@@ -15,5 +15,5 @@
 }
 
 .Button--Clicked {
-  visibility: hidden;
+  display: none;
 }

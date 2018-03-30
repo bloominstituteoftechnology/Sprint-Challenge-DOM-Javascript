@@ -1,28 +1,3 @@
-// class Dropmenu {
-//     constructor(element) {
-//         this.element = element;
-//         this.element.addEventListener('click', () => { this.dispL() });
-//         pargraphExit.addEventListener('mouseover', () => { this.hideDisp() });
-//     }
-//     dispL() {
-//         links.style.display = "block";
-//     }
-//     hideDisp() {
-//         links.style.display = "none"
-//     }
-    
-// }
-// let clickEvent = document.querySelectorAll(".Header__dropdown");
-// let moverEvent = document.querySelector(".Block__paragraph");
-// // clickEvent = new Dropmenu(clickEvent);
-// clickEvent = Array.from(clickEvent).map(item => {
-//     return new Dropmenu(item);
-// });
-// // moverEvent = new Dropmenu(moverEvent);
-// moverEvent = Array.from(moverEvent).map( item => {
-//     return new Dropmenu(item);
-// } );
-
 
 class Action {
     constructor(element, parent) {

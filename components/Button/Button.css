@@ -8,13 +8,11 @@
   text-align: center;
   justify-content: center;
   font-weight: bold;
+  font-size: 21px;
   align-items: center;
   margin-left: 17.5%;
   cursor: pointer;
   margin-top: 20px;
-
-
-
 }
 .Button--selected {
   /* color: red; */

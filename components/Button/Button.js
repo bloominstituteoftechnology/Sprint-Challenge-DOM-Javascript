@@ -4,9 +4,14 @@ class Button {
     this.element.addEventListener("click", ()=>{
       this.removeButton()
     })
+
   }
   removeButton(){
-    this.element.remove(this.element);
+
+    this.element.classList.add("Button--Hidden");
+  }
+  revealButton(){
+    this.element.classList.remove("Button--Hidden");
   }
 }
 

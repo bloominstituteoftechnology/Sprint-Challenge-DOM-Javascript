@@ -4,3 +4,8 @@
   border: solid black;
   cursor: pointer;
 }
+
+.Button--Hidden{
+  visibility: hidden;
+  cursor: pointer;
+}

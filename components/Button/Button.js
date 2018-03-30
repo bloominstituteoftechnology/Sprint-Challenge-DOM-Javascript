@@ -13,7 +13,7 @@ class Button {
             this.removeBorder();
         })
     }
-
+    
     //noShow function
     noShow() { // adds display: none when user clicks on button
         this.element.style.display = "none";

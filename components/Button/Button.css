@@ -22,3 +22,7 @@
   background-color: darkslateblue;
   color: white;
 }
+
+.Hide--button {
+  display: none;
+}

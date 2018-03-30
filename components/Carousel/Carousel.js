@@ -37,7 +37,7 @@ class Carousel {
 		// reference the first carousel item
 		this.activeIndex = 0;
 		// show the first slide
-		// this.init();
+		this.init();
 		// add an event listener to the right arrow
 		this.rightArrow.addEventListener('click', () => {this.updateIndex(1)});
 		// add an event listener to the left arrow
@@ -50,23 +50,24 @@ class Carousel {
 	}
 
 	updateIndex(n) {
-		console.log(this.activeIndex);
+		// console.log(this.activeIndex);
 		this.showSlide(this.activeIndex += n);
 	}
 
 	// hides the current slide and displays the previous slide
 	showSlide(num) {
-		console.log('you made it here');
+		// console.log('you made it here');
+		console.log(this.items.length);
 		if (num < 0) {
-			this.activeIndex = this.items.length -1;
+			this.activeIndex = this.items.length - 1;
 			// console.log(this.activeIndex);
-		} else if (num > this.items.length) {
-			this.activeindex = 0;
+		} else if (num === this.items.length) {
+			this.activeIndex = 0;
 			// console.log(this.activeIndex);
 		}
 		this.items.forEach((item) => item.hide());
-		console.log(this.items);
-		this.items[num].show();
+		console.log(num);
+		this.items[this.activeIndex].show();
 	}
 }
 

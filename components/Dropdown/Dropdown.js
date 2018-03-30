@@ -7,7 +7,6 @@ class Dropdown {
       this.toggleContent();
     });
   }
-
   toggleContent() {
     this.element.classList.toggle("Dropdown--active");
   }

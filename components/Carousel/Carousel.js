@@ -17,7 +17,7 @@ class Carousel {
 
     focus() {
         this.slide[this.current].classList.add('Carousel__item-focused')
-        this.interval = setInterval(this.goRight, 3000);
+        this.interval = setInterval(this.goRight.bind(this), 12000);
     }
 
     goLeft() {
@@ -35,37 +35,3 @@ class Carousel {
 
 let carousels = document.querySelectorAll(".Carousel");
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));
-
-// const cars = document.querySelectorAll(".Carousel__item");
-// const left = document.querySelector('.Carousel__arrow-left');
-// const right = document.querySelector('.Carousel__arrow-right');
-
-// let current = 0;
-// let interval;
-
-// const unfocus = () => {
-//     clearInterval(interval);
-//     cars[current].classList.remove('Carousel__item-focused')
-// };
-
-// const focus = () => {
-//     cars[current].classList.add('Carousel__item-focused')
-//     interval = window.setInterval(goRight, 12000);
-// };
-
-// const goLeft = () => {
-//     unfocus();
-//     current = ((current + (cars.length-1)) % cars.length);
-//     focus();
-// };
-
-// const goRight = () => {
-//     unfocus();
-//     current = ((current + 1) % cars.length);
-//     focus();
-// };
-
-// left.addEventListener('click', goLeft);
-// right.addEventListener('click', goRight);
-// focus();
-

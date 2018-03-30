@@ -1,22 +1,18 @@
-class Button {
-    constructor(element) {
-        this.element = element
-        this.element.addEventListener('click', (event) => {
-          if (event.select()) {
-              this.deselect(event)
-              event.stopPropagation()
-          }
-        })
-    }
+class Buttons {
+  constructor(element) {
+    this.element = element;
+    this.button = this.element.querySelector(".Button__button");
 
-    select() {
-        this.element.classList.add('Button--selected')
-    }
+    this.button.addEventListener("click", () => {
+      console.log("clicked");
+      this.toggleContent();
+    });
+  }
 
-    deselect() {
-        this.element.classList.remove('Button--selected')
-    }
+  toggleContent() {
+    this.element.classList.toggle("Button--selected");
+  }
 }
 
-let buttons = document.querySelector('.Button')
-buttons = Array.from(buttons).map(button => new Button(button))
+let buttons = document.querySelector('.Button');
+buttons = Array.from(buttons).map(button => new Button(button));

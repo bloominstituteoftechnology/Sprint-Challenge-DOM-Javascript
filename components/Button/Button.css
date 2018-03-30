@@ -18,6 +18,6 @@
   width: 10%;
 }
 
-.Button_Disappear {
-  display: none;
+.Button--disappear {
+  visibility: hidden;
 }

@@ -1,13 +1,15 @@
 class Button {
     constructor(element) {
         this.element = element;
+        this.element.addEventListener('click', () => 
+            this.select())
     }
 
     select() {
-        this.element.classList.add('Button__Disappear');
+        this.element.classList.toggle('Button--disappear');
     }
-    
-    deselect() {
-        this.element.classList.remove('Button__Disappear');
-    }
+
 }
+
+let buttons = document.querySelectorAll(".Buttons");
+buttons = Array.from(buttons).map(buttons => new Button(buttons));

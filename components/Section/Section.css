@@ -6,6 +6,7 @@
 	margin: 0;
 	padding: 20px;
 	position: relative;
+	
 }
 
 .Section--bordered {
@@ -27,7 +28,15 @@
 	.Section--half {
 		box-sizing: border-box;
 		display: inline-block;
-		width: 50%;
+		width: auto;
 		padding: 20px;
 	}
+}
+
+.Section--split {
+	display: flex;
+}
+
+.Section--half {
+	border: 2.5px solid black;	
 }

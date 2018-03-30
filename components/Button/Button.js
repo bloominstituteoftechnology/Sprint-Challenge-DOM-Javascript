@@ -1,4 +1,5 @@
 button = document.querySelectorAll('.Button');
+
 class buttonToObj {
   constructor(element) {
     this.element = element;
@@ -11,4 +12,5 @@ class buttonToObj {
     element.classList.add('HideBtn');
   }
 }
+
 button = Array.from(button).map((btn) => new buttonToObj(btn));

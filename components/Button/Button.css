@@ -1,3 +1,10 @@
 .Button {
   display: inline-block;
+  border: 2px solid teal;
+  background-color: slategray;
+  cursor: pointer;
+}
+
+.Button--disappear {
+  display: none;
 }

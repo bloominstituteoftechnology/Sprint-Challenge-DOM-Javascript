@@ -39,9 +39,9 @@ class Carousel {
 		// show the first slide
 		// this.init();
 		// add an event listener to the right arrow
-		this.rightArrow.addEventListener('click', this.updateIndex(1));
+		this.rightArrow.addEventListener('click', () => {this.updateIndex(1)});
 		// add an event listener to the left arrow
-		this.leftArrow.addEventListener('click', this.updateIndex(-1));
+		this.leftArrow.addEventListener('click', () => {this.updateIndex(-1)});
 	}
 	// Prototype Methods
 	// show the first active item on page load

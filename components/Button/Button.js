@@ -1,4 +1,3 @@
-
 class Button {
   constructor(button) {
     this.button = button;
@@ -11,3 +10,5 @@ class Button {
 }
 
 let buttons = Array.from(document.querySelectorAll('.Button')).map(button => new Button(button));
+
+

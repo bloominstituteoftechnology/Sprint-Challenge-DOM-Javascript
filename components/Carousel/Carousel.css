@@ -1,28 +1,22 @@
+.Carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
 .Carousel__arrow-left {
   font-size: 42px;
-  position: absolute;
-  left: 20px;
-  top: 125px;
-  padding: 25px;
   cursor: pointer;
 }
 
 .Carousel__arrow-right {
   font-size: 42px;
-  position: absolute;
-  right: 20px;
-  top: 125px;
-  padding: 25px;
   cursor: pointer;
 }
 
 .Carousel__items {
-  display: block;
-  position: absolute;
-  height: 250px;
-  margin: 33px auto;
-  width: 98%;
-  text-align: center;
+  text-align: center;  
 }
 
 .Carousel__item {
@@ -30,7 +24,5 @@
 }
 
 .Carousel__item-focused {
-  display: inline-block;
-  height: 250px;
-  width: 500px;
+  display: block;
 }

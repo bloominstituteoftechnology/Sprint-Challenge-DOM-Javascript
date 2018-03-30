@@ -10,7 +10,8 @@ class Carousel {
 		this.three = document.querySelector('.Carousel__item[data-num="3"]');
 
 		this.rightButton = document.querySelector('.Carousel__arrow-right');
-		this.leftButton =  document.querySelector('.Carousel__arrow-left');
+		// this.leftButton = document.querySelector('.Carousel__arrow-left');
+		this.leftButton = document.getElementById('left');
 
 		this.rightButton.addEventListener('click', () => {
 			this.goRight();
@@ -78,7 +79,6 @@ class Carousel {
 	}
 
 }
-
 
 let carousels = document.querySelectorAll(".Carousel");
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));

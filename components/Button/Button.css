@@ -1,3 +1,10 @@
 .Button {
   display: inline-block;
+  background: hsl(199, 87%, 64%);
+  border: solid 2px;
+  border-bottom-color: aqua;
+  border-top-color: navy;
+}
+.Button--dissappear {
+  display: none; 
 }

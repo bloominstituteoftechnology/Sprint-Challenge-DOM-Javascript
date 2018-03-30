@@ -1,3 +1,17 @@
 .Button {
   display: inline-block;
+  border: 2.5px solid black;
+  padding: 5%;
+  margin: 2% 1%;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+div .Button:nth-of-type(2n) {
+  background-color: blueviolet;
+}
+
+div .Button:nth-of-type(odd) {
+  background-color: blue;
 }

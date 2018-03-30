@@ -2,19 +2,19 @@
   font-size: 42px;
   position: absolute;
   left: 20px;
-  top: 50px;
+  top: 150px;
 }
 
 .Carousel__arrow-right {
   font-size: 42px;
   position: absolute;
   right: 20px;
-  top: 50px;
+  top: 150px;
 }
 
 .Carousel__items {
-  margin-left: 70px;
-  margin-right: 70px;
+  text-align: center;
+  margin-top: 33px;
 }
 
 .Carousel__item {

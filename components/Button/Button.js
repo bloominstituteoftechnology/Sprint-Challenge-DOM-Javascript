@@ -1,12 +1,12 @@
 class Button {
-    constructor(element){
+    constructor(element) {
         this.element = element;
-        this.element.addEventListener('click', () => { this.hideButton()});
+        this.element.addEventListener('click', () => { this.hideButton() });
     }
-    hideButton(){
+    hideButton() {
         this.element.classList.toggle('Button--hide');
     }
 }
 
 let buttons = document.querySelectorAll('.Button');
-buttons =  Array.from(buttons).map(buttons => new Button(buttons));
+buttons = Array.from(buttons).map(buttons => new Button(buttons));

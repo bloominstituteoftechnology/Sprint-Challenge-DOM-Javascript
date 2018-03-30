@@ -7,13 +7,12 @@ class CarouselItem {
 	// Prototype Methods
 	// when an arrow is clicked, hide current slide item
 	hide() {
-
+		this.element.classList.add('Carousel__item');
 	}
 	// when an arrow is clicked, show the new slide
 	show() {
-
+		this.element.classList.remove('Carousel__item');
 	}
-
 }
 
 // describes carousel as a whole

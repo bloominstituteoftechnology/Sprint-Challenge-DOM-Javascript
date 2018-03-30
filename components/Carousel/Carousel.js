@@ -22,7 +22,7 @@ class Carousel {
 
     goLeft() {
         this.unfocus();
-        this.current = ((this.current + 2) % this.slide.length);
+        this.current = ((this.current + (this.slide.length - 1)) % this.slide.length);
         this.focus();
     }
 

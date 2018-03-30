@@ -9,12 +9,18 @@ class CarouselItem {
 class Carousel {
  constructor(element) {
      this.element = element;
-     this.carouselItems = this.element.querySelectorAll(".Carousel__item");
-     this.carouselItems = Array.from(this.carouselItems).map(item => new CarouselItem(item));
-     this.carouselItems.unshift(this.carouselItems.pop());
-     this.Movement = Math.ceil((this.carouselItems.length / 2) - 1);
+     this.initItems();
+     this.initArrows();
+ }
+    initItems() {
+     this.carouselItems = this.element.querySelectorAll(".Carousel__item"); //grab all of items under carousel
+     this.carouselItems = Array.from(this.carouselItems).map(item => new CarouselItem(item)); // reassign items pass items through constructor
+     this.carouselItems.unshift(this.carouselItems.pop()); // to change viewing of items
+     this.Movement = Math.ceil((this.carouselItems.length / 2) - 1); //changes index of carousel item
+    }
+    initArrows() {
      this.rightArrow = this.element.querySelector(".Carousel__arrow-right");
-     this.leftArrow = this.element.querySelector(".Carousel__arrow-left");
+     this.leftArrow = this.element.querySelector(".Carousel__arrow-left"); // methods for movement to call
      this.rightArrow.addEventListener("click", () => {
          this.moveRight();
      });

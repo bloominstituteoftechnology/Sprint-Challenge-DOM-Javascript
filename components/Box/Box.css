@@ -3,3 +3,6 @@
   font-weight: bold;
   margin-bottom: 15px;
 }
+.button {
+  border: solid black 2px;
+}

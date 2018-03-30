@@ -18,3 +18,7 @@
 .Button[data-btn = '3'] {
   background-color: purple;
 } 
+
+.Hide--button {
+  display: none;
+}

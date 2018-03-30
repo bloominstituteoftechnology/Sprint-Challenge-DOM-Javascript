@@ -7,8 +7,7 @@ class Button {
 }
 
     hideButton() {
-        let element = this.element;
-        element.style.display = "none";    
+        this.element.classList.add("Hide--button")
     }
 }
 let buttons = document.querySelectorAll(".Button");

@@ -2,8 +2,16 @@ const hideButton = (event) => {
     event.target.classList.add("Button-hide");
 //    event.stopPropagation(); //not needed but I also tested this with Array and forEach commented out code
 }
+/*class Button {
+    constructor() {
+        this.buttons = Array.from(document.querySelectorAll(".Button"));
+        this.buttons.forEach(() => addEventListener('click', hideButton));
 
-// buttons = Array.from(document.querySelectorAll(".Button")); //Propagates to upper divs
+        this.DropdownButton.addEventListener('click', this.toggleMenu.bind(this));
+    }
+}*/ // planned to implement a class if the simpler code had worked...
+
+// buttons = Array.from(document.querySelectorAll(".Button")); //Propagates to upper divs for some reason...
 // buttons.forEach(() => addEventListener('click', hideButton));
 
 button1 = document.querySelector(".Button1");

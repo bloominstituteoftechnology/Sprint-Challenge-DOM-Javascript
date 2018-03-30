@@ -16,21 +16,22 @@ class Dropdown {
 let dropdowns = document.querySelectorAll(".Dropdown");
 dropdowns = Array.from(dropdowns).map(dropdown => new Dropdown(dropdown));
 
-class Button{
+
+// Button Constructor 
+class Button {
   constructor(element) {
     this.element = element;
-    this.button = this.element.querySelector(".Button"); 
+    this.button = this.element.querySelector(".Button__content"); 
 
-    this.button.addEventListener("click", () => {
+      this.element.addEventListener("click", () => {
       this.toggleButton();
     });
   }
 
   toggleButton() {
-    this.element.classList.toggle("Button--active");
+    this.button.classList.toggle("noShow");
   }
 }
 
 let buttons = document.querySelectorAll(".Button");
 buttons = Array.from(buttons).map(button => new Button(button));
-

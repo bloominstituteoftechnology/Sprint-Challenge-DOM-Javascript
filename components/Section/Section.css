@@ -11,8 +11,11 @@
 .Section--bordered {
 	border: 2.5px solid black;
 	border-top: none;
-}
 
+}
+.Section--fullB {
+	background-color: aqua; 
+}
 .Section--bordered:first-of-type {
 	border-top: 2.5px solid black;
 }

@@ -13,12 +13,19 @@
 }
 
 .Carousel__items {
+  display: flex; 
+  justify-content: center; 
   margin-left: 70px;
   margin-right: 70px;
+  padding: 20px; 
+   
 }
-
+.Box__title {
+  text-align: center; 
+}
 .Carousel__item {
   display: none;
+  align-items: center; 
 }
 
 .Carousel__item-focused {

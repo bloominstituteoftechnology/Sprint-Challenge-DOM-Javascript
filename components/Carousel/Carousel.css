@@ -1,15 +1,33 @@
 .Carousel__arrow-left {
   font-size: 42px;
-  position: absolute;
-  left: 20px;
-  top: 50px;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  z-index: 1;
+  background: rgba(178, 178, 178, 0.5);
+  align-self: stretch;
+  display: flex;
+  align-items: center;
 }
-
+.Carousel{
+  marign: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+}
 .Carousel__arrow-right {
   font-size: 42px;
-  position: absolute;
-  right: 20px;
-  top: 50px;
+  margin-right: 1rem;
+  padding: 0 0.5rem;
+  background: rgba(178, 178, 178, 0.5);
+  cursor: pointer;
+  z-index: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
 }
 
 .Carousel__items {

@@ -17,3 +17,4 @@ class Carousel {
 }
 
 let carousels = document.querySelectorAll(".Carousel");
+new Carousel(carousels);

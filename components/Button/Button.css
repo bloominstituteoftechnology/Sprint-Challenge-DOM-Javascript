@@ -1,3 +1,12 @@
 .Button {
   display: inline-block;
+  padding: 15px;
+  background-color: white;
+  border: 2.5px solid black;
+  cursor: pointer;
+}
+
+.Button-selected {
+  display: none;
+  border: 2.5px solid red;
 }

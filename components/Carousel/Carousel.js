@@ -52,7 +52,7 @@ const unfocus = () => {
 
 const focus = () => {
     cars[current].classList.add('Carousel__item-focused')
-    interval = window.setInterval(goRight, 5000);
+    interval = window.setInterval(goRight, 15000);
 };
 
 const goLeft = () => {

@@ -10,7 +10,7 @@ class Button {
 	// callback for when a button's event listener is triggered
 	hide() {
 		this.element.classList.toggle('Button__hide');
-		console.log(this.element.classList);
+		// console.log(this.element.classList);
 	}
 }
 
@@ -21,3 +21,4 @@ let buttons = document.querySelectorAll('.Button');
 // iterate over the collection of buttons
 // create an instance of class Button for each button
 buttons = Array.from(buttons).map(btn => new Button(btn));
+// console.log(buttons);

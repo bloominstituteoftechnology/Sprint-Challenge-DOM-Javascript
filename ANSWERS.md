@@ -6,3 +6,7 @@
 
 ## An event is any kind of interaction that occurs with a webpage on the user end, such as a click, cursor movement, scrolling, keyboard use. When an event culminates it is now considered triggered.
 
+#3. What is an event listener?
+
+## An event listener is a line of JS code that allows us to register when an event has taken place. They are placed on objects and give that object a callback function so that when the event is triggered, the callback runs.
+

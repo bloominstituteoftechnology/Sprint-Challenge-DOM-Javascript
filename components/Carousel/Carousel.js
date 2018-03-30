@@ -3,79 +3,82 @@ class Carousel {
 		this.element = element;
 		this.items = document.querySelectorAll('.Carousel__item');
 		this.items = Array.from(this.items);
+		this.currentlyActive = document.querySelector('.Carousel__item-focused');
 
-		this.activeItem = this.activeDisplay();
-		this.activeDataNum = this.dataNumber(this.activeItem);
-		this.nextActive = this.next();
+		this.one = document.querySelector('.Carousel__item[data-num="1"]');
+		this.two = document.querySelector('.Carousel__item[data-num="2"]');
+		this.three = document.querySelector('.Carousel__item[data-num="3"]');
 
-		this.right = document.querySelector('.Carousel__arrow-right');
-		this.left = document.querySelector('.Carousel__arrow-left');
+		this.rightButton = document.querySelector('.Carousel__arrow-right');
+		this.leftButton =  document.querySelector('.Carousel__arrow-left');
 
-		this.right.addEventListener('click', () => {
-			this.removeActive(); // remove active class from all classes
-			this.activeItem = this.next(); // add active class to next in line
+		this.rightButton.addEventListener('click', () => {
+			this.goRight();
+		});
+		this.leftButton.addEventListener('click', () => {
+			console.log('hey');
+			this.goLeft();
 		});
 	}
 
-	dataNumber(input) {
-		this.dataAttribute = input.dataset.num;
-		console.log(input);
-		return this.dataAttribute;
+	toggleOne() {
+		this.one.classList.toggle('Carousel__item-focused');
 	}
 
-	activeDisplay() {
-		Array.from(this.items).map(item => {
-			if (item.classList.contains('Carousel__item-focused')) {
-				return item;
-			}
-		});
+	toggleTwo() {
+		this.two.classList.toggle('Carousel__item-focused');
 	}
 
-	removeActive() {
-		this.items.forEach(item => {
-			item.classList.remove('Carousel__item-focused');
-		});
+	toggleThree() {
+		this.three.classList.toggle('Carousel__item-focused');
 	}
 
-	next() {
-		if (this.activeDataNum === "3") {
-			return document.querySelector('.Carousel__item[data-num="3"]');
-		} else {
-			return document.querySelector(`.Carousel__item[data-num="${Number(this.activeDataNum)+1}"]`);
+	reassignCurrentlyActive() {
+		this.currentlyActive = document.querySelector('.Carousel__item-focused');
+	}
+
+	goRight() {
+		this.data = this.currentlyActive.dataset.num; //returns string
+
+		if (this.data === "3") {
+			this.toggleOne();
+			this.toggleThree();
 		}
-	}
-
-	updateActive(newActive) {
-		this.activeItem = newActive;
-	}
-}
-
-/*
-class Next {
-	constructor(element, parent) {
-		this.element = element;
-		this.parent = parent;
-		this.rightArrow = document.querySelector('.Carousel__arrow-right');
-		this.rightArrow.addEventListener('click', () => {
-			this.goNext();
-		})
-	}
-
-	goNext() {
-		// remove .Carousel__item-focused
-		// add .Carousel__item-focused to next item
-		if (this.parent.activeDataNum === "3") {
-			this.parent.removeActive();
-			this.parent.updateActive(document.querySelector(`.Carousel__item[data-num="1"]`));
+		if (this.data === "2") {
+			
+			this.toggleThree();
+			this.toggleTwo();
 		}
+		if (this.data === "1") {
+			this.toggleOne();
+			this.toggleTwo();
+		}
+
+		this.reassignCurrentlyActive(); 
 	}
+
+	goLeft() {
+		this.data = this.currentlyActive.dataset.num; //returns string
+
+		if (this.data === "3") {
+			this.toggleThree();
+			this.toggleTwo();
+		}
+		if (this.data === "2") {
+			
+			this.toggleTwo();
+			this.toggleOne();
+		}
+		if (this.data === "1") {
+			this.toggleOne();
+			this.toggleThree();
+		}
+
+		this.reassignCurrentlyActive(); 
+	}
+
 }
 
-class Back {
-	constructor(element, parent) {
-		this.left = document.querySelector('.Carousel__arrow-left');
-	}
-}
-*/
+
 let carousels = document.querySelectorAll(".Carousel");
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));

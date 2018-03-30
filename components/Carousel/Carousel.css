@@ -2,19 +2,27 @@
   font-size: 42px;
   position: absolute;
   left: 20px;
-  top: 150px;
+  top: 125px;
+  padding: 25px;
+  cursor: pointer;
 }
 
 .Carousel__arrow-right {
   font-size: 42px;
   position: absolute;
   right: 20px;
-  top: 150px;
+  top: 125px;
+  padding: 25px;
+  cursor: pointer;
 }
 
 .Carousel__items {
+  display: block;
+  position: absolute;
+  height: 250px;
+  margin: 33px auto;
+  width: 98%;
   text-align: center;
-  margin-top: 33px;
 }
 
 .Carousel__item {
@@ -23,4 +31,6 @@
 
 .Carousel__item-focused {
   display: inline-block;
+  height: 250px;
+  width: 500px;
 }

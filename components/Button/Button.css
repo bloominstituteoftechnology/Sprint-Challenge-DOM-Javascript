@@ -1,3 +1,9 @@
 .Button {
   display: inline-block;
+  background-color: grey;
+  width: 10rem;
+}
+
+.Button--none {
+  opacity: 0;
 }

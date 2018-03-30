@@ -24,3 +24,7 @@
 .Carousel__item-focused {
   display: inline-block;
 }
+
+.Carousel_items--selected{
+  display: block;
+}

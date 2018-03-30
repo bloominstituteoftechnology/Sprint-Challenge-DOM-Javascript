@@ -1,6 +1,6 @@
 .Button {
   display: inline-block;
-  border: 3px solid green;
+  border: 3px solid black;
   padding: 8px;
-  background-color: pink;
+  background-color: #6682a0;
 }

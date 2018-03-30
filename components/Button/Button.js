@@ -33,8 +33,8 @@ class Button {
     }
   }
   
- buttons = Array.from(buttons).map(item => {
+buttons = Array.from(buttons).map(item => {
     new Button(item);
-  });
+});
 
 

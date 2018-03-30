@@ -11,15 +11,23 @@ class Carousel {
         this.selected = this.items[a];
     }
     leftMove(){
-        console.log('left');
         this.selected.classList.remove('Carousel__item-focused');
         this.selected = this.items[--a];
+        if(a < 0){
+            a = 2;
+            this.selected = this.items[a];
+        }
         this.selected.classList.add('Carousel__item-focused');
     }
     rightMove(){
-        console.log('right');
         this.selected.classList.remove('Carousel__item-focused');
-        this.selected = this.items[++a];
+        if(a < this.items.length - 1){
+            this.selected = this.items[++a];
+        }
+        else if(a === this.items.length - 1){
+            a = 0;
+            this.selected = this.items[a];
+        }
         this.selected.classList.add('Carousel__item-focused');
     }
 }

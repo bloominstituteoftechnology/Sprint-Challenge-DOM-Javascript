@@ -3,6 +3,12 @@
   position: absolute;
   left: 20px;
   top: 50px;
+  cursor: pointer;
+}
+.Carousel__arrow-left:hover {
+  color: rgba(197, 194, 194, 0.842);
+  text-shadow: .5px 0px #000000;  
+  background-color: solid rgba(240, 12, 12, 0.89);
 }
 
 .Carousel__arrow-right {
@@ -10,7 +16,14 @@
   position: absolute;
   right: 20px;
   top: 50px;
+  cursor: pointer;
 }
+.Carousel__arrow-right:hover {
+  color: rgba(226, 226, 226, 0.842);
+  text-shadow:.5px 0px #000000;  
+  background-color: solid rgba(240, 12, 12, 0.89);
+}
+
 
 .Carousel__items {
   margin-left: 70px;

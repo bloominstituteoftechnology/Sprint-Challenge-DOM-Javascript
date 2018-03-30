@@ -16,7 +16,7 @@ class Button {
     
     //noShow function
     noShow() { // adds display: none when user clicks on button
-        this.element.style.display = "none";
+        this.element.style.visibility = "hidden";
     }
 
     //addBorder function

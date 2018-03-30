@@ -1,3 +1,15 @@
 .Button {
   display: inline-block;
+  border: 2px solid black;
+  width: 100px;
+  text-align: center;
+  height: 40px;
+  padding-top: 20px;
+  font-weight: bold;
+  background:green;
+ 
+  
+}
+.Button--hide{
+  display: none;
 }

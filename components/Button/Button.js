@@ -17,10 +17,10 @@ class Button {
     this.element.addEventListener('click', () => { this.hideButton()})
   }
   hideButton() {
-      this.element.style.display === "none";
+      this.classList.add("Button--hide");
   }
 }
 
-let buttons = Array.from(buttons).map( element => {
+buttons = Array.from(buttons).map( buttons => {
   return new Button(button);
 })

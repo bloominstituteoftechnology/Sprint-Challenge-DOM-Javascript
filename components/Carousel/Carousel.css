@@ -1,8 +1,18 @@
+.Carousel {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
 .Carousel__arrow-left {
   font-size: 42px;
   position: absolute;
   left: 20px;
   top: 50px;
+  cursor: pointer;
 }
 
 .Carousel__arrow-right {
@@ -10,6 +20,7 @@
   position: absolute;
   right: 20px;
   top: 50px;
+  cursor: pointer;
 }
 
 .Carousel__items {

@@ -1,3 +1,18 @@
 .Button {
   display: inline-block;
+  width: 100px;
+  height: 25px;
+  background-color: grey;
+  text-align: center;
+  border-radius: 25%;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.Button:hover {
+  background-color: yellow;
+}
+
+.Button-hide {
+  display: none;
 }

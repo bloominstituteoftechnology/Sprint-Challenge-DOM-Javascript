@@ -6,12 +6,20 @@
   background-color: grey;
 }
 
+.Carousel__arrow-left:hover {
+  background-color: rgb(177, 176, 176);
+}
+
 .Carousel__arrow-right {
   font-size: 42px;
   position: absolute;
   right: 20px;
   top: 50px;
   background-color: grey;
+}
+
+.Carousel__arrow-right:hover {
+  background-color: rgb(177, 176, 176);
 }
 
 .Carousel__items {

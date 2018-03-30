@@ -1,15 +1,16 @@
 .Button {
   display: inline-block;
   border: 2.5px solid black;
-  padding: 5%;
+  padding: 2%;
   margin: 2% 1%;
   color: white;
   font-size: 1rem;
-  cursor: pointer;
 }
 
 .Button--hover {
-  border: 8px solid red ;
+  border: 8px solid red;
+  font-size: 1.5rem;
+  cursor: pointer;
 	animation: blink .5s step-end infinite alternate;   /* experimenting */
 }
 

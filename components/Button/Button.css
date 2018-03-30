@@ -1,3 +1,24 @@
 .Button {
   display: inline-block;
 }
+
+.Button__border {
+  border: 2px solid black;
+  padding: 5x;
+}
+
+.Button[data-btn = '1'] {
+  background-color: red;
+}
+
+.Button[data-btn = '2'] {
+  background-color: blue;
+}
+
+.Button[data-btn = '3'] {
+  background-color: purple;
+} 
+
+.Hide--button {
+  display: none;
+}

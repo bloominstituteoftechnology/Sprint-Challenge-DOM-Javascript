@@ -3,11 +3,14 @@
  
   padding-left: 10px;
   padding-top: 20px;
+  padding-right: 10px;
+  margin-right: 30px;
   background: white;
   height: 35px;
   width: 85px;
   color:black;
   border: 2px solid black
+  
   
 }
 

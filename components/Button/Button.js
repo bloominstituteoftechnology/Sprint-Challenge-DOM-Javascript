@@ -2,12 +2,10 @@ class Button {
   constructor(element) {
     this.element = element;
     this.element.addEventListener('click', this.disappear);
-    console.log(this);
   }
   
   //Adds the disappear class
   disappear() {
-    console.log(this);
     this.classList.add('Button--disappear');
   }
 }

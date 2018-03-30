@@ -8,8 +8,13 @@
   cursor: pointer;
 }
 
+.Button--hover {
+  border: 8px solid red ;
+	animation: blink .5s step-end infinite alternate;   /* experimenting */
+}
+
 div .Button:nth-of-type(2n) {
-  background-color: blueviolet;
+  background-color: green;
 }
 
 div .Button:nth-of-type(odd) {

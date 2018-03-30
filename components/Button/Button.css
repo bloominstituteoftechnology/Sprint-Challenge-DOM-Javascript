@@ -5,6 +5,7 @@ body {
 
 .Body--invert {
 	filter: invert(100%);
+	color: yellow;
 }
 
 .Button {
@@ -26,7 +27,7 @@ body {
 }
 
 .Button__actual--phantom {
-	color: white;
+	opacity: .05;
 	border: 1px solid;
 	padding: 13px;
 	margin: 25px;

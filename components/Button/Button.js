@@ -27,11 +27,5 @@ class Disguise {
 	}
 }
 
-// class Invert extends Disguise {
-// 	constructor(element) {
-// 		this.element = element;
-// 	}
-// }
-
 const mainButtonClass = document.querySelector('.Button');
 new Button(mainButtonClass);

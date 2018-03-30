@@ -1,3 +1,14 @@
 .Button {
   display: inline-block;
+  border: 2px solid black;
+  padding: 1% 2%;
+  border-radius: 5px;
+}
+
+.Button:hover {
+  cursor: pointer;
+}
+
+.Button--Selected {
+  display: none;
 }

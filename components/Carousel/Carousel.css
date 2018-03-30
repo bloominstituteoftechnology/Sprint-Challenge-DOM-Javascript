@@ -5,6 +5,17 @@
   top: 50px;
 }
 
+.Carousel_arrow--pointer {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 .Carousel__arrow-right {
   font-size: 42px;
   position: absolute;
@@ -18,9 +29,13 @@
 }
 
 .Carousel__item {
-  display: none;
+  transition: opacity 2s ease-out;
+  opacity: 0; 
+  height: 0;
+  overflow: hidden;
 }
 
 .Carousel__item-focused {
-  display: inline-block;
+  opacity: 1;
+  height: auto;
 }

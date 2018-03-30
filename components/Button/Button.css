@@ -1,3 +1,9 @@
 .Button {
   display: inline-block;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.Button--hide {
+	display: none;
 }

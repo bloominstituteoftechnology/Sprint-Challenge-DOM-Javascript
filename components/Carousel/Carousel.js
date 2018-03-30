@@ -17,8 +17,8 @@ class Carousel {
     this.left = document.querySelector('.Carousel__arrow-left')
     this.right = document.querySelector('.Carousel__arrow-right')
     // make sure handlers know who 'this' is
-    this.left.addEventListener('click', this.previous.bind(this))
-    this.right.addEventListener('click', this.next.bind(this))
+    this.left.addEventListener('click', () => this.previous())
+    this.right.addEventListener('click', () => this.next())
   }
 
   /**

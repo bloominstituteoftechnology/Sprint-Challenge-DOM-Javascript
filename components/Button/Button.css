@@ -1,3 +1,33 @@
+
 .Button {
   display: inline-block;
+  border: 2px solid red;
+  height: 22px;
+  cursor: pointer;
+  width: 77px;
+}
+
+.butt--show {
+  visibility: hidden;
+}
+
+.Button[data-dig="1"]{
+  background-color: green;
+  color: blue;
+  margin:33px;
+  text-align: center;  
+}
+
+.Button[data-dig="2"]{
+  background-color: orange;
+  color: gray;
+  margin:33px;
+  text-align: center; 
+}
+
+.Button[data-dig="3"]{
+  background-color: blue;
+  color: yellow;
+  margin:33px;
+  text-align: center; 
 }

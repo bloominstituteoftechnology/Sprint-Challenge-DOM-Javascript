@@ -5,13 +5,14 @@
 }
 
 .Button:hover {
-  background-color: gray;
+  background-color: slategray;
   color: white;
-  border: 3px solid darkgray;
+  border: 3px solid gray;
   cursor: pointer;
 }
 
 .Button--hide {
-  display: none;
+  /* display: none; */
+  visibility: hidden;
 }
 

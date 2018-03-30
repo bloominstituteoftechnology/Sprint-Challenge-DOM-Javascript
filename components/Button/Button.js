@@ -29,7 +29,7 @@ class Button {
       this.element.addEventListener('click', () => {this.hideButton()});
     }
     hideButton() {
-        this.element.classList.toggle('Button--hide');
+        this.element.classList.add('Button--hide');
     }
   }
   

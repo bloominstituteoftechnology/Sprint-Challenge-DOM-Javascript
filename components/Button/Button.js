@@ -1,9 +1,11 @@
+// creates an Array of all buttons with Button class
 let buttons = document.querySelectorAll('.Button');
 
+// Button Class
 class Button {
+    // each button will be passed into the constructor as the element
     constructor(element) {
         this.element = element;
-        this.dataNumber = element.dataset.number;
         this.element.addEventListener('click', () => {this.buttonClick()});
     }
 

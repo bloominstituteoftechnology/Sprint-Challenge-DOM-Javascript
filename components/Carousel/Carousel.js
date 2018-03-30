@@ -35,13 +35,18 @@ class Carousel {
 		// stores all instances of CarouselItem
 		this.items = Array.from(this.items).map((item) => new CarouselItem(item));
 		// reference the first carousel item
-		this.activeItem = items[0];
+		this.activeIndex = 0;
 		// show the first slide
 		this.init();
 	}
 	// Prototype Methods
+	// show the first active item on page load
 	init() {
-		this.activeItem.show();
+		this.items[this.activeIndex].show();
+	}
+	// update the current active item via the activeIndex
+	updateActive() {
+
 	}
 	// hides the current slide and displays the previous slide
 	previousSlide() {

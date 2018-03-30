@@ -26,7 +26,7 @@ let buttons = document.querySelectorAll('.Button'); //r returns NodeList of 3 el
 class Button {
     constructor(element){
       this.element = element;
-      this.element.addEventListener('click', (event) => {
+      this.element.addEventListener('click', () => {
         this.element.classList.toggle('Button--hide');
       });
     }
@@ -35,4 +35,5 @@ class Button {
  buttons = Array.from(buttons).map(item => {
     new Button(item);
   });
+
 

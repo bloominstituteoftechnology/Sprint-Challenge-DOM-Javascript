@@ -55,13 +55,13 @@ carousels = Array.from(carousels).map(carousel => new Carousel(carousel));
 
 // const goLeft = () => {
 //     unfocus();
-//     current = ((current + 2) % 3);
+//     current = ((current + (cars.length-1)) % cars.length);
 //     focus();
 // };
 
 // const goRight = () => {
 //     unfocus();
-//     current = ((current + 1) % 3);
+//     current = ((current + 1) % cars.length);
 //     focus();
 // };
 

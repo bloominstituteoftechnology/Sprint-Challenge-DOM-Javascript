@@ -37,11 +37,11 @@ class Carousel {
 		// reference the first carousel item
 		this.activeIndex = 0;
 		// show the first slide
-		this.init();
+		// this.init();
 		// add an event listener to the right arrow
-		document.querySelector('.Carousel__arrow-left').addEventListener('click', this.previousSlide());
+		this.rightArrow.addEventListener('click', this.updateIndex(1));
 		// add an event listener to the left arrow
-		document.querySelector('.Carousel__arrow-right').addEventListener('click', this.nextSlide);
+		this.leftArrow.addEventListener('click', this.updateIndex(-1));
 	}
 	// Prototype Methods
 	// show the first active item on page load
@@ -49,32 +49,24 @@ class Carousel {
 		this.items[this.activeIndex].show();
 	}
 
-	updateActive(newActive) {
-    	// deselect the old active slide item
-    	// assign the new active slide index
-    	this.items[this.activeIndex].hide();
-    	this.items[this.activeIndex] = newActive;
- 	 }
+	updateIndex(n) {
+		console.log(this.activeIndex);
+		this.showSlide(this.activeIndex += n);
+	}
 
 	// hides the current slide and displays the previous slide
-	previousSlide() {
-		// console.log(this.items[this.activeIndex]);
-		this.items[this.activeIndex].hide();
-		// decrement index to go to a previous slide
-		// this.activeIndex--;
-		// // console.log(this.activeIndex);
-		// if (this.activeIndex < 0) {
-		// 	this.activeIndex = this.items.length - 1;
-		// 	// console.log(this.activeIndex);
-		// } else if (this.activeIndex > this.items.length) {
-		// 	this.activeindex = 0;
-		// 	// console.log(this.activeIndex);
-		// }
-		// this.items[this.activeIndex].show('Carousel__item-focused');
-	}
-	// hides the current slide and displays the next slide
-	nextSlide() {
-		
+	showSlide(num) {
+		console.log('you made it here');
+		if (num < 0) {
+			this.activeIndex = this.items.length -1;
+			// console.log(this.activeIndex);
+		} else if (num > this.items.length) {
+			this.activeindex = 0;
+			// console.log(this.activeIndex);
+		}
+		this.items.forEach((item) => item.hide());
+		console.log(this.items);
+		this.items[num].show();
 	}
 }
 

@@ -6,43 +6,50 @@ class Carousel {
     this.items = Array.from(this.items).map(item => new CarouselItem(item));
     this.focusIndex = 0;
     // Arrow elements and listeners
+    this.controlsActive = true;
     this.leftArrow = this.element.children[0];
     this.rightArrow = this.element.children[2];
 
     // Swipe items to right and show item at index -1
     this.leftArrow.addEventListener('click', () => {
-      const previousItem = this.items[this.focusIndex];
-      this.moveRight(this.items[this.focusIndex--]); // Move right and decrement focus index
-      // Wrap index value around if needed
-      if (this.focusIndex < 0) this.focusIndex += this.items.length;
-      const nextItem = this.items[this.focusIndex];
+      if (this.controlsActive) {
+        this.controlsActive = false;
+        const previousItem = this.items[this.focusIndex];
+        this.moveRight(this.items[this.focusIndex--]); // Move right and decrement focus index
+        // Wrap index value around if needed
+        if (this.focusIndex < 0) this.focusIndex += this.items.length;
+        const nextItem = this.items[this.focusIndex];
 
-      setTimeout(() => { // After a duration of time
-        nextItem.toggleTransition('off'); // Do next fast
-        this.moveLeft(nextItem); // Stage next item left of window
-        previousItem.element.classList.remove('Carousel__item-focused');
-        nextItem.element.classList.add('Carousel__item-focused'); // Transfer focus class
-        nextItem.toggleTransition('on'); // Do next slow
-        this.moveRight(nextItem); // Insert next item from left
-      }, animationTime)
+        setTimeout(() => { // After a duration of time
+          nextItem.toggleTransition('off'); // Do next fast
+          this.moveLeft(nextItem); // Stage next item left of window
+          previousItem.element.classList.remove('Carousel__item-focused');
+          nextItem.element.classList.add('Carousel__item-focused'); // Transfer focus class
+          nextItem.toggleTransition('on'); // Do next slow
+          this.moveRight(nextItem); // Insert next item from left
+        }, animationTime);
+      }
     });
 
     // Swipe items to left and show item at index +1
     this.rightArrow.addEventListener('click', () => {
-      const previousItem = this.items[this.focusIndex];
-      this.moveLeft(this.items[this.focusIndex++]); // Move left and increment focus index
-      // Wrap index value around if needed
-      if (this.focusIndex >= this.items.length) this.focusIndex = 0;
-      const nextItem = this.items[this.focusIndex];
+      if (this.controlsActive) {
+        this.controlsActive = false;
+        const previousItem = this.items[this.focusIndex];
+        this.moveLeft(this.items[this.focusIndex++]); // Move left and increment focus index
+        // Wrap index value around if needed
+        if (this.focusIndex >= this.items.length) this.focusIndex = 0;
+        const nextItem = this.items[this.focusIndex];
 
-      setTimeout(() => { // After a duration of time
-        nextItem.toggleTransition('off'); // Do next fast
-        this.moveRight(nextItem); // Stage next item to right of window
-        previousItem.element.classList.remove('Carousel__item-focused');
-        nextItem.element.classList.add('Carousel__item-focused'); // Transfer focus class
-        nextItem.toggleTransition('on'); // Do next slow
-        this.moveLeft(nextItem); // Insert next item from right
-      }, animationTime)
+        setTimeout(() => { // After a duration of time
+          nextItem.toggleTransition('off'); // Do next fast
+          this.moveRight(nextItem); // Stage next item to right of window
+          previousItem.element.classList.remove('Carousel__item-focused');
+          nextItem.element.classList.add('Carousel__item-focused'); // Transfer focus class
+          nextItem.toggleTransition('on'); // Do next slow
+          this.moveLeft(nextItem); // Insert next item from right
+        }, animationTime);
+      }
     });
   }
 
@@ -77,6 +84,8 @@ class Carousel {
     } else { // Move into window
       item.fadeIn();
       this.clearMargin(item);
+      // Prevent use of controls until all animations finish
+      setTimeout(() => this.controlsActive = true, 1000);
     }
   }
 
@@ -95,6 +104,8 @@ class Carousel {
     } else { // Move into window
       item.fadeIn();
       this.clearMargin(item);
+      // Prevent use of controls until all animations finish
+      setTimeout(() => this.controlsActive = true, 1000);
     }
   }
 }

@@ -12,20 +12,24 @@
   overflow: scroll;
 }
 
-.Carousel__arrow-left {
+.Carousel__arrow-left, .Carousel__arrow-right {
   font-size: 42px;
-  margin-left: 10px;
   font-weight: bold;
   height: 100%;
   cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.Carousel__arrow-left {
+  margin-left: 10px;
 }
 
 .Carousel__arrow-right {
-  font-size: 42px;
   margin-right: 10px;
-  font-weight: bold;
-  height: 100%;
-  cursor: pointer;
 }
 
 .Carousel__items {

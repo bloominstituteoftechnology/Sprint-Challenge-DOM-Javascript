@@ -18,27 +18,28 @@ class Carousel {
       const nextItem = this.items[this.focusIndex];
       setTimeout(() => { // After a duration of time
         nextItem.toggleTransition('off'); // Do next fast
-        this.moveLeft(nextItem);
+        this.moveLeft(nextItem); // Stage next item
         previousItem.element.classList.remove('Carousel__item-focused');
-        nextItem.element.classList.add('Carousel__item-focused');
+        nextItem.element.classList.add('Carousel__item-focused'); // Transfer focus
         nextItem.toggleTransition('on'); // Do next slow
-        this.moveRight(nextItem);
+        this.moveRight(nextItem); // Insert next item
       }, 1000)
     });
     // Swipe items to left and show item at index +1
     this.rightArrow.addEventListener('click', () => {
       const previousItem = this.items[this.focusIndex];
-      this.moveLeft(this.items[this.focusIndex++]); // Increment index after move
+      this.moveLeft(previousItem); 
+      this.focusIndex++; // Increment index after move
       // Wrap index value around if needed
       if (this.focusIndex >= this.items.length) this.focusIndex = 0;
       const nextItem = this.items[this.focusIndex];
       setTimeout(() => { // After a duration of time
         nextItem.toggleTransition('off'); // Do next fast
-        this.moveRight(nextItem);
+        this.moveRight(nextItem); // Stage next item
         previousItem.element.classList.remove('Carousel__item-focused');
-        nextItem.element.classList.add('Carousel__item-focused');
+        nextItem.element.classList.add('Carousel__item-focused'); // Transfer focus
         nextItem.toggleTransition('on'); // Do next slow
-        this.moveLeft(nextItem);
+        this.moveLeft(nextItem); // Insert next item
       }, 1000)
     });
   }
@@ -67,12 +68,14 @@ class Carousel {
       // move out of window
       item.fadeOut();
       this.positionRightOut(item);
+      console.log(`Moved slide ${this.focusIndex + 1} to the right`);
     } else { // otherwise
       // move into window
       item.fadeIn();
       item.element.style.margin = '';
       item.element.style.marginLeft = '';
       item.element.style.marginRight = '';
+      console.log(`Centered slide ${this.focusIndex - 1}`);
     }
   }
 
@@ -86,12 +89,14 @@ class Carousel {
       // move out of window
       item.fadeOut();
       this.positionLeftOut(item);
+      console.log(`Moved slide ${this.focusIndex + 1} to the left`);
     } else { // otherwise
       // move into window
       item.fadeIn();
       item.element.style.margin = '';
       item.element.style.marginLeft = '';
       item.element.style.marginRight = '';
+      console.log(`Centered slide ${this.focusIndex + 1}`);
     }
   }
 }

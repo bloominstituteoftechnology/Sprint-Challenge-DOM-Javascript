@@ -1,3 +1,21 @@
+.Section__buttonsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px auto 0;
+  width: 300px;
+}
+
 .Button {
   display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px 5px;
+  cursor: pointer;
+}
+
+.Button-clicked {
+  background-color: lightgrey;
+  background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+  linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+  linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }

@@ -20,8 +20,10 @@ class Carousel {
         })
     }      
     rightArrowHandler(){
-        ;
-       if (this.index >= this.items.length) {
+        
+       
+        
+       if (this.index + 1  === this.items.length) {
           return;
         }
        let  index = this.index;      
@@ -29,15 +31,18 @@ class Carousel {
         this.items[index + 1].classList.add('Carousel__item-focused');
         this.index++
     }  
+        
     leftArrowHandler(){
-        this.index--;
-           if (this.index < 0 ) {
+        
+       
+        
+           if (this.index  === 0 ) {
             return;
         }       
         let  index = this.index;      
-        this.items[index].classList.add('Carousel__item-focused')
-        this.items[index + 1].classList.remove('Carousel__item-focused');
-       
+        this.items[index].classList.remove('Carousel__item-focused')
+        this.items[index - 1].classList.add('Carousel__item-focused');
+        this.index--;
         }
 }
 let carousels = document.querySelectorAll(".Carousel");

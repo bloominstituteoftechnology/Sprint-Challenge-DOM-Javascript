@@ -12,91 +12,89 @@ class Carousel {
     // Swipe items to right and show item at index -1
     this.leftArrow.addEventListener('click', () => {
       const previousItem = this.items[this.focusIndex];
-      this.moveRight(this.items[this.focusIndex--]); // Decrement index after move
+      this.moveRight(this.items[this.focusIndex--]); // Move right and decrement focus index
       // Wrap index value around if needed
       if (this.focusIndex < 0) this.focusIndex += this.items.length;
       const nextItem = this.items[this.focusIndex];
+
       setTimeout(() => { // After a duration of time
         nextItem.toggleTransition('off'); // Do next fast
-        this.moveLeft(nextItem); // Stage next item
+        this.moveLeft(nextItem); // Stage next item left of window
         previousItem.element.classList.remove('Carousel__item-focused');
-        nextItem.element.classList.add('Carousel__item-focused'); // Transfer focus
+        nextItem.element.classList.add('Carousel__item-focused'); // Transfer focus class
         nextItem.toggleTransition('on'); // Do next slow
-        this.moveRight(nextItem); // Insert next item
-      }, 1000)
+        this.moveRight(nextItem); // Insert next item from left
+      }, animationTime)
     });
+
     // Swipe items to left and show item at index +1
     this.rightArrow.addEventListener('click', () => {
       const previousItem = this.items[this.focusIndex];
-      this.moveLeft(previousItem); 
-      this.focusIndex++; // Increment index after move
+      this.moveLeft(this.items[this.focusIndex++]); // Move left and increment focus index
       // Wrap index value around if needed
       if (this.focusIndex >= this.items.length) this.focusIndex = 0;
       const nextItem = this.items[this.focusIndex];
+
       setTimeout(() => { // After a duration of time
         nextItem.toggleTransition('off'); // Do next fast
-        this.moveRight(nextItem); // Stage next item
+        this.moveRight(nextItem); // Stage next item to right of window
         previousItem.element.classList.remove('Carousel__item-focused');
-        nextItem.element.classList.add('Carousel__item-focused'); // Transfer focus
+        nextItem.element.classList.add('Carousel__item-focused'); // Transfer focus class
         nextItem.toggleTransition('on'); // Do next slow
-        this.moveLeft(nextItem); // Insert next item
-      }, 1000)
+        this.moveLeft(nextItem); // Insert next item from right
+      }, animationTime)
     });
   }
 
-  positionRightOut(item) { // move out of window to right
-    item.element.style.margin = ''; // clear any previous margin
+  clearMargin(item) { // Clear any previous margin
+    item.element.style.margin = '';
     item.element.style.marginLeft = '';
     item.element.style.marginRight = '';
+  }
+
+  positionRightOut(item) { // Move out of window to right
+    this.clearMargin(item);
     item.element.style.marginRight = `-${item.parentWidth * 4}px`;
   }
 
-  positionLeftOut(item) { // move out of window to left
-    item.element.style.margin = ''; // clear any previous margin
-    item.element.style.marginLeft = '';
-    item.element.style.marginRight = '';
+  positionLeftOut(item) { // Move out of window to left
+    this.clearMargin(item);
     item.element.style.marginLeft = `-${item.parentWidth * 4}px`;
   }
 
   moveRight(item) {
-    item.toggleTransition('on'); // activate transition time
-    item.updateWidths(); // set current widths for item and parent
-     // if item is centered
+    item.toggleTransition('on'); // Activate transition time
+    item.updateParentWidth(); // Set current width of parent
+     // If item is centered
     if (item.element.style.margin === '' 
     && item.element.style.marginLeft === '' 
     && item.element.style.marginRight === '') {
-      // move out of window
+      // Move out of window
       item.fadeOut();
       this.positionRightOut(item);
-      console.log(`Moved slide ${this.focusIndex + 1} to the right`);
-    } else { // otherwise
-      // move into window
+      // Clear margins for full reset after animation finished
+      setTimeout(() => this.clearMargin(item), animationTime);
+    } else { // Move into window
       item.fadeIn();
-      item.element.style.margin = '';
-      item.element.style.marginLeft = '';
-      item.element.style.marginRight = '';
-      console.log(`Centered slide ${this.focusIndex - 1}`);
+      this.clearMargin(item);
     }
   }
 
   moveLeft(item) {
-    item.toggleTransition('on'); // activate transition time
-    item.updateWidths(); // set current widths for item and parent
-     // if item is centered
+    item.toggleTransition('on'); // Activate transition time
+    item.updateParentWidth(); // Set current widths for item and parent
+    // If item is centered
     if (item.element.style.margin === '' 
     && item.element.style.marginLeft === '' 
     && item.element.style.marginRight === '') {
-      // move out of window
+      // Move out of window
       item.fadeOut();
       this.positionLeftOut(item);
-      console.log(`Moved slide ${this.focusIndex + 1} to the left`);
-    } else { // otherwise
-      // move into window
+      // Clear margins for full reset after animation finishes
+      setTimeout(() => this.clearMargin(item), animationTime);
+    } else { // Move into window
       item.fadeIn();
-      item.element.style.margin = '';
-      item.element.style.marginLeft = '';
-      item.element.style.marginRight = '';
-      console.log(`Centered slide ${this.focusIndex + 1}`);
+      this.clearMargin(item);
     }
   }
 }
@@ -104,18 +102,13 @@ class Carousel {
 class CarouselItem {
   constructor(element) {
     this.element = element;
-    this.elementWidth;
     this.parent = element.parentNode;
     this.parentWidth;
   }
 
-  fadeIn() { // Set opacity to 1
-    this.element.style.opacity = 1;
-  }
+  fadeIn() { this.element.style.opacity = 1 } // Set opacity to 1
 
-  fadeOut() { // Set opacity of 0
-    this.element.style.opacity = 0;
-  }
+  fadeOut() { this.element.style.opacity = 0 } // Set opacity of 0
 
   toggleTransition(option) { // Switch 2 second transitions on/off
     if (option === 'on' && !(this.element.classList.contains('Carousel__item-transition'))) {
@@ -125,9 +118,8 @@ class CarouselItem {
     }
   }
 
-  updateWidths() { // Convert width properties into numerical values for later mutation
-    this.elementWidth = Number(window.getComputedStyle(this.element).width.slice(0, -2));
-    if (isNaN(this.elementWidth)) this.elementWidth = 'auto'; // maintain auto if already set
+  updateParentWidth() { // Update parent width to transition appropriately based on size
+    // Convert width property into numerical values for later mutation
     this.parentWidth = Number(window.getComputedStyle(this.parent).width.slice(0, -2));
   }
 }
@@ -135,3 +127,6 @@ class CarouselItem {
 // DOM references
 let carousels = document.querySelectorAll(".Carousel");
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));
+
+// Easily change all animation times from single variable
+const animationTime = 1000;

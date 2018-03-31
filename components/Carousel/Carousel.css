@@ -3,17 +3,18 @@
   margin: 0 auto;
   background: white;
   display: flex;
+  align-items: center;
 }
 
 .Carousel__window {
   border: 2px solid black;
   padding: 5px 0 15px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .Carousel__arrow-left {
   font-size: 42px;
-  margin: 50px 0 0 10px;
+  margin-left: 10px;
   font-weight: bold;
   height: 100%;
   cursor: pointer;
@@ -21,7 +22,7 @@
 
 .Carousel__arrow-right {
   font-size: 42px;
-  margin: 50px 10px 0 0;
+  margin-right: 10px;
   font-weight: bold;
   height: 100%;
   cursor: pointer;

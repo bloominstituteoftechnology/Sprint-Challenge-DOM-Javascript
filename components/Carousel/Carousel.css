@@ -1,15 +1,28 @@
+.Section__witcher{
+  color: rgb(202, 66, 66)
+}
+.Section__borderWitcher{
+ background: #353232
+}
+.Box__title{
+  color:white
+}
 .Carousel__arrow-left {
   font-size: 42px;
   position: absolute;
   left: 20px;
   top: 50px;
+  color:white;
 }
-
+.Box__description{
+  color:white;
+}
 .Carousel__arrow-right {
   font-size: 42px;
   position: absolute;
   right: 20px;
   top: 50px;
+  color:white
 }
 
 .Carousel__items {

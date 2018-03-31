@@ -30,7 +30,7 @@ class Carousel {
         this.rightArrow.addEventListener('click',() => {this.increment()});
         // Event listener for a click that fires the decrement function,
         // when the left arrow is clicked
-        this.leftArrow.addEventListener('click',() => {this.decrement()})
+        this.leftArrow.addEventListener('click',() => {this.decrement()});
       
           //obj[arrow.dataset.tab] = new TabLink(arrow);
           //return obj;
@@ -38,19 +38,40 @@ class Carousel {
 //constructor
 increment(){
     console.log('clicked')
-    // and if loop checking if the counter plus 1 is equal to the this.items length.
-    if(this.counter +1 === this.items.length){
-    // if it is it just returns the function.
-    return;
-    }
-    // assigning this.counter to a const of counter, that we can use for reference we can use inside of this function
-    const counter = this.counter;
-    // we remove the current item and we remove the modifier of focused so that we can clear text. 
-    this.items[counter].classList.remove('Carousel__item-focused');
-    // we take the counter and increment it and use that to grab the next item and set the modifer of focused on it.
-    this.items[counter + 1].classList.add('Carousel__item-focused');
+   // we take the counter and increment it and use that to grab the next item and set the modifer of focused on it.
+   this.items[this.counter].classList.remove('Carousel__item-focused');
+  
+     this.counter++;
+        // this checks to see if the counter is equal to the length of the array if it is, it sets the counter to 0, basically this resets it.
+     if(this.counter  === this.items.length){
+        // this does not need to be set to length because 0 is always the first index no matter the size of the array.
+     this.counter = 0;
+        }
+
+    this.items[this.counter].classList.add('Carousel__item-focused');
+
+
     // then we increment the counter
-    this.counter++;
+   
+
+}
+decrement(){
+    console.log('clicked')
+    // we remove the current item and we remove the modifier of focused so that we can clear text. 
+    this.items[this.counter].classList.remove('Carousel__item-focused');
+   
+    // we are decrementing the counter so we can add the next array item.
+    this.counter--;
+    // so when the counter goes to -1 it will basically reset to the end of the array
+    if(this.counter  < 0){
+      // this was set to equal 0 instead of the length, but this means you can add in more items into the array and it will scale.
+        this.counter = this.items.length;
+       
+        }
+      
+    this.items[this.counter].classList.add('Carousel__item-focused');
+    // then we increment the counter
+  
 
 }
 }//class

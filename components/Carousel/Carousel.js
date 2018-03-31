@@ -2,7 +2,7 @@
 
 
 
-let carousels = document.querySelectorAll(".Carousel");
+
 
 
 class Carousel {
@@ -10,7 +10,7 @@ class Carousel {
         this.element = el;
         this.leftArrow = document.querySelector('.Carousel__arrow-left');
         this.rightArrow = document.querySelector('.Carousel__arrow-right');
-        this.items = document.querySelectorAll('.Carousel__items');
+        this.items = document.querySelectorAll('.Carousel__item');
         this.index = 0;
         this.rightArrow.addEventListener ('click', ()=>{
             this.rightArrowHandler();
@@ -20,26 +20,27 @@ class Carousel {
         })
     }      
     rightArrowHandler(){
-       
-        this.index++;
-       if (this.index++ === this.items.length) {
+        ;
+       if (this.index >= this.items.length) {
           return;
         }
-       let  index = this.index;
-        this.items[index].style.display = 'block';
-        this.items[index].classList.toggle('Carousel__item-focused')
-    } 
-
+       let  index = this.index;      
+        this.items[index].classList.remove('Carousel__item-focused');
+        this.items[index + 1].classList.add('Carousel__item-focused');
+        this.index++
+    }  
     leftArrowHandler(){
-          this.index++;
-        if (this.index === this.items.length) {
+        this.index--;
+           if (this.index < 0 ) {
             return;
+        }       
+        let  index = this.index;      
+        this.items[index].classList.add('Carousel__item-focused')
+        this.items[index + 1].classList.remove('Carousel__item-focused');
+       
         }
-        let  index = this.index;
-        this.items[index].style.display = 'block';
-        this.items[index].classList.toggle('Carousel__item-focused')
-    }
 }
+let carousels = document.querySelectorAll(".Carousel");
 carousels = Array.from(carousels).map((carousel) => new Carousel(carousel));
 
 

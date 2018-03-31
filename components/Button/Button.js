@@ -2,16 +2,47 @@ class Button {
 	constructor(element) {
 		this.element = element; // individual button
 		this.dataNumber = this.element.dataset.num;
-		this.element.addEventListener('click', () => this.toggleDisplay());
+		this.element.addEventListener('click', () => {
+			this.toggleDisplay();
+		});
 	}
 
 	toggleDisplay() {
 		this.element.classList.toggle('Button__actual--phantom');
-		if (this.dataNumber === "2") this.invert();
+
+		if (this.dataNumber === "1") {
+			this.element.classList.toggle('active');
+			this.flickr();
+		}
+
+		if (this.dataNumber === "2") this.sunrise();
+
+		if (this.dataNumber === "3") {
+			this.element.classList.toggle('active');
+			this.ayy();
+		}
 	}
 
-	invert() {
-		document.body.classList.toggle('Body--invert');
+	ayy() {
+		document.body.classList.toggle('Body--stars');
+		if (this.element.classList.contains('active')) {
+			// new PopUp --> can i access this if its in another document ? 
+			alert('ayyy great choice mate');
+		} 
+	}
+
+	flickr() {
+		if (this.element.classList.contains('active')) {
+			this.interval = setInterval(() => {
+				document.body.classList.toggle('Body--flickr');
+			}, 100);
+		} else {
+			clearInterval(this.interval);
+		}
+	}
+
+	sunrise() {
+		document.body.classList.toggle('Body--beach');
 	}
 }
 

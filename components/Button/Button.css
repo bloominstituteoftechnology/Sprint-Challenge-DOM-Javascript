@@ -8,6 +8,22 @@ body {
 	color: yellow;
 }
 
+.Body--stars {
+	background-image: url('../../img/stars.jpg');
+	background-size: cover;
+}
+
+.Body--beach {
+	background-image: url('https://picturesmania.com/0-0/9926_okean-vosh.jpg');
+	background-size: cover;
+}
+
+.Body--flickr {
+	filter: invert(10%);
+	background-color: black;
+	color: #55E806;
+}
+
 .Button {
   display: flex;
   justify-content: center;
@@ -21,8 +37,8 @@ body {
 
 .Button__actual {
 	border: 2px solid black;
-	box-shadow: 1px 2px 2px 2px black;
-	padding: 13px;
+	border-radius: 15px;
+	padding: 13px 33px;
 	margin: 25px;
 	cursor: pointer;
 }
@@ -37,4 +53,8 @@ body {
 
 .Button__actual--invert {
 	opactiy: 0.33;
+}
+
+.Button__actual--hover:hover {
+	box-shadow: 1px 2px 2px 2px black;
 }

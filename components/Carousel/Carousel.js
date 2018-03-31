@@ -46,6 +46,7 @@ increment(){
      if(this.counter  === this.items.length){
         // this does not need to be set to length because 0 is always the first index no matter the size of the array.
      this.counter = 0;
+     console.log("reset")
         }
 
     this.items[this.counter].classList.add('Carousel__item-focused');
@@ -58,15 +59,19 @@ increment(){
 decrement(){
     console.log('clicked')
     // we remove the current item and we remove the modifier of focused so that we can clear text. 
+
     this.items[this.counter].classList.remove('Carousel__item-focused');
    
     // we are decrementing the counter so we can add the next array item.
     this.counter--;
+   
     // so when the counter goes to -1 it will basically reset to the end of the array
     if(this.counter  < 0){
+
+  
       // this was set to equal 0 instead of the length, but this means you can add in more items into the array and it will scale.
-        this.counter = this.items.length;
-       
+        this.counter = this.items.length -1;
+       console.log("reset")
         }
       
     this.items[this.counter].classList.add('Carousel__item-focused');

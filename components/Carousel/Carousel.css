@@ -6,6 +6,7 @@
   cursor: pointer;
   left: 20px;
   top: 50px;
+
 }
 
 .Carousel__arrow-right {
@@ -24,9 +25,12 @@
 }
 
 .Carousel__item {
-  display: none;
+  /* display: none; */
 }
 
 .Carousel__item-focused {
-  display: inline-block;
+  /* display: inline-block; */
+
+    /* display: none; */
+
 }

@@ -8,11 +8,13 @@
 .Carousel__arrow-left {
   font-size: 42px;
   cursor: pointer;
+  padding: 25px;
 }
 
 .Carousel__arrow-right {
   font-size: 42px;
   cursor: pointer;
+  padding: 25px;
 }
 
 .Carousel__items {

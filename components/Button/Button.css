@@ -11,11 +11,13 @@ body {
 .Body--stars {
 	background-image: url('../../img/stars.jpg');
 	background-size: cover;
+	color: white;
 }
 
 .Body--beach {
-	background-image: url('https://picturesmania.com/0-0/9926_okean-vosh.jpg');
+	background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18979476.jpg');
 	background-size: cover;
+	color: white;
 }
 
 .Body--flickr {

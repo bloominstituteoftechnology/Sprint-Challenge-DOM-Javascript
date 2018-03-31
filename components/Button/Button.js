@@ -15,9 +15,13 @@ class Button {
 			this.flickr();
 		}
 
-		if (this.dataNumber === "2") this.sunrise();
+		if (this.dataNumber === "2") {
+			document.body.classList.remove('Body--stars');
+			this.sunrise();
+		}
 
 		if (this.dataNumber === "3") {
+			document.body.classList.remove('Body--beach');
 			this.element.classList.toggle('active');
 			this.ayy();
 		}

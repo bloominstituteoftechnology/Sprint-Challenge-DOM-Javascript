@@ -8,60 +8,91 @@ class Carousel {
     // Arrow elements and listeners
     this.leftArrow = this.element.children[0];
     this.rightArrow = this.element.children[2];
-    this.leftArrow.addEventListener('click', () => {
-      this.moveLeft(this.items[this.focusIndex]);
-      console.log(this.items[this.focusIndex]);
-    });
-    this.rightArrow.addEventListener('click', () => {
-      this.moveRight(this.items[this.focusIndex]);
-      console.log(this.items[this.focusIndex]);
-    });
 
-    this.startLeft(this.items[this.focusIndex]);
+    // Swipe items to right and show item at index -1
+    this.leftArrow.addEventListener('click', () => {
+      const previousItem = this.items[this.focusIndex];
+      this.moveRight(this.items[this.focusIndex--]); // Decrement index after move
+      // Wrap index value around if needed
+      if (this.focusIndex < 0) this.focusIndex += this.items.length;
+      const nextItem = this.items[this.focusIndex];
+      setTimeout(() => { // After a duration of time
+        nextItem.toggleTransition('off'); // Do next fast
+        this.moveLeft(nextItem);
+        previousItem.element.classList.remove('Carousel__item-focused');
+        nextItem.element.classList.add('Carousel__item-focused');
+        nextItem.toggleTransition('on'); // Do next slow
+        this.moveRight(nextItem);
+      }, 1000)
+    });
+    // Swipe items to left and show item at index +1
+    this.rightArrow.addEventListener('click', () => {
+      const previousItem = this.items[this.focusIndex];
+      this.moveLeft(this.items[this.focusIndex++]); // Increment index after move
+      // Wrap index value around if needed
+      if (this.focusIndex >= this.items.length) this.focusIndex = 0;
+      const nextItem = this.items[this.focusIndex];
+      setTimeout(() => { // After a duration of time
+        nextItem.toggleTransition('off'); // Do next fast
+        this.moveRight(nextItem);
+        previousItem.element.classList.remove('Carousel__item-focused');
+        nextItem.element.classList.add('Carousel__item-focused');
+        nextItem.toggleTransition('on'); // Do next slow
+        this.moveLeft(nextItem);
+      }, 1000)
+    });
   }
 
-  startRight(item) {
-    item.updateWidths();
+  positionRightOut(item) { // move out of window to right
+    item.element.style.margin = ''; // clear any previous margin
+    item.element.style.marginLeft = '';
+    item.element.style.marginRight = '';
     item.element.style.marginRight = `-${item.parentWidth * 4}px`;
   }
 
-  startLeft(item) {
-    item.updateWidths();
+  positionLeftOut(item) { // move out of window to left
+    item.element.style.margin = ''; // clear any previous margin
+    item.element.style.marginLeft = '';
+    item.element.style.marginRight = '';
     item.element.style.marginLeft = `-${item.parentWidth * 4}px`;
   }
 
   moveRight(item) {
-    item.toggleTransition('on');
-    item.updateWidths();
-    item.element
-    item.fadeIn();
-    // If to the left then bring to center
-    if (item.element.style.marginLeft !== '') {
+    item.toggleTransition('on'); // activate transition time
+    item.updateWidths(); // set current widths for item and parent
+     // if item is centered
+    if (item.element.style.margin === '' 
+    && item.element.style.marginLeft === '' 
+    && item.element.style.marginRight === '') {
+      // move out of window
+      item.fadeOut();
+      this.positionRightOut(item);
+    } else { // otherwise
+      // move into window
+      item.fadeIn();
+      item.element.style.margin = '';
       item.element.style.marginLeft = '';
-    } else { // Otherwise move to right
-      this.startRight(item);
+      item.element.style.marginRight = '';
     }
   }
 
   moveLeft(item) {
-    item.toggleTransition('on');
-    item.updateWidths();
-    item.element
-    item.fadeIn();
-    // If to the right then bring to center
-    if (item.element.style.marginRight !== '') {
+    item.toggleTransition('on'); // activate transition time
+    item.updateWidths(); // set current widths for item and parent
+     // if item is centered
+    if (item.element.style.margin === '' 
+    && item.element.style.marginLeft === '' 
+    && item.element.style.marginRight === '') {
+      // move out of window
+      item.fadeOut();
+      this.positionLeftOut(item);
+    } else { // otherwise
+      // move into window
+      item.fadeIn();
+      item.element.style.margin = '';
+      item.element.style.marginLeft = '';
       item.element.style.marginRight = '';
-    } else { // Otherwise move to right
-      this.startLeft(item);
     }
-  }
-
-  shiftLeft() { // Left arrow clicked
-    console.log('left');
-  }
-
-  shiftRight() { // Right arrow clicked
-    console.log('right');
   }
 }
 
@@ -81,12 +112,6 @@ class CarouselItem {
     this.element.style.opacity = 0;
   }
 
-  reset() { // Reset modified styles
-    this.element.style.margin = 'auto';
-    this.element.style.opacity = 1;
-    this.width = 'auto';
-  }
-
   toggleTransition(option) { // Switch 2 second transitions on/off
     if (option === 'on' && !(this.element.classList.contains('Carousel__item-transition'))) {
       this.element.classList.add('Carousel__item-transition');
@@ -97,6 +122,7 @@ class CarouselItem {
 
   updateWidths() { // Convert width properties into numerical values for later mutation
     this.elementWidth = Number(window.getComputedStyle(this.element).width.slice(0, -2));
+    if (isNaN(this.elementWidth)) this.elementWidth = 'auto'; // maintain auto if already set
     this.parentWidth = Number(window.getComputedStyle(this.parent).width.slice(0, -2));
   }
 }
@@ -104,42 +130,3 @@ class CarouselItem {
 // DOM references
 let carousels = document.querySelectorAll(".Carousel");
 carousels = Array.from(carousels).map(carousel => new Carousel(carousel));
-
-
-
-// -v-vvv-v- Prototype of my above functionality -v-vvv-v- //
-
-// const carouselItems = document.querySelector('.Carousel__items');
-
-// for (let i = 0; i < carouselItems.children.length; i++) {
-//   carouselItems.children[i].addEventListener('click', function() {
-//     // Fade out first item
-//     var elComputedStyle = window.getComputedStyle(this),
-//         elWidth = elComputedStyle.getPropertyValue('width');
-//     this.style.width = elWidth;
-//     var pComputedStyle = window.getComputedStyle(this.parentNode),
-//         pWidth = pComputedStyle.getPropertyValue('width');
-    
-//     this.style.marginLeft += pWidth;
-//     this.style.opacity = 0;
-//     this.classList.add('Carousel__items-fadeRight');
-//     setTimeout(() => {
-//       console.log(carouselItems.children[i]);
-//       carouselItems.children[i].className = 'Carousel__item';
-//     }, 2000);
-
-//     // Fade in next item
-//     const lastChild = carouselItems.children[carouselItems.children.length - 1];
-//     console.log(carouselItems.children[carouselItems.children.length - 1]);
-//     var lastComputedStyle = window.getComputedStyle(this),
-//         lastWidth = lastComputedStyle.getPropertyValue('width');
-//     lastChild.style.marginLeft = `-${pWidth}`;
-//     lastChild.classList.add('Carousel__items-fadeRight');
-//     lastChild.classList.add('Carousel__item-focused');
-//     lastChild.style.marginLeft = 0;
-//     lastChild.style.opacity = 1;
-//     console.log(lastChild);
-//   })
-// }
-
-// //console.log(carouselItems.children)

@@ -3,7 +3,7 @@ class Carousel {
     this.element = element;
     this.buttonLeft = new CarouselButtonLeft(this.element.children[0], this);
     this.buttonRight = new CarouselButtonRight(this.element.children[2], this);
-    this.itemList = document.querySelector('.Carousel__items');
+    this.itemList = this.element.children[1];
     this.activeItem = this.itemList.firstElementChild;
   }
 }

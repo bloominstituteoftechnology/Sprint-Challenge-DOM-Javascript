@@ -1,16 +1,17 @@
-button = document.querySelectorAll('.Button');
+buttons = document.querySelectorAll('.Button');
 
-class buttonToObj {
+class ButtonElmToObj {
   constructor(element) {
     this.element = element;
     this.element.addEventListener('click', () => {
-      this.click(this.element);
+      this.click();
     });
   }
-  click(element) {
-    console.log(element);
-    element.classList.add('HideBtn');
+  click() {
+    this.element.classList.add('HideBtn');
   }
 }
 
-button = Array.from(button).map((btn) => new buttonToObj(btn));
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i] = new ButtonElmToObj(buttons[i]);
+}

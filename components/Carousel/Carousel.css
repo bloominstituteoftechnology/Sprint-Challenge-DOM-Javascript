@@ -24,7 +24,7 @@
   display: inline-block;
   position: fixed;
   width: 100%;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 1s;
 }
 
 .Carousel__item--hidden-left {

@@ -1,13 +1,20 @@
 .Carousel__arrow-left {
   font-size: 42px;
   position: absolute;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
   left: 20px;
   top: 50px;
+
 }
 
 .Carousel__arrow-right {
   font-size: 42px;
   position: absolute;
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
   right: 20px;
   top: 50px;
 }
@@ -18,9 +25,12 @@
 }
 
 .Carousel__item {
-  display: none;
+  /* display: none; */
 }
 
 .Carousel__item-focused {
-  display: inline-block;
+  /* display: inline-block; */
+
+    /* display: none; */
+
 }

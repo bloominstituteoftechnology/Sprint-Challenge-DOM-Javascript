@@ -1,3 +1,23 @@
 .Button {
-  display: inline-block;
+  display: inline-flex;
+  width: 10%;
+  height: 50px;
+  color: red;
+  background-color: blue;
+  border: 8px solid black;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 21px;
+  align-items: center;
+  margin-left: 17.5%;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.Button--selected {
+  /* color: red; */
+}
+.Buttons {
+  /* border: 2px solid red; */
+  width: 100%;
 }

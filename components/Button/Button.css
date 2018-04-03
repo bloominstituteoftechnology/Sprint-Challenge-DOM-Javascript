@@ -1,3 +1,19 @@
 .Button {
   display: inline-block;
 }
+
+.Button__border {
+  border: solid 2px black;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.Button__shadow {
+  box-shadow: 5px 2px 2px blue;
+}
+
+.Button:hover {
+  background-color: gray;
+  cursor: pointer;
+  box-shadow: 5px 2px 2px red;
+}

@@ -2,6 +2,7 @@
   z-index: 5;
   display: inline-block;
   position: absolute;
+  cursor: pointer;
 }
 
 .Dropdown__button {

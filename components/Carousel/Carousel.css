@@ -1,4 +1,5 @@
 .Carousel__arrow-left {
+  cursor: pointer;
   font-size: 42px;
   position: absolute;
   left: 20px;
@@ -6,6 +7,7 @@
 }
 
 .Carousel__arrow-right {
+  cursor: pointer;
   font-size: 42px;
   position: absolute;
   right: 20px;
@@ -15,12 +17,24 @@
 .Carousel__items {
   margin-left: 70px;
   margin-right: 70px;
+  overflow-x: hidden;
 }
 
 .Carousel__item {
-  display: none;
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  transition: all ease-in-out 1s;
 }
 
-.Carousel__item-focused {
-  display: inline-block;
+.Carousel__item--hidden-left {
+  transform: translateX(-150%);
+}
+
+.Carousel__item--hidden-right {
+  transform: translateX(150%);
+}
+
+.Carousel__item--focused {
+  transform: translateX(0);
 }

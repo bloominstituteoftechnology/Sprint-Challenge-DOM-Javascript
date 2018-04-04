@@ -1,3 +1,16 @@
 .Button {
   display: inline-block;
+  border: 1px solid black;
+  padding: 10px 0px;
+  width: 200px;
+  text-align: center;
+}
+
+.Button:hover {
+  color: white;
+  background-color: black;
+}
+
+.Button--hidden {
+  display: none;
 }

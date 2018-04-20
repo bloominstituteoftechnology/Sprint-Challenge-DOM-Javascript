@@ -1,3 +1,62 @@
+body {
+	background-color: #13A5FF;
+	color: white;
+}
+
+.Body--invert {
+	filter: invert(100%);
+	color: yellow;
+}
+
+.Body--stars {
+	background-image: url('../../img/stars.jpg');
+	background-size: cover;
+	color: white;
+}
+
+.Body--beach {
+	background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18979476.jpg');
+	background-size: cover;
+	color: white;
+}
+
+.Body--flickr {
+	filter: invert(10%);
+	background-color: black;
+	color: #55E806;
+}
+
 .Button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Button__list {
+	display: flex;
+	justify-content: center;
+}
+
+.Button__actual {
+	border: 2px solid black;
+	border-radius: 15px;
+	padding: 13px 33px;
+	margin: 25px;
+	cursor: pointer;
+}
+
+.Button__actual--phantom {
+	opacity: .05;
+	border: 1px solid;
+	padding: 13px;
+	margin: 25px;
+	box-shadow: 2px 3px 3px 3px #888888;
+}
+
+.Button__actual--invert {
+	opactiy: 0.33;
+}
+
+.Button__actual--hover:hover {
+	box-shadow: 1px 2px 2px 2px black;
 }

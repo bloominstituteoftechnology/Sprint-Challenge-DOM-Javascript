@@ -1,20 +1,24 @@
+.Carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
 .Carousel__arrow-left {
   font-size: 42px;
-  position: absolute;
-  left: 20px;
-  top: 50px;
+  cursor: pointer;
+  padding: 25px;
 }
 
 .Carousel__arrow-right {
   font-size: 42px;
-  position: absolute;
-  right: 20px;
-  top: 50px;
+  cursor: pointer;
+  padding: 25px;
 }
 
 .Carousel__items {
-  margin-left: 70px;
-  margin-right: 70px;
+  text-align: center;  
 }
 
 .Carousel__item {
@@ -22,5 +26,5 @@
 }
 
 .Carousel__item-focused {
-  display: inline-block;
+  display: block;
 }

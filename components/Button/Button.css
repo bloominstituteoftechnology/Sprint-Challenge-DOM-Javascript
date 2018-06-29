@@ -1,3 +1,8 @@
 .Button {
   display: inline-block;
+
+  border: 1px solid black;
+  background: grey;
+  margin: 0 20px;
+  padding: 10px;
 }

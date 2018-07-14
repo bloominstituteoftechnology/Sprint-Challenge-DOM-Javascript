@@ -1,3 +1,11 @@
 .Button {
   display: inline-block;
+  background-color: blue;
+  box-shadow: 3px 3px 3px 3px rgb(0, 0, 61);
+  border: none;
+  margin-left: 10px;
+  color: white;
+  padding: 5px;
+  font-size: 20px;
 }
+

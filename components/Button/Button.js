@@ -1,20 +1,13 @@
-function toggleElement() {
-  let showHide = document.getElementById('btn1' || 'btn2' || 'btn3');
-  if (showHide.style.display === 'none') {
-    showHide.style.display = 'inline';
-  } else {
-    showHide.style.display = 'none';
-  }
-}
-module.exports = toggleElement
-
-{/* <script>
-function myFunction() {
-    var x = document.getElementById('myDIV');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
+function toggleButton() {
+  document.getElementById("Button").addEventListener("click", function toggleElement(){
+    let btn = document.querySelectorAll(".Button");
+    let i;
+    array.forEach(showHide.style.display === 'none'); (i = 0; i < x.length; i++); {
+      btn[i].showHide.style.display = 'inline';
     } else {
-        x.style.display = 'none';
+      showHide.style.display = 'none';
     }
+  });
 }
-</script> */}
+module.exports = toggleButton
+

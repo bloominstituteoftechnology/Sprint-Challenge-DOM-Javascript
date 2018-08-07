@@ -1,3 +1,27 @@
-.Button {
+
+.Buttons {
   display: inline-block;
+  border: 3px;
+  border-color: blue;
+  padding: 15px;
+  border: 2.5px solid black;
+  text-decoration-color: whitesmoke;
+}
+
+#btn1 {
+  background-color: teal;
+  /* border: 2.5px solid black;
+  text-decoration-color: whitesmoke; */
+}
+
+#btn2 {
+  background-color: rgb(69, 116, 152);
+  /* border: 2.5px solid black;
+  text-decoration-color: whitesmoke; */
+}
+
+#btn3 {
+  background-color: rgba(40, 94, 57, 0.563);
+  /* border: 2.5px solid black;
+  text-decoration-color: whitesmoke; */
 }

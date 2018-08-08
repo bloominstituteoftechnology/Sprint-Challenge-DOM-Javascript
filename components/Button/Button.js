@@ -8,19 +8,18 @@
 // }
 
 
-
 let buttons = document.querySelectorAll('.Button');
 
 class Button {
-  constructor(element){
-    this.element = element;
-    this.element.addEventListener('click', () => { this.hideButton()})
-  }
-  hideButton() {
-      this.classList.add("Button--hide");
-  }
-}
+    constructor(element){
+        this.element = element;
+        this.element.addEventListener('click', () => {
+          this.hideButton()})
+      }
 
-buttons = Array.from(buttons).map( buttons => {
-  return new Button(button);
-})
+      hideButton() {
+            this.element.classList.add("Button--hide");
+        }
+      }
+
+buttons = buttons.forEach(button => new Button(button));

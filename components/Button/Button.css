@@ -1,4 +1,8 @@
 .Button {
   display: inline-block;
-  border: 4px solid red;
+  border: 3px solid orangered;
+  background-color: rgba(61, 49, 49, 0.418);
+  border-radius: 15px;
+
+  
 }

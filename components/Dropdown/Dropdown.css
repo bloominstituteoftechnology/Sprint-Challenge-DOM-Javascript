@@ -6,14 +6,14 @@
 
 .Dropdown__button {
   padding: 15px;
-  background-color: white;
+  background-color: violet;
   border: 2.5px solid black;
 
 }
 
 .Dropdown__content {
   position: absolute;
-  background-color: white;
+  background-color: violet;
   display: none;
   margin-top: 10px;
   padding: 15px;

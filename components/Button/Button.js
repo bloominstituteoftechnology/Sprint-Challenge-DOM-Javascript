@@ -12,11 +12,11 @@
 //         })
 //     }
 
-//     // getButton(data) {
-//     //     // use the tab item classname and the data attribute to select the proper tab
-//     //     return this.element.querySelector(`.Button[data-number="${data}"]`);
-//     //   }
-// }
+    // getButton(data) {
+    //     // use the tab item classname and the data attribute to select the proper tab
+    //     return this.element.querySelector(`.Button[data-number="${data}"]`);
+    //   }
+//}
 
 // creates a button 
 class Button {
